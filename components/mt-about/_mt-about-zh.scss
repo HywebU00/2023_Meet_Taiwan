@@ -1,0 +1,108 @@
+@import '../../sass/variable'; //Variable
+@import '../../sass/mixin'; //Mixin
+
+.mt-about {
+  padding: 8em 0px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (min-width: 768px) {
+    background-image: none !important;
+  }
+  @include screen('mobile') {
+    padding: 0px 0px 200px;
+  }
+  .outBox {
+    display: flex;
+    align-items: flex-start;
+    @include screen('mobile') {
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+  .col {
+    width: 57%;
+    padding: 0 90px 0 0;
+    @include screen('mobile') {
+      padding: 70px 0 50px;
+      width: 100%;
+    }
+    &:last-child {
+      position: sticky;
+      top: 100px;
+      width: 43%;
+      padding: 0;
+      @include screen('mobile') {
+        margin: 20px 0 0;
+        width: 100%;
+        display: none;
+      }
+    }
+    .slick-dots li {
+      margin: 0 5px;
+      button:before {
+        width: 12px;
+        height: 12px;
+        background: rgba(255, 249, 249, 0.5);
+      }
+      &.slick-active button:before {
+        background: rgba(255, 249, 249, 0.7);
+      }
+    }
+  }
+  .title {
+    font-weight: 300;
+    font-size: 28px;
+    color: #02183d;
+    margin: 0 0 30px;
+    position: relative;
+    padding: 0 0 0 15px;
+    line-height: 1;
+    @include screen('notebook') {
+      font-size: 26px;
+    }
+    @include screen('mobile') {
+      font-size: 24px;
+      margin: 0 0 10px;
+      color: #fff;
+    }
+    @include screen('xs_mobile') {
+      font-size: 22px;
+    }
+    &:first-letter {
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 96px;
+      @include screen('notebook') {
+        font-size: 80px;
+      }
+      @include screen('mobile') {
+        font-size: 64px;
+      }
+      @include screen('xs_mobile') {
+        font-size: 48px;
+      }
+    }
+
+    &::after {
+      content: '“';
+      position: absolute;
+      font-size: 86px;
+      left: 0;
+      top: -20px;
+    }
+  }
+  .description {
+    color: #535353;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 2;
+    span {
+      font-weight: 100;
+      font-style: italic;
+    }
+    @include screen('mobile') {
+      color: #fff;
+    }
+  }
+}

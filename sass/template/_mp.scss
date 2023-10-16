@@ -1,4 +1,11 @@
 /////////////////////////////////////////////
+:root {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+  @include screen('mobile') {
+    scroll-padding-top: 60px;
+  }
+}
 .preLoad {
   position: fixed;
   inset: 0;

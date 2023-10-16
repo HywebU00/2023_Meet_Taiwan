@@ -1,7 +1,7 @@
 @import '../../sass/variable'; //Variable
 @import '../../sass/mixin'; //Mixin
 
-.mt-earth {
+.certpage-tw .mt-earth {
   padding: 5.5em 20px 4.5em;
   background: url('../images/mt/earth_bg.jpg') center top no-repeat;
   isolation: isolate;
@@ -193,7 +193,7 @@
       .info {
         color: rgba(0, 65, 175, 0.69);
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 400;
         margin: 0 0 0 20px;
         span {
           font-size: 20px;

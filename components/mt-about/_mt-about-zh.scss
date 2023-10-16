@@ -18,6 +18,8 @@
     @include screen('mobile') {
       flex-direction: column;
       background: rgba(0, 0, 0, 0.8);
+      padding-left: 36px;
+      padding-right: 36px;
     }
   }
   .col {

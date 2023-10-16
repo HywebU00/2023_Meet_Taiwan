@@ -27891,6 +27891,8 @@ p.error a {
   .mt-about .outBox {
     flex-direction: column;
     background: rgba(0, 0, 0, 0.8);
+    padding-left: 36px;
+    padding-right: 36px;
   }
 }
 .mt-about .col {
@@ -30644,6 +30646,8 @@ p.error a {
   .certpage-tw .mt-about .outBox {
     flex-direction: column;
     background: rgba(0, 0, 0, 0.8);
+    padding-left: 36px;
+    padding-right: 36px;
   }
 }
 .certpage-tw .mt-about .col {

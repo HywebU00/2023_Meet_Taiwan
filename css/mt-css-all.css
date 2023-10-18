@@ -32979,6 +32979,11 @@ p.error a {
   height: 100vh;
   height: 100dvh;
 }
+@media screen and (max-width: 991px) {
+  .mt-kv4 .kvSlider .item .pic {
+    height: 50dvh;
+  }
+}
 .mt-kv4 .kvSlider .item .pic::before {
   content: "";
   position: absolute;
@@ -33082,7 +33087,12 @@ p.error a {
   align-items: center;
   flex-direction: column;
   z-index: 9;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
+}
+@media screen and (max-width: 767px) {
+  .mt-kv4 .kvSlider .infoBox {
+    margin-bottom: 15%;
+  }
 }
 .mt-kv4 .kvSlider .infoBox .title {
   text-align: center;
@@ -33921,6 +33931,11 @@ p.error a {
   height: 100vh;
   height: 100dvh;
 }
+@media screen and (max-width: 991px) {
+  .certpage-tw .mt-kv4 .kvSlider .item .pic {
+    height: 50dvh;
+  }
+}
 .certpage-tw .mt-kv4 .kvSlider .item .pic::before {
   content: "";
   position: absolute;
@@ -34025,6 +34040,11 @@ p.error a {
   flex-direction: column;
   z-index: 9;
   margin-bottom: 5%;
+}
+@media screen and (max-width: 767px) {
+  .certpage-tw .mt-kv4 .kvSlider .infoBox {
+    margin-bottom: 15%;
+  }
 }
 .certpage-tw .mt-kv4 .kvSlider .infoBox .title {
   text-align: center;

@@ -126,6 +126,9 @@
       .pic {
         height: 100vh;
         height: 100dvh;
+        @include screen('tablet') {
+          height: 50dvh;
+        }
         &::before {
           content: '';
           position: absolute;
@@ -209,7 +212,10 @@
       align-items: center;
       flex-direction: column;
       z-index: 9;
-      margin-bottom: 5%;
+      margin-bottom: 10%;
+      @include screen('mobile') {
+        margin-bottom: 15%;
+      }
       .title {
         text-align: center;
         font-size: 128px;

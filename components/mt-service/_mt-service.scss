@@ -4,6 +4,9 @@
 .mt-service {
   margin: 0 auto 4%;
   font-family: 'Homenaje', sans-serif;
+  @include screen('tablet') {
+    margin: 0 auto 40px;
+  }
   .outBox {
     max-width: 1840px;
     padding: 0;

@@ -32915,7 +32915,6 @@ p.error a {
   right: auto;
   position: relative;
   z-index: 1;
-  margin: 0 20px;
 }
 .mt-kv4 .control .slick-dots li {
   width: 12px;
@@ -32934,34 +32933,33 @@ p.error a {
 }
 .mt-kv4 .control .slick-arrow {
   position: relative;
-  width: auto !important;
-  height: auto !important;
+  width: 16px;
+  height: 16px;
   top: auto !important;
   left: auto !important;
   right: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.mt-kv4 .control .slick-prev:before {
+.mt-kv4 .control .slick-arrow::before {
+  width: 6px;
+  height: 6px;
   position: relative;
   top: auto;
   left: auto;
-  border: 5px solid #fff;
-  border-top: none;
-  border-right: none;
   display: block;
+  border: 3px solid rgba(255, 255, 255, 0.5);
   transform: rotate(45deg);
+}
+.mt-kv4 .control .slick-prev:before {
+  border-width: 0 0 3px 3px;
 }
 .mt-kv4 .control .slick-next {
   order: 3;
 }
 .mt-kv4 .control .slick-next:before {
-  position: relative;
-  top: auto;
-  left: auto;
-  border: 5px solid #fff;
-  border-top: none;
-  border-left: none;
-  display: block;
-  transform: rotate(-45deg);
+  border-width: 3px 3px 0 0;
 }
 .mt-kv4 .kvSlider {
   width: 100%;
@@ -33527,6 +33525,11 @@ p.error a {
   margin: 0 auto 4%;
   font-family: "Homenaje", sans-serif;
 }
+@media screen and (max-width: 991px) {
+  .mt-service {
+    margin: 0 auto 40px;
+  }
+}
 .mt-service .outBox {
   max-width: 1840px;
   padding: 0;
@@ -33867,7 +33870,6 @@ p.error a {
   right: auto;
   position: relative;
   z-index: 1;
-  margin: 0 20px;
 }
 .certpage-tw .mt-kv4 .control .slick-dots li {
   width: 12px;
@@ -33886,34 +33888,33 @@ p.error a {
 }
 .certpage-tw .mt-kv4 .control .slick-arrow {
   position: relative;
-  width: auto !important;
-  height: auto !important;
+  width: 16px;
+  height: 16px;
   top: auto !important;
   left: auto !important;
   right: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.certpage-tw .mt-kv4 .control .slick-prev:before {
+.certpage-tw .mt-kv4 .control .slick-arrow::before {
+  width: 6px;
+  height: 6px;
   position: relative;
   top: auto;
   left: auto;
-  border: 5px solid #fff;
-  border-top: none;
-  border-right: none;
   display: block;
+  border: 3px solid rgba(255, 255, 255, 0.5);
   transform: rotate(45deg);
+}
+.certpage-tw .mt-kv4 .control .slick-prev:before {
+  border-width: 0 0 3px 3px;
 }
 .certpage-tw .mt-kv4 .control .slick-next {
   order: 3;
 }
 .certpage-tw .mt-kv4 .control .slick-next:before {
-  position: relative;
-  top: auto;
-  left: auto;
-  border: 5px solid #fff;
-  border-top: none;
-  border-left: none;
-  display: block;
-  transform: rotate(-45deg);
+  border-width: 3px 3px 0 0;
 }
 .certpage-tw .mt-kv4 .kvSlider {
   width: 100%;
@@ -34272,6 +34273,11 @@ p.error a {
 
 .certpage-tw .mt-service {
   margin: 0 auto 4%;
+}
+@media screen and (max-width: 991px) {
+  .certpage-tw .mt-service {
+    margin: 0 auto 40px;
+  }
 }
 .certpage-tw .mt-service .outBox {
   max-width: 1840px;

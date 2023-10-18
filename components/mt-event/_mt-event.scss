@@ -1,0 +1,111 @@
+@import '../../sass/variable'; //Variable
+@import '../../sass/mixin'; //Mixin
+
+.mt-event {
+  margin: 0 0 40px;
+  .outBox {
+    max-width: 1840px;
+    padding: 0;
+  }
+  .unitTitle {
+    color: #fff;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.88px;
+    position: relative;
+    padding: 0 0 30px;
+    margin: 0 0 2%;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10ch;
+      height: 1px;
+      background: #fff;
+      display: block;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .listBox {
+    &:hover {
+      .title {
+        filter: blur(2px);
+      }
+      .pic {
+        &::before {
+          backdrop-filter: blur(6px);
+          background: rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+    .item {
+      position: relative;
+      transition: all 0.3s linear;
+      padding: 10px;
+      isolation: isolate;
+      a {
+        display: block;
+        border-radius: 30px;
+        overflow: hidden;
+      }
+      &:hover {
+        .title {
+          filter: none;
+        }
+        .pic {
+          &::before {
+            backdrop-filter: none;
+            background: rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+    }
+    .pic {
+      position: relative;
+      line-height: 0;
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        display: block;
+        background: rgba(0, 0, 0, 0.65);
+        transition: all 0.3s linear;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .title {
+      transition: all 0.3s linear;
+      color: #fff;
+      text-align: center;
+      font-family: 'Homenaje';
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 2.4px;
+      line-height: 1.2;
+      position: absolute;
+      inset: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9;
+      @include screen('notebook') {
+        font-size: 36px;
+      }
+      @include screen('mobile') {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 40px;
+      }
+    }
+  }
+}

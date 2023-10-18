@@ -1,0 +1,148 @@
+@import '../../sass/variable'; //Variable
+@import '../../sass/mixin'; //Mixin
+
+.mt-search {
+  margin: 0 0 3%;
+  position: relative;
+  z-index: 9;
+  .outBox {
+    max-width: 1200px;
+    border-radius: 10px;
+    background: #efefef;
+    padding: 28px 60px;
+    @include screen('tablet') {
+      padding: 20px 40px;
+    }
+    @include screen('mobile') {
+      padding: 15px 20px 10px;
+    }
+  }
+  .searchForm {
+    display: flex;
+    gap: 20px;
+    @include screen('tablet') {
+      gap: 10px;
+    }
+    @include screen('mobile') {
+      flex-wrap: wrap;
+    }
+    .title {
+      color: rgba(0, 0, 0, 0.76);
+      font-family: 'Inter';
+      font-size: 24px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      @include screen('tablet') {
+        font-size: 20px;
+      }
+      @include screen('mobile') {
+        width: 100%;
+      }
+    }
+    .inputBox {
+      flex-grow: 1;
+      position: relative;
+      .input {
+        height: 100%;
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          right: 20px;
+          width: 6px;
+          height: 6px;
+          top: 50%;
+          border: 2px solid #000;
+          transform: translateY(-50%) rotate(45deg);
+          border-width: 0 3px 3px 0;
+        }
+      }
+      input {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        &:focus {
+          border: 1px solid #c9c9c9;
+          box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+        }
+      }
+      .list {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 100%;
+        background: #efefef;
+        max-height: 200px;
+        overflow-y: auto;
+        padding: 20px;
+        box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+        & > ul {
+          & > li {
+            color: #23437f;
+            font-family: 'Lato';
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            padding: 5px;
+          }
+          ul {
+            padding: 0 0 0 10px;
+            color: rgba(0, 0, 0, 0.8);
+            font-family: 'Lato';
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 1.4px;
+            li {
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+    button {
+      color: #fff;
+      font-family: 'Noto Sans';
+      font-size: 24px;
+      font-weight: 500;
+      display: flex;
+      width: 140px;
+      height: 60px;
+      padding: 16px 30px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      margin: 0 40px 0 0;
+      border-radius: 50px;
+      background: #0b2443;
+      @include screen('tablet') {
+        padding: 6px 20px;
+        height: 40px;
+        font-size: 18px;
+        margin: 0 20px 0 0;
+      }
+      &:hover {
+        background: #166eb1;
+      }
+    }
+    .info {
+      color: #0b2443;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: '';
+        width: 20px;
+        aspect-ratio: 1;
+        display: block;
+        background: url('../images/mt/search_icon.svg') no-repeat center;
+        background-size: contain;
+        margin: 0 10px 0 0;
+      }
+      &:hover {
+        color: #166eb1;
+      }
+    }
+  }
+}

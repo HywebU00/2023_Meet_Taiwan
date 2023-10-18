@@ -1,0 +1,115 @@
+@import '../../sass/variable'; //Variable
+@import '../../sass/mixin'; //Mixin
+
+.certpage-tw .mt-service {
+  margin: 0 auto 4%;
+  .outBox {
+    max-width: 1840px;
+    padding: 0;
+  }
+  .listBox {
+    overflow: hidden;
+    .item {
+      // width: calc((100% - 20px * 2) / 3);
+      position: relative;
+      transition: all 0.3s linear;
+      padding: 10px;
+      a {
+        display: block;
+        border-radius: 30px;
+        overflow: hidden;
+      }
+      &:hover {
+        .serviceMore {
+          background: #0b2443;
+          color: #fff;
+          .i {
+            fill: #fff;
+          }
+          .a {
+            fill: #0b2443;
+          }
+        }
+      }
+    }
+    .pic {
+      position: relative;
+      line-height: 0;
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        display: block;
+        background: rgba(0, 0, 0, 0.35);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .info {
+      position: absolute;
+      inset: 50px 30px 30px;
+      z-index: 9;
+      display: flex;
+      flex-direction: column;
+      @media screen and (max-width: 1440px) {
+        inset: 30px 30px 30px;
+      }
+    }
+    .title {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 1.5px;
+      font-family: 'Noto Sans TC', sans-serif;
+      @include screen('tablet') {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 24px;
+      }
+      span {
+        font-family: 'Homenaje', sans-serif;
+        display: block;
+        font-size: 20px;
+        @media screen and (max-width: 800px) {
+          font-size: 16px;
+        }
+      }
+    }
+    .serviceMore {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(0, 0, 0, 0.88);
+      font-family: 'Noto Sans';
+      font-size: 20px;
+      font-weight: 500;
+      margin: auto 0 0 auto;
+      padding: 10px 26px;
+      gap: 5px;
+      background: #fff;
+      border-radius: 50px;
+      transition: all 0.3s linear;
+      @include screen('tablet') {
+        font-size: 18px;
+        padding: 10px 15px;
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 14px;
+      }
+      &::after {
+        content: '';
+        width: 20px;
+        aspect-ratio: 1;
+        display: block;
+        background: url('../images/mt/service_icon.svg') no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+}

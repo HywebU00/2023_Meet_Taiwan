@@ -27513,6 +27513,12 @@ p.error a {
   left: 0;
 }
 
+.visaBottomBox {
+  padding: 60px 20px;
+  margin: 0 0 -32px;
+  background: linear-gradient(180deg, #1c3c6c 0%, #90e1ea 100%);
+}
+
 .tabSet, .mt-category, .divider,
 .divider-vertical, .pagination, .mt-main-content .cp_content .file_download,
 .mt-main-content .signup_content .file_download, .mt-main-content .cp_content .web_link,
@@ -28307,8 +28313,8 @@ p.error a {
 .certpage-tw .mt-sp .breadth .item:last-child .iconBox::after {
   display: none;
 }
-.certpage-tw .mt-sp .breadth .item:nth-child(2) svg {
-  fill: #28b2b5;
+.certpage-tw .mt-sp .breadth .item:nth-child(2) i {
+  background-image: url("../images/mt/sp_02.svg") !important;
 }
 .certpage-tw .mt-sp .breadth .item:nth-child(2) span {
   color: #28b2b5;
@@ -28316,8 +28322,8 @@ p.error a {
 .certpage-tw .mt-sp .breadth .item:nth-child(2) span::after {
   background: #28b2b5;
 }
-.certpage-tw .mt-sp .breadth .item:nth-child(3) svg {
-  fill: #43bb95;
+.certpage-tw .mt-sp .breadth .item:nth-child(3) i {
+  background-image: url("../images/mt/sp_03.svg") !important;
 }
 .certpage-tw .mt-sp .breadth .item:nth-child(3) span {
   color: #43bb95;
@@ -28393,20 +28399,21 @@ p.error a {
     background: #fff;
   }
 }
-.certpage-tw .mt-sp .breadth .iconBox svg {
-  fill: #24a8c2;
+.certpage-tw .mt-sp .breadth .iconBox i {
   margin: 0 auto;
   display: block;
   aspect-ratio: 16/23;
   width: 96px;
+  background: url("../images/mt/sp_01.svg") center top no-repeat;
+  background-size: contain;
 }
 @media screen and (max-width: 767px) {
-  .certpage-tw .mt-sp .breadth .iconBox svg {
+  .certpage-tw .mt-sp .breadth .iconBox i {
     width: 70px;
   }
 }
 @media screen and (max-width: 575px) {
-  .certpage-tw .mt-sp .breadth .iconBox svg {
+  .certpage-tw .mt-sp .breadth .iconBox i {
     transform: rotate(-90deg) scale(0.7);
   }
 }
@@ -28431,6 +28438,7 @@ p.error a {
     width: 56px;
     font-size: 30px;
     top: 7px;
+    line-height: 56px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -28439,7 +28447,7 @@ p.error a {
     top: 50%;
     transform: translateY(-50%);
     left: 3px;
-    line-height: 1.9;
+    line-height: 42px;
     font-size: 23px;
   }
 }

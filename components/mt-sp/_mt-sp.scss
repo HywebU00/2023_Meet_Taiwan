@@ -119,8 +119,8 @@
         display: none;
       }
       &:nth-child(2) {
-        svg {
-          fill: #28b2b5;
+        i {
+          background-image: url('../images/mt/sp_02.svg') !important;
         }
         span {
           color: #28b2b5;
@@ -130,8 +130,8 @@
         }
       }
       &:nth-child(3) {
-        svg {
-          fill: #43bb95;
+        i {
+          background-image: url('../images/mt/sp_03.svg') !important;
         }
         span {
           color: #43bb95;
@@ -200,12 +200,13 @@
           background: #fff;
         }
       }
-      svg {
-        fill: #24a8c2;
+      i {
         margin: 0 auto;
         display: block;
         aspect-ratio: 16/23;
         width: 96px;
+        background: url('../images/mt/sp_01.svg') center top no-repeat;
+        background-size: contain;
         @include screen('mobile') {
           width: 70px;
         }
@@ -232,13 +233,14 @@
           width: 56px;
           font-size: 30px;
           top: 7px;
+          line-height: 56px;
         }
         @include screen('xs_mobile') {
           width: 42px;
           top: 50%;
           transform: translateY(-50%);
           left: 3px;
-          line-height: 1.9;
+          line-height: 42px;
           font-size: 23px;
         }
         &::before {

@@ -6,16 +6,16 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 821px) {
     background-image: none !important;
   }
-  @include screen('mobile') {
+  @media screen and (max-width: 820px) {
     padding: 0px 0px 200px;
   }
   .outBox {
     display: flex;
     align-items: flex-start;
-    @include screen('mobile') {
+    @media screen and (max-width: 820px) {
       flex-direction: column;
       background: rgba(0, 0, 0, 0.8);
       padding-left: 36px;
@@ -25,7 +25,10 @@
   .col {
     width: 57%;
     padding: 0 90px 0 0;
-    @include screen('mobile') {
+    @include screen('tablet') {
+      padding: 0 60px 0 0;
+    }
+    @media screen and (max-width: 820px) {
       padding: 70px 0 50px;
       width: 100%;
     }
@@ -34,7 +37,7 @@
       top: 100px;
       width: 43%;
       padding: 0;
-      @include screen('mobile') {
+      @media screen and (max-width: 820px) {
         margin: 20px 0 0;
         width: 100%;
         display: none;
@@ -53,23 +56,24 @@
     }
   }
   .title {
-    font-weight: 300;
-    font-size: 28px;
+    font-weight: 500;
+    font-size: 34px;
     color: #02183d;
     margin: 0 0 30px;
     position: relative;
     padding: 0 0 0 15px;
     line-height: 1;
+    font-family: 'Josefin Sans', 'Noto Sans TC', sans-serif;
     @include screen('notebook') {
-      font-size: 26px;
+      font-size: 32px;
     }
-    @include screen('mobile') {
-      font-size: 24px;
+    @media screen and (max-width: 820px) {
+      font-size: 28px;
       margin: 0 0 10px;
       color: #fff;
     }
     @include screen('xs_mobile') {
-      font-size: 22px;
+      font-size: 26px;
     }
     &:first-letter {
       font-weight: 400;
@@ -78,7 +82,7 @@
       @include screen('notebook') {
         font-size: 80px;
       }
-      @include screen('mobile') {
+      @media screen and (max-width: 820px) {
         font-size: 64px;
       }
       @include screen('xs_mobile') {
@@ -99,11 +103,11 @@
     font-size: 18px;
     font-weight: 300;
     line-height: 2;
-    span {
-      font-weight: 100;
-      font-style: italic;
-    }
-    @include screen('mobile') {
+    // span {
+    //   font-weight: 100;
+    //   font-style: italic;
+    // }
+    @media screen and (max-width: 820px) {
       color: #fff;
     }
   }

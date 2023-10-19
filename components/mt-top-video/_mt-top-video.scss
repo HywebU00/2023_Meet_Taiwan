@@ -14,7 +14,7 @@
     isolation: isolate;
     z-index: 3;
     @include screen('xs_mobile') {
-      height: 205px;
+      height: 150px;
     }
     &::before {
       content: '';
@@ -50,6 +50,9 @@
     }
     @include screen('xs_mobile') {
       font-size: 44px;
+    }
+    @media screen and (max-width: 400px) {
+      left: 20px;
     }
   }
   .video {

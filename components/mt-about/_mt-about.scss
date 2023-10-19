@@ -7,17 +7,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 821px) {
     background-image: none !important;
   }
-  @include screen('mobile') {
+  @media screen and (max-width: 820px) {
     padding: 0px 0px 200px;
   }
   .outBox {
     display: flex;
     align-items: flex-start;
 
-    @include screen('mobile') {
+    @media screen and (max-width: 820px) {
       flex-direction: column;
       background: rgba(0, 0, 0, 0.8);
       padding-left: 36px;
@@ -27,7 +27,7 @@
   .col {
     width: 57%;
     padding: 0 90px 0 0;
-    @include screen('mobile') {
+    @media screen and (max-width: 820px) {
       padding: 70px 0 50px;
       width: 100%;
     }
@@ -36,7 +36,7 @@
       top: 100px;
       width: 43%;
       padding: 0;
-      @include screen('mobile') {
+      @media screen and (max-width: 820px) {
         margin: 20px 0 0;
         width: 100%;
         display: none;
@@ -66,7 +66,7 @@
     @include screen('notebook') {
       // font-size: 36px;
     }
-    @include screen('mobile') {
+    @media screen and (max-width: 820px) {
       // font-size: 30px;
       margin: 0 0 20px;
       color: #fff;
@@ -80,7 +80,7 @@
       @include screen('notebook') {
         font-size: 65px;
       }
-      @include screen('mobile') {
+      @media screen and (max-width: 820px) {
         font-size: 59px;
       }
       @include screen('xs_mobile') {
@@ -102,7 +102,7 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 1.6;
-    @include screen('mobile') {
+    @media screen and (max-width: 820px) {
       color: #fff;
     }
   }

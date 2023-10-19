@@ -307,7 +307,7 @@ $(window).on('load', function () {
   //---------------------------------- common setting -----//
   //lazyload
   var lazyLoadInstance = new LazyLoad({
-    elements_selector: 'img.lazy',
+    elements_selector: '.lazy',
     //placeholder: '/images/basic/placeholder.gif',
     effect: 'fadeIn',
     fadeTime: 600,

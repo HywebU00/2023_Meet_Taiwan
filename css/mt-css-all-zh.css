@@ -27460,13 +27460,19 @@ p.error a {
     gap: 20px;
   }
 }
+@media screen and (max-width: 575px) {
+  .btnBox {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .btnBox a {
   width: 100%;
   max-width: 240px;
   padding: 14px;
   border-radius: 10px;
   background: #fff;
-  height: 54px;
+  min-height: 54px;
   box-sizing: border-box;
   box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.25);
   color: rgba(0, 0, 0, 0.76);
@@ -27484,7 +27490,7 @@ p.error a {
     padding: 10px;
     flex: 0 1 180px;
     font-size: 18px;
-    height: 48px;
+    min-height: 48px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -27938,12 +27944,12 @@ p.error a {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 821px) {
   .certpage-tw .mt-about {
     background-image: none !important;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 820px) {
   .certpage-tw .mt-about {
     padding: 0px 0px 200px;
   }
@@ -27952,7 +27958,7 @@ p.error a {
   display: flex;
   align-items: flex-start;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 820px) {
   .certpage-tw .mt-about .outBox {
     flex-direction: column;
     background: rgba(0, 0, 0, 0.8);
@@ -27964,7 +27970,12 @@ p.error a {
   width: 57%;
   padding: 0 90px 0 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
+  .certpage-tw .mt-about .col {
+    padding: 0 60px 0 0;
+  }
+}
+@media screen and (max-width: 820px) {
   .certpage-tw .mt-about .col {
     padding: 70px 0 50px;
     width: 100%;
@@ -27976,7 +27987,7 @@ p.error a {
   width: 43%;
   padding: 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 820px) {
   .certpage-tw .mt-about .col:last-child {
     margin: 20px 0 0;
     width: 100%;
@@ -27995,29 +28006,30 @@ p.error a {
   background: rgba(255, 249, 249, 0.7);
 }
 .certpage-tw .mt-about .title {
-  font-weight: 300;
-  font-size: 28px;
+  font-weight: 500;
+  font-size: 34px;
   color: #02183d;
   margin: 0 0 30px;
   position: relative;
   padding: 0 0 0 15px;
   line-height: 1;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
 }
 @media screen and (max-width: 1399px) {
   .certpage-tw .mt-about .title {
-    font-size: 26px;
+    font-size: 32px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 820px) {
   .certpage-tw .mt-about .title {
-    font-size: 24px;
+    font-size: 28px;
     margin: 0 0 10px;
     color: #fff;
   }
 }
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-about .title {
-    font-size: 22px;
+    font-size: 26px;
   }
 }
 .certpage-tw .mt-about .title:first-letter {
@@ -28030,7 +28042,7 @@ p.error a {
     font-size: 80px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 820px) {
   .certpage-tw .mt-about .title:first-letter {
     font-size: 64px;
   }
@@ -28053,11 +28065,7 @@ p.error a {
   font-weight: 300;
   line-height: 2;
 }
-.certpage-tw .mt-about .description span {
-  font-weight: 100;
-  font-style: italic;
-}
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 820px) {
   .certpage-tw .mt-about .description {
     color: #fff;
   }
@@ -28142,7 +28150,7 @@ p.error a {
 }
 .certpage-tw .mt-sp .title {
   max-width: 1240px;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 90px;
   line-height: 1;
   margin: 0 auto 100px;
@@ -28168,7 +28176,7 @@ p.error a {
 }
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-sp .title {
-    font-size: 30px;
+    font-size: 34px;
     margin: 0 auto 30px;
   }
 }
@@ -28215,7 +28223,7 @@ p.error a {
   font-family: "Josefin Sans", sans-serif;
   color: rgba(255, 255, 255, 0.2);
   font-size: 130px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: -3.9px;
   margin: 0;
@@ -28230,12 +28238,8 @@ p.error a {
 @media screen and (max-width: 767px) {
   .certpage-tw .mt-sp .secTitle {
     font-size: 70px;
-    letter-spacing: -2px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .certpage-tw .mt-sp .secTitle {
     margin: 0 0 -30px;
+    letter-spacing: -2px;
   }
 }
 .certpage-tw .mt-sp .description {
@@ -28249,10 +28253,6 @@ p.error a {
     font-size: 18px;
     margin: 0px;
   }
-}
-.certpage-tw .mt-sp .description span {
-  font-weight: 100;
-  font-style: italic;
 }
 .certpage-tw .mt-sp .titleBox {
   max-width: 820px;
@@ -28986,7 +28986,7 @@ p.error a {
 }
 @media screen and (max-width: 575px) {
   .mt-topVideo .outBox {
-    height: 205px;
+    height: 150px;
   }
 }
 .mt-topVideo .outBox::before {
@@ -29030,6 +29030,11 @@ p.error a {
 @media screen and (max-width: 575px) {
   .mt-topVideo .title {
     font-size: 44px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mt-topVideo .title {
+    left: 20px;
   }
 }
 .mt-topVideo .video {
@@ -29119,7 +29124,7 @@ p.error a {
   gap: 30px;
 }
 .certpage-tw .mt-wp .topBox {
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   display: flex;
   gap: 13px;
 }
@@ -29144,7 +29149,7 @@ p.error a {
 }
 .certpage-tw .mt-wp .topBox .infoBox .title {
   font-size: 44px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 73px;
   letter-spacing: 4.4px;
   text-align: center;
@@ -29157,14 +29162,8 @@ p.error a {
 }
 @media screen and (max-width: 767px) {
   .certpage-tw .mt-wp .topBox .infoBox .title {
-    font-weight: 400;
-    font-size: 32px;
+    font-size: 34px;
     line-height: 1.4;
-  }
-}
-@media screen and (max-width: 575px) {
-  .certpage-tw .mt-wp .topBox .infoBox .title {
-    font-size: 26px;
   }
 }
 .certpage-tw .mt-wp .topBox .infoBox .description {
@@ -29239,7 +29238,7 @@ p.error a {
   font-weight: 400;
   line-height: 1;
   margin: 0 0 20px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
 }
 @media screen and (max-width: 767px) {
   .certpage-tw .mt-wp .wpBox .title {
@@ -29260,10 +29259,6 @@ p.error a {
   flex-grow: 1;
   font-weight: 300;
   margin: 0 0 50px;
-}
-.certpage-tw .mt-wp .wpBox .description span {
-  font-weight: 100;
-  font-style: italic;
 }
 .certpage-tw .mt-wp .btnBox a {
   display: flex;
@@ -29341,7 +29336,7 @@ p.error a {
 }
 .certpage-tw .mt-sirco .title {
   color: rgba(2, 24, 61, 0.7);
-  font-family: "Josefin Sans";
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   font-size: 96px;
   font-weight: 700;
   line-height: 1;
@@ -29411,7 +29406,7 @@ p.error a {
 .certpage-tw .mt-sirco ul li .title {
   color: #000;
   text-align: center;
-  font-family: "Noto Sans TC";
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   font-size: 30px;
   font-weight: 300;
   line-height: 1.2;
@@ -29534,11 +29529,12 @@ p.error a {
 .certpage-tw .mt-earth .title {
   color: #02183d;
   text-align: center;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 86px;
   line-height: 1.4;
   letter-spacing: 8px;
   margin: 0 0 25px;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
 }
 @media screen and (max-width: 1399px) {
   .certpage-tw .mt-earth .title {
@@ -29554,12 +29550,8 @@ p.error a {
 }
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-earth .title {
-    font-size: 30px;
+    font-size: 34px;
   }
-}
-.certpage-tw .mt-earth .title span {
-  font-weight: 100;
-  font-style: italic;
 }
 .certpage-tw .mt-earth .description {
   color: #02183d;
@@ -29583,10 +29575,6 @@ p.error a {
   .certpage-tw .mt-earth .description {
     font-size: 18px;
   }
-}
-.certpage-tw .mt-earth .description span {
-  font-weight: 100;
-  font-style: italic;
 }
 .certpage-tw .mt-earth .infoBox {
   margin: 0 0 6%;
@@ -29776,7 +29764,7 @@ p.error a {
   }
 }
 .certpage-tw .mt-st .title {
-  font-weight: 300;
+  font-weight: 500;
   font-size: 90px;
   line-height: 1.2;
   letter-spacing: -2.7px;
@@ -29797,7 +29785,7 @@ p.error a {
 }
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-st .title {
-    font-size: 30px;
+    font-size: 34px;
   }
 }
 .certpage-tw .mt-st .description {
@@ -29818,10 +29806,6 @@ p.error a {
   .certpage-tw .mt-st .description {
     font-size: 18px;
   }
-}
-.certpage-tw .mt-st .description span {
-  font-weight: 100;
-  font-style: italic;
 }
 .certpage-tw .mt-st ul {
   flex-grow: 1;
@@ -29866,7 +29850,7 @@ p.error a {
 }
 @media screen and (max-width: 767px) {
   .certpage-tw .mt-st ul li {
-    padding: 17px 24px;
+    padding: 17px 15px 17px 20px;
     max-width: none;
     width: 100%;
     display: flex;
@@ -29879,7 +29863,7 @@ p.error a {
   }
 }
 .certpage-tw .mt-st ul li .title {
-  font-family: "lato";
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   font-size: 28px;
   font-weight: 600;
   letter-spacing: 0px;
@@ -29897,6 +29881,7 @@ p.error a {
 }
 @media screen and (max-width: 767px) {
   .certpage-tw .mt-st ul li .title {
+    text-align: left;
     font-size: 20px;
     height: auto;
     margin: 0 0 12px;
@@ -29911,7 +29896,7 @@ p.error a {
   justify-content: center;
   font-weight: 300;
   line-height: 1.2;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   margin: 0 0 50px;
 }
 @media screen and (max-width: 1399px) {
@@ -29925,6 +29910,7 @@ p.error a {
     height: auto;
     margin: 0;
     justify-content: flex-start;
+    text-align: left;
   }
 }
 .certpage-tw .mt-st ul li .count {
@@ -30014,11 +30000,11 @@ p.error a {
 
 .certpage-tw .mt-awards2 {
   padding: 40px 20px;
-  background: url("../images/mt/awards_bg.jpg") center no-repeat;
-  background-attachment: fixed;
   position: relative;
   height: 500px;
   overflow: hidden;
+  background-size: cover;
+  background-position: right center;
 }
 .certpage-tw .mt-awards2::before {
   content: "";
@@ -30057,9 +30043,9 @@ p.error a {
 }
 .certpage-tw .mt-awards2 .infoBox .title {
   color: #fff;
-  font-family: "Josefin Sans";
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   font-size: 60px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
   margin: 0 0 20px;
   text-align: center;
@@ -30076,7 +30062,7 @@ p.error a {
 }
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-awards2 .infoBox .title {
-    font-size: 30px;
+    font-size: 34px;
   }
 }
 .certpage-tw .mt-awards2 .infoBox .description {
@@ -30209,7 +30195,7 @@ p.error a {
   max-width: 700px;
 }
 .certpage-tw .mt-campaign .infoBox .title {
-  font-family: "Josefin Sans";
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   font-size: 60px;
   font-weight: 700;
   flex-grow: 1;
@@ -30229,7 +30215,7 @@ p.error a {
 }
 @media screen and (max-width: 767px) {
   .certpage-tw .mt-campaign .infoBox .title {
-    font-size: 44px;
+    font-size: 34px;
     filter: none;
   }
 }
@@ -30256,7 +30242,6 @@ p.error a {
 }
 .certpage-tw .mt-campaign .video {
   width: 40%;
-  aspect-ratio: 49/31;
   flex-shrink: 0;
   position: relative;
 }
@@ -30264,6 +30249,28 @@ p.error a {
   .certpage-tw .mt-campaign .video {
     width: 100%;
   }
+}
+.certpage-tw .mt-campaign .video .outer {
+  width: 100%;
+  position: relative;
+}
+.certpage-tw .mt-campaign .video a {
+  display: block;
+  position: relative;
+}
+.certpage-tw .mt-campaign .video a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: 50%;
+  left: 50%;
+  width: 55px;
+  height: 39px;
+  z-index: 9;
+  display: block;
+  background: url("../images/mt/play.svg") center no-repeat;
+  background-size: contain;
+  transform: translate(-50%, -50%);
 }
 .certpage-tw .mt-campaign .video iframe {
   position: absolute;
@@ -30407,6 +30414,24 @@ p.error a {
     text-align: center;
     width: 100%;
   }
+}
+.mt-video ul li a {
+  display: block;
+  position: relative;
+}
+.mt-video ul li a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: 50%;
+  left: 50%;
+  width: 55px;
+  height: 39px;
+  z-index: 9;
+  display: block;
+  background: url("../images/mt/play.svg") center no-repeat;
+  background-size: contain;
+  transform: translate(-50%, -50%);
 }
 .mt-video ul li img {
   width: 100%;

@@ -96,7 +96,7 @@
         flex-grow: 1;
       }
       @include screen('mobile') {
-        padding: 17px 24px;
+        padding: 17px 15px 17px 20px;
         max-width: none;
         width: 100%;
         display: flex;
@@ -123,6 +123,7 @@
           font-size: 24px;
         }
         @include screen('mobile') {
+          text-align: left;
           font-size: 20px;
           height: auto;
           margin: 0 0 12px;
@@ -147,6 +148,7 @@
           height: auto;
           margin: 0;
           justify-content: flex-start;
+          text-align: left;
         }
       }
       .count {

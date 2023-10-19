@@ -27,7 +27,7 @@
   }
   .title {
     max-width: 1240px;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 90px;
     line-height: 1;
     margin: 0 auto 100px;
@@ -47,7 +47,7 @@
       font-size: 50px;
     }
     @include screen('xs_mobile') {
-      font-size: 30px;
+      font-size: 34px;
       margin: 0 auto 30px;
     }
     span {
@@ -86,7 +86,7 @@
     font-family: 'Josefin Sans', sans-serif;
     color: rgba(255, 255, 255, 0.2);
     font-size: 130px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1;
     letter-spacing: -3.9px;
     margin: 0;
@@ -97,10 +97,8 @@
     }
     @include screen('mobile') {
       font-size: 70px;
-      letter-spacing: -2px;
-    }
-    @include screen('xs_mobile') {
       margin: 0 0 -30px;
+      letter-spacing: -2px;
     }
   }
   .description {
@@ -112,10 +110,10 @@
       font-size: 18px;
       margin: 0px;
     }
-    span {
-      font-weight: 100;
-      font-style: italic;
-    }
+    // span {
+    //   font-weight: 100;
+    //   font-style: italic;
+    // }
   }
 
   .titleBox {

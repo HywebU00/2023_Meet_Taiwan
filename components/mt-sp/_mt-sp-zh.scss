@@ -249,18 +249,30 @@
           background: #fff;
         }
       }
-      i {
+      .icon {
         margin: 0 auto;
         display: block;
         aspect-ratio: 16/23;
+        position: relative;
         width: 96px;
-        background: url('../images/mt/sp_01.svg') center top no-repeat;
-        background-size: contain;
         @include screen('mobile') {
           width: 70px;
         }
-        @include screen('xs_mobile') {
-          transform: rotate(-90deg) scale(0.7);
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          display: block;
+          background: url('../images/mt/sp_01.svg') center top no-repeat;
+          background-size: contain;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 50%;
+          transform-origin: center;
+          @include screen('xs_mobile') {
+            transform: translate(-50%, -50%) rotate(-90deg) scale(0.7);
+          }
         }
       }
       span {
@@ -452,7 +464,7 @@
           align-items: center;
         }
         &:nth-child(2) {
-          i {
+          .icon {
             background: linear-gradient(135deg, rgba(86, 244, 185, 1) 0%, rgba(12, 170, 169, 1) 100%);
             &::before {
               background: #109198;
@@ -463,7 +475,7 @@
           }
         }
         &:nth-child(3) {
-          i {
+          .icon {
             background: linear-gradient(135deg, rgba(114, 229, 203, 1) 0%, rgba(8, 61, 119, 1) 100%);
             &::before {
               background: #315f6f;
@@ -471,7 +483,7 @@
           }
         }
       }
-      i {
+      .icon {
         font-style: normal;
         width: 96px;
         aspect-ratio: 8/7;

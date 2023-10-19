@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Homenaje&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lato:wght@100;300;400;700;900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .sitemap, .sp_member .file_download,
 .sp_member .score_list, .mt-main-content .cp_content .mt-tag,
 .mt-main-content .signup_content .mt-tag, .mt-main-content .cp_content .web_link,
@@ -28399,22 +28400,34 @@ p.error a {
     background: #fff;
   }
 }
-.certpage-tw .mt-sp .breadth .iconBox i {
+.certpage-tw .mt-sp .breadth .iconBox .icon {
   margin: 0 auto;
   display: block;
   aspect-ratio: 16/23;
+  position: relative;
   width: 96px;
-  background: url("../images/mt/sp_01.svg") center top no-repeat;
-  background-size: contain;
 }
 @media screen and (max-width: 767px) {
-  .certpage-tw .mt-sp .breadth .iconBox i {
+  .certpage-tw .mt-sp .breadth .iconBox .icon {
     width: 70px;
   }
 }
+.certpage-tw .mt-sp .breadth .iconBox .icon::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("../images/mt/sp_01.svg") center top no-repeat;
+  background-size: contain;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+}
 @media screen and (max-width: 575px) {
-  .certpage-tw .mt-sp .breadth .iconBox i {
-    transform: rotate(-90deg) scale(0.7);
+  .certpage-tw .mt-sp .breadth .iconBox .icon::before {
+    transform: translate(-50%, -50%) rotate(-90deg) scale(0.7);
   }
 }
 .certpage-tw .mt-sp .breadth .iconBox span {
@@ -28631,22 +28644,22 @@ p.error a {
     align-items: center;
   }
 }
-.certpage-tw .mt-sp .depth .chartBox .item:nth-child(2) i {
+.certpage-tw .mt-sp .depth .chartBox .item:nth-child(2) .icon {
   background: linear-gradient(135deg, rgb(86, 244, 185) 0%, rgb(12, 170, 169) 100%);
 }
-.certpage-tw .mt-sp .depth .chartBox .item:nth-child(2) i::before {
+.certpage-tw .mt-sp .depth .chartBox .item:nth-child(2) .icon::before {
   background: #109198;
 }
 .certpage-tw .mt-sp .depth .chartBox .item:nth-child(2) a {
   margin: auto 0 18px;
 }
-.certpage-tw .mt-sp .depth .chartBox .item:nth-child(3) i {
+.certpage-tw .mt-sp .depth .chartBox .item:nth-child(3) .icon {
   background: linear-gradient(135deg, rgb(114, 229, 203) 0%, rgb(8, 61, 119) 100%);
 }
-.certpage-tw .mt-sp .depth .chartBox .item:nth-child(3) i::before {
+.certpage-tw .mt-sp .depth .chartBox .item:nth-child(3) .icon::before {
   background: #315f6f;
 }
-.certpage-tw .mt-sp .depth .chartBox i {
+.certpage-tw .mt-sp .depth .chartBox .icon {
   font-style: normal;
   width: 96px;
   aspect-ratio: 8/7;
@@ -28664,7 +28677,7 @@ p.error a {
   z-index: 9;
 }
 @media screen and (max-width: 1399px) {
-  .certpage-tw .mt-sp .depth .chartBox i {
+  .certpage-tw .mt-sp .depth .chartBox .icon {
     width: 60px;
     font-size: 28px;
     border-radius: 0 34px 0 34px;
@@ -28672,7 +28685,7 @@ p.error a {
   }
 }
 @media screen and (max-width: 575px) {
-  .certpage-tw .mt-sp .depth .chartBox i {
+  .certpage-tw .mt-sp .depth .chartBox .icon {
     margin: 0 20px 0 0;
     width: 30px;
     font-size: 20px;
@@ -28680,7 +28693,7 @@ p.error a {
     padding: 0;
   }
 }
-.certpage-tw .mt-sp .depth .chartBox i::before {
+.certpage-tw .mt-sp .depth .chartBox .icon::before {
   content: "";
   position: absolute;
   border-radius: 20px;
@@ -28692,13 +28705,13 @@ p.error a {
   left: 116px;
 }
 @media screen and (max-width: 1399px) {
-  .certpage-tw .mt-sp .depth .chartBox i::before {
+  .certpage-tw .mt-sp .depth .chartBox .icon::before {
     left: 72px;
     width: 36px;
   }
 }
 @media screen and (max-width: 575px) {
-  .certpage-tw .mt-sp .depth .chartBox i::before {
+  .certpage-tw .mt-sp .depth .chartBox .icon::before {
     left: 42px;
     width: 30px;
     bottom: 50%;

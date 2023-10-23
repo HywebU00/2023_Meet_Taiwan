@@ -27881,10 +27881,12 @@ p.error a {
 
 .mt-about {
   padding: 8em 20px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-position: center bottom;
+}
+@media screen and (min-width: 768px) {
+  .mt-about {
+    background-attachment: fixed;
+  }
 }
 @media screen and (min-width: 821px) {
   .mt-about {
@@ -28045,7 +28047,7 @@ p.error a {
 }
 
 .mt-sp {
-  background: url("../images/mt/sp_bg.jpg") center top no-repeat;
+  background: url("../images/m1/sp_bg.jpg") center top no-repeat;
   background-size: cover;
   padding: 10em 20px;
   color: #fff;
@@ -28186,7 +28188,7 @@ p.error a {
   display: none;
 }
 .mt-sp .breadth .item:nth-child(2) .icon::before {
-  background-image: url("../images/mt/sp_02.svg") !important;
+  background-image: url("../images/m1/sp_02.svg") !important;
 }
 .mt-sp .breadth .item:nth-child(2) span {
   color: #28b2b5;
@@ -28195,7 +28197,7 @@ p.error a {
   background: #28b2b5;
 }
 .mt-sp .breadth .item:nth-child(3) .icon::before {
-  background-image: url("../images/mt/sp_03.svg") !important;
+  background-image: url("../images/m1/sp_03.svg") !important;
 }
 .mt-sp .breadth .item:nth-child(3) span {
   color: #43bb95;
@@ -28288,7 +28290,7 @@ p.error a {
   width: 100%;
   height: 100%;
   display: block;
-  background: url("../images/mt/sp_01.svg") center top no-repeat;
+  background: url("../images/m1/sp_01.svg") center top no-repeat;
   background-size: contain;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -28427,7 +28429,7 @@ p.error a {
   content: "";
   display: block;
   position: absolute;
-  background: url("../images/mt/sp_arrow.png") no-repeat;
+  background: url("../images/m1/sp_arrow.png") no-repeat;
   width: 45px;
   height: 45px;
   bottom: 0;
@@ -28692,7 +28694,7 @@ p.error a {
   content: "";
   display: block;
   position: absolute;
-  background: url("../images/mt/sp_link.png") no-repeat;
+  background: url("../images/m1/sp_link.png") no-repeat;
   width: 22px;
   height: 22px;
   top: 50%;
@@ -28993,10 +28995,16 @@ p.error a {
 
 .mt-wp {
   padding: 6.5em 20px;
-  background: url("../images/mt/wp_bg.jpg") center top no-repeat;
-  background-attachment: fixed;
-  background-position: -280px -200px;
+  background: url("../images/m1/wp_bg.jpg") center top no-repeat;
+  background-position: left top;
+  background-size: cover;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .mt-wp {
+    background-attachment: fixed;
+    background-position: -280px -200px;
+  }
 }
 .mt-wp .content {
   width: 100%;
@@ -29375,7 +29383,7 @@ p.error a {
 
 .mt-earth {
   padding: 5.5em 20px 4.5em;
-  background: url("../images/mt/earth_bg.jpg") center top no-repeat;
+  background: url("../images/m1/earth_bg.jpg") center top no-repeat;
   isolation: isolate;
   position: relative;
   overflow: hidden;
@@ -29590,7 +29598,7 @@ p.error a {
 
 .mt-st {
   padding: 6em 20px;
-  background: url("../images/mt/st_bg.jpg") center top no-repeat;
+  background: url("../images/m1/st_bg.jpg") center top no-repeat;
   position: relative;
   overflow: hidden;
 }
@@ -29998,7 +30006,7 @@ p.error a {
 
 .mt-campaign {
   padding: 40px 20px;
-  background: url("../images/mt/campaign_bg.jpg") center bottom no-repeat;
+  background: url("../images/m1/campaign_bg.jpg") center bottom no-repeat;
   position: relative;
   height: 500px;
   overflow: hidden;
@@ -30097,7 +30105,7 @@ p.error a {
   height: 39px;
   z-index: 9;
   display: block;
-  background: url("../images/mt/play.svg") center no-repeat;
+  background: url("../images/m1/play.svg") center no-repeat;
   background-size: contain;
   transform: translate(-50%, -50%);
 }
@@ -30173,11 +30181,16 @@ p.error a {
 
 .mt-video {
   padding: 4em 20px 5.5em;
-  background: url("../images/mt/video_bg.jpg") center no-repeat;
-  background-attachment: fixed;
+  background: url("../images/m1/video_bg.jpg") center no-repeat;
   position: relative;
   color: #fff;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .mt-video {
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 @media screen and (max-width: 1399px) {
   .mt-video {
@@ -30258,7 +30271,7 @@ p.error a {
   height: 39px;
   z-index: 9;
   display: block;
-  background: url("../images/mt/play.svg") center no-repeat;
+  background: url("../images/m1/play.svg") center no-repeat;
   background-size: contain;
   transform: translate(-50%, -50%);
 }
@@ -30688,9 +30701,12 @@ p.error a {
 
 .certpage-tw .mt-about {
   padding: 8em 20px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center bottom;
+}
+@media screen and (min-width: 768px) {
+  .certpage-tw .mt-about {
+    background-attachment: fixed;
+  }
 }
 @media screen and (min-width: 821px) {
   .certpage-tw .mt-about {
@@ -30867,7 +30883,7 @@ p.error a {
 }
 
 .certpage-tw .mt-sp {
-  background: url("../images/mt/sp_bg.jpg") center top no-repeat;
+  background: url("../images/m1/sp_bg.jpg") center top no-repeat;
   background-size: cover;
   padding: 10em 20px;
   color: #fff;
@@ -31063,7 +31079,7 @@ p.error a {
   display: none;
 }
 .certpage-tw .mt-sp .breadth .item:nth-child(2) i {
-  background-image: url("../images/mt/sp_02.svg") !important;
+  background-image: url("../images/m1/sp_02.svg") !important;
 }
 .certpage-tw .mt-sp .breadth .item:nth-child(2) span {
   color: #28b2b5;
@@ -31072,7 +31088,7 @@ p.error a {
   background: #28b2b5;
 }
 .certpage-tw .mt-sp .breadth .item:nth-child(3) i {
-  background-image: url("../images/mt/sp_03.svg") !important;
+  background-image: url("../images/m1/sp_03.svg") !important;
 }
 .certpage-tw .mt-sp .breadth .item:nth-child(3) span {
   color: #43bb95;
@@ -31165,7 +31181,7 @@ p.error a {
   width: 100%;
   height: 100%;
   display: block;
-  background: url("../images/mt/sp_01.svg") center top no-repeat;
+  background: url("../images/m1/sp_01.svg") center top no-repeat;
   background-size: contain;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -31303,7 +31319,7 @@ p.error a {
   content: "";
   display: block;
   position: absolute;
-  background: url("../images/mt/sp_arrow.png") no-repeat;
+  background: url("../images/m1/sp_arrow.png") no-repeat;
   width: 45px;
   height: 45px;
   bottom: 0;
@@ -31567,7 +31583,7 @@ p.error a {
   content: "";
   display: block;
   position: absolute;
-  background: url("../images/mt/sp_link.png") no-repeat;
+  background: url("../images/m1/sp_link.png") no-repeat;
   width: 22px;
   height: 22px;
   top: 50%;
@@ -31720,10 +31736,15 @@ p.error a {
 
 .certpage-tw .mt-wp {
   padding: 6.5em 20px;
-  background: url("../images/mt/wp_bg.jpg") center top no-repeat;
-  background-attachment: fixed;
+  background: url("../images/m1/wp_bg.jpg") center top no-repeat;
   background-position: -280px -200px;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .certpage-tw .mt-wp {
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 .certpage-tw .mt-wp .content {
   width: 100%;
@@ -32102,7 +32123,7 @@ p.error a {
 
 .certpage-tw .mt-earth {
   padding: 5.5em 20px 4.5em;
-  background: url("../images/mt/earth_bg.jpg") center top no-repeat;
+  background: url("../images/m1/earth_bg.jpg") center top no-repeat;
   isolation: isolate;
   position: relative;
   overflow: hidden;
@@ -32333,7 +32354,7 @@ p.error a {
 
 .certpage-tw .mt-st {
   padding: 6em 20px;
-  background: url("../images/mt/st_bg.jpg") center top no-repeat;
+  background: url("../images/m1/st_bg.jpg") center top no-repeat;
   position: relative;
   overflow: hidden;
 }
@@ -32761,7 +32782,7 @@ p.error a {
 
 .certpage-tw .mt-campaign {
   padding: 40px 20px;
-  background: url("../images/mt/campaign_bg.jpg") center bottom no-repeat;
+  background: url("../images/m1/campaign_bg.jpg") center bottom no-repeat;
   position: relative;
   height: 500px;
   overflow: hidden;
@@ -32878,7 +32899,7 @@ p.error a {
   height: 39px;
   z-index: 9;
   display: block;
-  background: url("../images/mt/play.svg") center no-repeat;
+  background: url("../images/m1/play.svg") center no-repeat;
   background-size: contain;
   transform: translate(-50%, -50%);
 }
@@ -33530,7 +33551,7 @@ p.error a {
   width: 20px;
   aspect-ratio: 1;
   display: block;
-  background: url("../images/mt/search_icon.svg") no-repeat center;
+  background: url("../images/m1/search_icon.svg") no-repeat center;
   background-size: contain;
   margin: 0 10px 0 0;
 }
@@ -33701,7 +33722,7 @@ p.error a {
   width: 20px;
   aspect-ratio: 1;
   display: block;
-  background: url("../images/mt/service_icon.svg") no-repeat center;
+  background: url("../images/m1/service_icon.svg") no-repeat center;
   background-size: contain;
 }
 
@@ -34459,7 +34480,7 @@ p.error a {
   width: 20px;
   aspect-ratio: 1;
   display: block;
-  background: url("../images/mt/service_icon.svg") no-repeat center;
+  background: url("../images/m1/service_icon.svg") no-repeat center;
   background-size: contain;
 }
 

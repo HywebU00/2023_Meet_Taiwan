@@ -3,10 +3,13 @@
 
 .certpage-tw .mt-wp {
   padding: 6.5em 20px;
-  background: url('../images/mt/wp_bg.jpg') center top no-repeat;
-  background-attachment: fixed;
+  background: url('../images/m1/wp_bg.jpg') center top no-repeat;
   background-position: -280px -200px;
   overflow: hidden;
+  @media screen and (min-width: 768px) {
+    background-attachment: fixed;
+    background-size: cover;
+  }
 
   .content {
     width: 100%;

@@ -3,11 +3,14 @@
 
 .mt-video {
   padding: 4em 20px 5.5em;
-  background: url('../images/mt/video_bg.jpg') center no-repeat;
-  background-attachment: fixed;
+  background: url('../images/m1/video_bg.jpg') center no-repeat;
   position: relative;
   color: #fff;
   overflow: hidden;
+  @media screen and (min-width: 768px) {
+    background-attachment: fixed;
+    background-size: cover;
+  }
   @include screen('notebook') {
     padding: 3.5em 20px 4em;
   }
@@ -72,7 +75,7 @@
           height: 39px;
           z-index: 9;
           display: block;
-          background: url('../images/mt/play.svg') center no-repeat;
+          background: url('../images/m1/play.svg') center no-repeat;
           background-size: contain;
           transform: translate(-50%, -50%);
         }

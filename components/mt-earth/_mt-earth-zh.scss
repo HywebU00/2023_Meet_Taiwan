@@ -12,6 +12,7 @@
   }
   @media screen and (max-width: 800px) {
     background-position: -408px top;
+    background-size: cover;
   }
   @include screen('mobile') {
     padding: 3.4em 20px;

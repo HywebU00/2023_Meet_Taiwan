@@ -29555,6 +29555,7 @@ p.error a {
 @media screen and (max-width: 800px) {
   .certpage-tw .mt-earth {
     background-position: -408px top;
+    background-size: cover;
   }
 }
 @media screen and (max-width: 767px) {

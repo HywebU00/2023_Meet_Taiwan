@@ -440,8 +440,8 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
       <!-- mt_topVideo -->
       <div class="full">
         <div class="container">
-          <div class="mt-topVideo">
-            <div class="outBox" data-aos="fade-up" data-aos-delay="0">
+          <div class="mt-topVideo" data-aos="fade-up" data-aos-delay="100">
+            <div class="outBox">
               <div class="title">
                 Stay Green ,<br />
                 Go Sustainable!
@@ -702,6 +702,27 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
           </div>
         </div>
       </div>
+      <!-- JS -->
+      <script>
+        window.addEventListener('load', function () {
+          const check = document.querySelector('.mt-wp');
+          const options = {
+            root: null,
+            rootMargin: '0px 0px 0px 0px',
+            threshold: 0,
+          };
+          const callback = (entries, observer) => {
+            if (entries[0].isIntersecting && !check.classList.contains('active')) {
+              check.classList.add('active');
+            } else {
+              check.classList.remove('active');
+            }
+          };
+
+          const observer = new IntersectionObserver(callback, options);
+          observer.observe(check);
+        });
+      </script>
 
       <!-- mt_sirco -->
       <div class="full">

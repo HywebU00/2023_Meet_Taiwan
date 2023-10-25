@@ -9,7 +9,6 @@
   &::before {
     content: '';
     position: fixed;
-    display: block;
     top: 0;
     left: 0;
     right: 0;
@@ -17,9 +16,15 @@
     z-index: -1;
     background: url('../images/m1/wp_bg.jpg') center top no-repeat;
     background-position: -280px -200px;
+    display: none;
     @include screen('xs_mobile') {
       background-position: center top;
       background-size: 350%;
+    }
+  }
+  &.active {
+    &::before {
+      display: block;
     }
   }
 

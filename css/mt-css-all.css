@@ -29043,7 +29043,6 @@ p.error a {
 .mt-wp::before {
   content: "";
   position: fixed;
-  display: block;
   top: 0;
   left: 0;
   right: 0;
@@ -29051,12 +29050,16 @@ p.error a {
   z-index: -1;
   background: url("../images/m1/wp_bg.jpg") center top no-repeat;
   background-position: -280px -200px;
+  display: none;
 }
 @media screen and (max-width: 575px) {
   .mt-wp::before {
     background-position: center top;
     background-size: 350%;
   }
+}
+.mt-wp.active::before {
+  display: block;
 }
 .mt-wp .content {
   width: 100%;
@@ -31825,7 +31828,6 @@ p.error a {
 .certpage-tw .mt-wp::before {
   content: "";
   position: fixed;
-  display: block;
   top: 0;
   left: 0;
   right: 0;
@@ -31833,12 +31835,16 @@ p.error a {
   z-index: -1;
   background: url("../images/m1/wp_bg.jpg") center top no-repeat;
   background-position: -280px -200px;
+  display: none;
 }
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-wp::before {
     background-position: center top;
     background-size: 350%;
   }
+}
+.certpage-tw .mt-wp.active::before {
+  display: block;
 }
 .certpage-tw .mt-wp .content {
   width: 100%;

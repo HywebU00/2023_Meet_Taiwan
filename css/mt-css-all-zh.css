@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Homenaje&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lato:wght@100;300;400;700;900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Homenaje&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lato:wght@100;300;400;700;900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 .sitemap, .sp_member .file_download,
 .sp_member .score_list, .mt-main-content .cp_content .mt-tag,
 .mt-main-content .signup_content .mt-tag, .mt-main-content .cp_content .web_link,
@@ -27712,7 +27712,7 @@ p.error a {
     display: block;
   }
 }
-.certpage-tw .mt-kv-html .kvSlider .item::after {
+.certpage-tw .mt-kv-html .kvSlider .item a::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -27723,6 +27723,7 @@ p.error a {
 }
 .certpage-tw .mt-kv-html .kvSlider .item .pic {
   height: 500px;
+  overflow: hidden;
 }
 .certpage-tw .mt-kv-html .kvSlider .item img {
   width: 100%;
@@ -27806,6 +27807,17 @@ p.error a {
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-kv-html .kvSlider .item .caption p {
     width: 80% !important;
+  }
+}
+.certpage-tw .mt-kv-html .kvSlider .item.slick-active a {
+  animation: fadeUse 0.2s ease-in-out forwards;
+}
+@keyframes fadeUse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .certpage-tw .mt-kv-html .kvSlider .infoBox {
@@ -27941,6 +27953,7 @@ p.error a {
 .certpage-tw .mt-about {
   padding: 8em 20px;
   background-position: center bottom;
+  background: #fff;
 }
 @media screen and (min-width: 768px) {
   .certpage-tw .mt-about {
@@ -28286,11 +28299,6 @@ p.error a {
     margin: 0 0 5px;
   }
 }
-@media screen and (max-width: 575px) {
-  .certpage-tw .mt-sp .titleBox .subTitle {
-    font-size: 20px;
-  }
-}
 .certpage-tw .mt-sp .breadth .listBox {
   display: flex;
   gap: 30px;
@@ -28298,6 +28306,7 @@ p.error a {
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-sp .breadth .listBox {
     flex-direction: column;
+    margin: 0 -16px 0 0;
   }
 }
 .certpage-tw .mt-sp .breadth .item {
@@ -28415,6 +28424,11 @@ p.error a {
     width: 70px;
   }
 }
+@media screen and (max-width: 390px) {
+  .certpage-tw .mt-sp .breadth .iconBox .icon {
+    width: 40px;
+  }
+}
 .certpage-tw .mt-sp .breadth .iconBox .icon::before {
   content: "";
   width: 100%;
@@ -28467,6 +28481,14 @@ p.error a {
     font-size: 23px;
   }
 }
+@media screen and (max-width: 390px) {
+  .certpage-tw .mt-sp .breadth .iconBox span {
+    width: 22px;
+    top: 50%;
+    line-height: 22px;
+    font-size: 13px;
+  }
+}
 .certpage-tw .mt-sp .breadth .iconBox span::before {
   z-index: -1;
   content: "";
@@ -28502,6 +28524,13 @@ p.error a {
     right: -50px;
     left: auto;
     bottom: auto;
+  }
+}
+@media screen and (max-width: 390px) {
+  .certpage-tw .mt-sp .breadth .iconBox span::after {
+    width: 10px;
+    height: 10px;
+    right: -35px;
   }
 }
 .certpage-tw .mt-sp .breadth a {
@@ -28977,6 +29006,7 @@ p.error a {
   isolation: isolate;
   position: relative;
   overflow: hidden;
+  background: #fff;
 }
 .mt-topVideo .outBox {
   width: 100%;
@@ -29113,14 +29143,26 @@ p.error a {
 
 .certpage-tw .mt-wp {
   padding: 6.5em 20px;
+  overflow: hidden;
+  z-index: 0;
+  background: none;
+}
+.certpage-tw .mt-wp::before {
+  content: "";
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
   background: url("../images/m1/wp_bg.jpg") center top no-repeat;
   background-position: -280px -200px;
-  overflow: hidden;
 }
-@media screen and (min-width: 768px) {
-  .certpage-tw .mt-wp {
-    background-attachment: fixed;
-    background-size: cover;
+@media screen and (max-width: 575px) {
+  .certpage-tw .mt-wp::before {
+    background-position: center top;
+    background-size: 350%;
   }
 }
 .certpage-tw .mt-wp .content {
@@ -29559,6 +29601,14 @@ p.error a {
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-earth .title {
     font-size: 34px;
+  }
+}
+.certpage-tw .mt-earth .title br {
+  display: none;
+}
+@media screen and (max-width: 575px) {
+  .certpage-tw .mt-earth .title br {
+    display: block;
   }
 }
 .certpage-tw .mt-earth .description {

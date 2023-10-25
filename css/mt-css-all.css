@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Homenaje&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lato:wght@100;300;400;700;900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Homenaje&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lato:wght@100;300;400;700;900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 .sitemap, .sp_member .file_download,
 .sp_member .score_list, .mt-main-content .cp_content .mt-tag,
 .mt-main-content .signup_content .mt-tag, .mt-main-content .cp_content .web_link,
@@ -27654,8 +27654,9 @@ p.error a {
 .mt-kv-html .kvSlider .item {
   position: relative;
   width: 100%;
+  opacity: 1 !important;
 }
-.mt-kv-html .kvSlider .item::after {
+.mt-kv-html .kvSlider .item a::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -27666,6 +27667,7 @@ p.error a {
 }
 .mt-kv-html .kvSlider .item .pic {
   height: 500px;
+  overflow: hidden;
 }
 .mt-kv-html .kvSlider .item img {
   width: 100%;
@@ -27749,6 +27751,17 @@ p.error a {
 @media screen and (max-width: 575px) {
   .mt-kv-html .kvSlider .item .caption p {
     width: 80% !important;
+  }
+}
+.mt-kv-html .kvSlider .item.slick-active a {
+  animation: fadeUse 0.2s ease-in-out forwards;
+}
+@keyframes fadeUse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .mt-kv-html .kvSlider .infoBox {
@@ -27882,6 +27895,7 @@ p.error a {
 .mt-about {
   padding: 8em 20px;
   background-position: center bottom;
+  background: #fff;
 }
 @media screen and (min-width: 768px) {
   .mt-about {
@@ -27932,6 +27946,12 @@ p.error a {
     width: 100%;
     display: none;
   }
+}
+.mt-about .col:last-child img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .mt-about .col .slick-dots li {
   margin: 0 5px;
@@ -28285,6 +28305,11 @@ p.error a {
     width: 70px;
   }
 }
+@media screen and (max-width: 390px) {
+  .mt-sp .breadth .iconBox .icon {
+    width: 40px;
+  }
+}
 .mt-sp .breadth .iconBox .icon::before {
   content: "";
   width: 100%;
@@ -28337,6 +28362,14 @@ p.error a {
     font-size: 23px;
   }
 }
+@media screen and (max-width: 390px) {
+  .mt-sp .breadth .iconBox span {
+    width: 22px;
+    top: 50%;
+    line-height: 22px;
+    font-size: 13px;
+  }
+}
 .mt-sp .breadth .iconBox span::before {
   z-index: -1;
   content: "";
@@ -28372,6 +28405,13 @@ p.error a {
     right: -50px;
     left: auto;
     bottom: auto;
+  }
+}
+@media screen and (max-width: 390px) {
+  .mt-sp .breadth .iconBox span::after {
+    width: 10px;
+    height: 10px;
+    right: -35px;
   }
 }
 .mt-sp .breadth a {
@@ -28859,6 +28899,7 @@ p.error a {
   isolation: isolate;
   position: relative;
   overflow: hidden;
+  background: #fff;
 }
 .mt-topVideo .outBox {
   width: 100%;
@@ -28995,15 +29036,26 @@ p.error a {
 
 .mt-wp {
   padding: 6.5em 20px;
-  background: url("../images/m1/wp_bg.jpg") center top no-repeat;
-  background-position: left top;
-  background-size: cover;
   overflow: hidden;
+  z-index: 0;
+  background: none;
 }
-@media screen and (min-width: 768px) {
-  .mt-wp {
-    background-attachment: fixed;
-    background-position: -280px -200px;
+.mt-wp::before {
+  content: "";
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url("../images/m1/wp_bg.jpg") center top no-repeat;
+  background-position: -280px -200px;
+}
+@media screen and (max-width: 575px) {
+  .mt-wp::before {
+    background-position: center top;
+    background-size: 350%;
   }
 }
 .mt-wp .content {
@@ -30473,7 +30525,7 @@ p.error a {
     display: block;
   }
 }
-.certpage-tw .mt-kv-html .kvSlider .item::after {
+.certpage-tw .mt-kv-html .kvSlider .item a::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -30484,6 +30536,7 @@ p.error a {
 }
 .certpage-tw .mt-kv-html .kvSlider .item .pic {
   height: 500px;
+  overflow: hidden;
 }
 .certpage-tw .mt-kv-html .kvSlider .item img {
   width: 100%;
@@ -30567,6 +30620,17 @@ p.error a {
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-kv-html .kvSlider .item .caption p {
     width: 80% !important;
+  }
+}
+.certpage-tw .mt-kv-html .kvSlider .item.slick-active a {
+  animation: fadeUse 0.2s ease-in-out forwards;
+}
+@keyframes fadeUse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .certpage-tw .mt-kv-html .kvSlider .infoBox {
@@ -30702,6 +30766,7 @@ p.error a {
 .certpage-tw .mt-about {
   padding: 8em 20px;
   background-position: center bottom;
+  background: #fff;
 }
 @media screen and (min-width: 768px) {
   .certpage-tw .mt-about {
@@ -31047,11 +31112,6 @@ p.error a {
     margin: 0 0 5px;
   }
 }
-@media screen and (max-width: 575px) {
-  .certpage-tw .mt-sp .titleBox .subTitle {
-    font-size: 20px;
-  }
-}
 .certpage-tw .mt-sp .breadth .listBox {
   display: flex;
   gap: 30px;
@@ -31059,6 +31119,7 @@ p.error a {
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-sp .breadth .listBox {
     flex-direction: column;
+    margin: 0 -16px 0 0;
   }
 }
 .certpage-tw .mt-sp .breadth .item {
@@ -31176,6 +31237,11 @@ p.error a {
     width: 70px;
   }
 }
+@media screen and (max-width: 390px) {
+  .certpage-tw .mt-sp .breadth .iconBox .icon {
+    width: 40px;
+  }
+}
 .certpage-tw .mt-sp .breadth .iconBox .icon::before {
   content: "";
   width: 100%;
@@ -31228,6 +31294,14 @@ p.error a {
     font-size: 23px;
   }
 }
+@media screen and (max-width: 390px) {
+  .certpage-tw .mt-sp .breadth .iconBox span {
+    width: 22px;
+    top: 50%;
+    line-height: 22px;
+    font-size: 13px;
+  }
+}
 .certpage-tw .mt-sp .breadth .iconBox span::before {
   z-index: -1;
   content: "";
@@ -31263,6 +31337,13 @@ p.error a {
     right: -50px;
     left: auto;
     bottom: auto;
+  }
+}
+@media screen and (max-width: 390px) {
+  .certpage-tw .mt-sp .breadth .iconBox span::after {
+    width: 10px;
+    height: 10px;
+    right: -35px;
   }
 }
 .certpage-tw .mt-sp .breadth a {
@@ -31736,14 +31817,26 @@ p.error a {
 
 .certpage-tw .mt-wp {
   padding: 6.5em 20px;
+  overflow: hidden;
+  z-index: 0;
+  background: none;
+}
+.certpage-tw .mt-wp::before {
+  content: "";
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
   background: url("../images/m1/wp_bg.jpg") center top no-repeat;
   background-position: -280px -200px;
-  overflow: hidden;
 }
-@media screen and (min-width: 768px) {
-  .certpage-tw .mt-wp {
-    background-attachment: fixed;
-    background-size: cover;
+@media screen and (max-width: 575px) {
+  .certpage-tw .mt-wp::before {
+    background-position: center top;
+    background-size: 350%;
   }
 }
 .certpage-tw .mt-wp .content {
@@ -32182,6 +32275,14 @@ p.error a {
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-earth .title {
     font-size: 34px;
+  }
+}
+.certpage-tw .mt-earth .title br {
+  display: none;
+}
+@media screen and (max-width: 575px) {
+  .certpage-tw .mt-earth .title br {
+    display: block;
   }
 }
 .certpage-tw .mt-earth .description {
@@ -33621,11 +33722,28 @@ p.error a {
 }
 .mt-service .listBox {
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .mt-service .listBox .item {
+  width: calc((100% - 60px) / 4);
   position: relative;
   transition: all 0.3s linear;
-  padding: 10px;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .mt-service .listBox .item {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media screen and (max-width: 400px) {
+  .mt-service .listBox .item {
+    width: 100%;
+  }
+}
+.mt-service .listBox .item.active {
+  display: block;
 }
 .mt-service .listBox .item a {
   display: block;
@@ -33660,9 +33778,14 @@ p.error a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 400px) {
+  .mt-service .listBox .pic img {
+    min-height: 250px;
+  }
+}
 .mt-service .listBox .info {
   position: absolute;
-  inset: 50px 30px 30px;
+  inset: 30px 30px 30px;
   z-index: 9;
   display: flex;
   flex-direction: column;
@@ -33675,25 +33798,37 @@ p.error a {
 .mt-service .listBox .title {
   color: #fff;
   color: #fff;
-  font-family: "Homenaje";
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 1.5px;
+  padding: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-family: "Playfair Display", serif;
+  word-wrap: break-word;
 }
 @media screen and (max-width: 1399px) {
   .mt-service .listBox .title {
     font-size: 44px;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1400px) {
   .mt-service .listBox .title {
-    font-size: 38px;
+    font-size: 30px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 991px) {
   .mt-service .listBox .title {
-    font-size: 40px;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mt-service .listBox .title {
+    font-size: 28px;
   }
 }
 .mt-service .listBox .serviceMore {
@@ -33701,7 +33836,7 @@ p.error a {
   justify-content: center;
   align-items: center;
   color: rgba(0, 0, 0, 0.88);
-  font-family: "Noto Sans";
+  font-family: "Noto Sans TC", sans-serif;
   font-size: 20px;
   font-weight: 500;
   margin: auto 0 0 auto;
@@ -33803,8 +33938,10 @@ p.error a {
   left: 50%;
   transform: translateX(-50%);
 }
-.mt-event .listBox:hover .title {
-  filter: blur(2px);
+.mt-event .listBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .mt-event .listBox:hover .pic::before {
   -webkit-backdrop-filter: blur(6px);
@@ -33812,10 +33949,20 @@ p.error a {
   background: rgba(0, 0, 0, 0.8);
 }
 .mt-event .listBox .item {
+  width: calc((100% - 60px) / 4);
   position: relative;
   transition: all 0.3s linear;
-  padding: 10px;
   isolation: isolate;
+}
+@media screen and (max-width: 767px) {
+  .mt-event .listBox .item {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media screen and (max-width: 400px) {
+  .mt-event .listBox .item {
+    width: 100%;
+  }
 }
 .mt-event .listBox .item a {
   display: block;
@@ -33853,7 +34000,7 @@ p.error a {
   transition: all 0.3s linear;
   color: #fff;
   text-align: center;
-  font-family: "Homenaje";
+  font-family: "Playfair Display", serif;
   font-size: 40px;
   font-weight: 400;
   letter-spacing: 2.4px;
@@ -33875,9 +34022,19 @@ p.error a {
     font-size: 32px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1400px) {
   .mt-event .listBox .title {
-    font-size: 40px;
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .mt-event .listBox .title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mt-event .listBox .title {
+    font-size: 28px;
   }
 }
 
@@ -34370,11 +34527,24 @@ p.error a {
 }
 .certpage-tw .mt-service .listBox {
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .certpage-tw .mt-service .listBox .item {
+  width: calc((100% - 60px) / 4);
   position: relative;
   transition: all 0.3s linear;
-  padding: 10px;
+}
+@media screen and (max-width: 767px) {
+  .certpage-tw .mt-service .listBox .item {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media screen and (max-width: 400px) {
+  .certpage-tw .mt-service .listBox .item {
+    width: 100%;
+  }
 }
 .certpage-tw .mt-service .listBox .item a {
   display: block;
@@ -34421,6 +34591,11 @@ p.error a {
     inset: 30px 30px 30px;
   }
 }
+@media screen and (max-width: 1000px) {
+  .certpage-tw .mt-service .listBox .info {
+    inset: 20px 20px 20px;
+  }
+}
 .certpage-tw .mt-service .listBox .title {
   color: #fff;
   font-size: 40px;
@@ -34429,7 +34604,7 @@ p.error a {
   letter-spacing: 1.5px;
   font-family: "Noto Sans TC", sans-serif;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1400px) {
   .certpage-tw .mt-service .listBox .title {
     font-size: 30px;
   }
@@ -34440,13 +34615,19 @@ p.error a {
   }
 }
 .certpage-tw .mt-service .listBox .title span {
-  font-family: "Homenaje", "Noto Sans TC", sans-serif;
+  font-family: "Playfair Display", serif;
   display: block;
-  font-size: 20px;
+  font-size: 16px;
+}
+@media screen and (max-width: 991px) {
+  .certpage-tw .mt-service .listBox .title span {
+    display: none;
+  }
 }
 @media screen and (max-width: 800px) {
   .certpage-tw .mt-service .listBox .title span {
-    font-size: 16px;
+    font-size: 14px;
+    display: block;
   }
 }
 .certpage-tw .mt-service .listBox .serviceMore {
@@ -34561,6 +34742,11 @@ p.error a {
   left: 50%;
   transform: translateX(-50%);
 }
+.certpage-tw .mt-event .listBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 .certpage-tw .mt-event .listBox:hover .title {
   filter: blur(2px);
 }
@@ -34570,10 +34756,20 @@ p.error a {
   background: rgba(0, 0, 0, 0.8);
 }
 .certpage-tw .mt-event .listBox .item {
+  width: calc((100% - 60px) / 4);
   position: relative;
   transition: all 0.3s linear;
-  padding: 10px;
   isolation: isolate;
+}
+@media screen and (max-width: 767px) {
+  .certpage-tw .mt-event .listBox .item {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media screen and (max-width: 400px) {
+  .certpage-tw .mt-event .listBox .item {
+    width: 100%;
+  }
 }
 .certpage-tw .mt-event .listBox .item a {
   display: block;
@@ -34625,15 +34821,10 @@ p.error a {
 }
 @media screen and (max-width: 1300px) {
   .certpage-tw .mt-event .listBox .title {
-    font-size: 30px;
-  }
-}
-@media screen and (max-width: 991px) {
-  .certpage-tw .mt-event .listBox .title {
     font-size: 28px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 991px) {
   .certpage-tw .mt-event .listBox .title {
     font-size: 24px;
   }

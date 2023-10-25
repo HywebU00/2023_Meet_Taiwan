@@ -137,9 +137,6 @@
         font-size: 26px;
         margin: 0 0 5px;
       }
-      @include screen('xs_mobile') {
-        font-size: 20px;
-      }
     }
   }
 
@@ -149,6 +146,7 @@
       gap: 30px;
       @include screen('xs_mobile') {
         flex-direction: column;
+        margin: 0 -16px 0 0;
       }
     }
     .item {
@@ -256,6 +254,9 @@
         @include screen('mobile') {
           width: 70px;
         }
+        @media screen and (max-width: 390px) {
+          width: 40px;
+        }
         &::before {
           content: '';
           width: 100%;
@@ -302,6 +303,12 @@
           line-height: 42px;
           font-size: 23px;
         }
+        @media screen and (max-width: 390px) {
+          width: 22px;
+          top: 50%;
+          line-height: 22px;
+          font-size: 13px;
+        }
         &::before {
           z-index: -1;
           content: '';
@@ -333,6 +340,11 @@
             right: -50px;
             left: auto;
             bottom: auto;
+          }
+          @media screen and (max-width: 390px) {
+            width: 10px;
+            height: 10px;
+            right: -35px;
           }
         }
       }

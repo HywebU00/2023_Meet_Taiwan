@@ -4,6 +4,7 @@
 .mt-about {
   padding: 8em 20px;
   background-position: center bottom;
+  background: #fff;
   @media screen and (min-width: 768px) {
     background-attachment: fixed;
   }
@@ -40,6 +41,11 @@
         margin: 20px 0 0;
         width: 100%;
         display: none;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
     .slick-dots li {

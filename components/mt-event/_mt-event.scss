@@ -31,10 +31,13 @@
     }
   }
   .listBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     &:hover {
-      .title {
-        filter: blur(2px);
-      }
+      // .title {
+      //   filter: blur(2px);
+      // }
       .pic {
         &::before {
           backdrop-filter: blur(6px);
@@ -43,10 +46,16 @@
       }
     }
     .item {
+      width: calc((100% - 20px * 3) / 4);
       position: relative;
       transition: all 0.3s linear;
-      padding: 10px;
       isolation: isolate;
+      @media screen and (max-width: 767px) {
+        width: calc((100% - 20px) / 2);
+      }
+      @media screen and (max-width: 400px) {
+        width: 100%;
+      }
       a {
         display: block;
         border-radius: 30px;
@@ -86,7 +95,7 @@
       transition: all 0.3s linear;
       color: #fff;
       text-align: center;
-      font-family: 'Homenaje';
+      font-family: 'Playfair Display', serif;
       font-size: 40px;
       font-weight: 400;
       letter-spacing: 2.4px;
@@ -103,8 +112,14 @@
       @include screen('mobile') {
         font-size: 32px;
       }
-      @media screen and (max-width: 600px) {
-        font-size: 40px;
+      @media screen and (max-width: 1400px) {
+        font-size: 30px;
+      }
+      @include screen('tablet') {
+        font-size: 24px;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 28px;
       }
     }
   }

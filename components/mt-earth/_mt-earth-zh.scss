@@ -52,6 +52,12 @@
     @include screen('xs_mobile') {
       font-size: 34px;
     }
+    br {
+      display: none;
+      @include screen('xs_mobile') {
+        display: block;
+      }
+    }
     // span {
     //   font-weight: 300;
     //   font-style: italic;

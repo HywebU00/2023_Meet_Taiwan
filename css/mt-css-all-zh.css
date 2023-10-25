@@ -29284,6 +29284,16 @@ p.error a {
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 850px) and (min-width: 767px) {
+  .certpage-tw .mt-wp .wpBox .btnBox {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .certpage-tw .mt-wp .wpBox .btnBox a {
+    max-width: none;
+    flex: 1 1 auto;
+  }
+}
 .certpage-tw .mt-wp .wpBox .title {
   color: #02183d;
   font-size: 26px;
@@ -29985,16 +29995,16 @@ p.error a {
     padding: 0 0 10px;
   }
 }
-.certpage-tw .mt-st ul li .count::after {
-  content: "Licenses";
+.certpage-tw .mt-st ul li .count > div {
   line-height: 1;
   font-size: 16px;
 }
 @media screen and (max-width: 767px) {
-  .certpage-tw .mt-st ul li .count::after {
+  .certpage-tw .mt-st ul li .count > div {
     position: absolute;
     bottom: 0;
     left: 50%;
+    font-size: 15px;
     transform: translateX(-50%);
   }
 }

@@ -167,14 +167,14 @@
           width: 100px;
           padding: 0 0 10px;
         }
-        &::after {
-          content: 'Licenses';
+        & > div {
           line-height: 1;
           font-size: 16px;
           @include screen('mobile') {
             position: absolute;
             bottom: 0;
             left: 50%;
+            font-size: 15px;
             transform: translateX(-50%);
           }
         }

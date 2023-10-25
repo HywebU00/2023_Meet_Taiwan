@@ -161,171 +161,6 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
         </div>
       </div>
     </header>
-    <!-- JS -->
-    <script>
-      $(function () {
-        // pageY > 100 header addClass
-        $(window).on('scroll', function () {
-          if ($(this).scrollTop() > 100) {
-            $('.mt-header').stop().addClass('sticky');
-          } else {
-            $('.mt-header').stop().removeClass('sticky');
-          }
-        });
-        //sidarbar setting
-        $('.mt-header').find('.mt-menu').clone().appendTo('.mt-sidebar .sidebarContent');
-        $('.mt-header').find('.mt-nav').clone().appendTo('.mt-sidebar .sidebarContent');
-        //menu open sidebar
-        var menuStatus = false;
-        $('.menuBtn')
-          .off()
-          .click(function (e) {
-            $(this).toggleClass('open');
-
-            if (!menuStatus) {
-              $('.mt-sidebar').stop().addClass('menuOpen');
-              $('body').stop().addClass('noscroll');
-              menuStatus = true;
-            } else {
-              $('.mt-sidebar').stop().removeClass('menuOpen');
-              $('body').stop().removeClass('noscroll');
-              menuStatus = false;
-            }
-            e.preventDefault();
-          });
-        // click document close mainMenu
-        function closeMenu() {
-          $('.menuBtn').removeClass('open');
-          $('.mt-sidebar').stop().removeClass('menuOpen');
-          $('body').stop().removeClass('noscroll');
-        }
-        $(document.body).click(function (e) {
-          if (menuStatus) {
-            closeMenu();
-            menuStatus = false;
-          }
-        });
-        $('.mt-sidebar,.menuBtn').click(function (e) {
-          e.stopPropagation();
-        });
-
-        //menu Settings
-        var _menu = $('.mt-menu');
-        _menu.find('li').has('ul').addClass('hasChild');
-        var liHasChild = _menu.find('li.hasChild');
-        function changeDirection() {
-          var screenWidth = $(document).width();
-          $('.mt-menu > ul>li')
-            .find('.hasChild ul')
-            .each(function () {
-              if ($(this)[0].getBoundingClientRect().x < 0) {
-                // $(this).parent().removeClass('changePosition')
-                $(this).css('left', '100%');
-              }
-              if ($(this)[0].getBoundingClientRect().right > screenWidth) {
-                // $(this).parent().addClass('changePosition')
-                $(this).css('left', '-98%');
-              }
-            });
-        }
-
-        (function ($) {
-          function mediaSize() {
-            if (window.matchMedia('(min-width: 992px)').matches) {
-              // PC
-              liHasChild.on({
-                mouseenter: function () {
-                  $(this).children('ul').stop(true, false).fadeIn();
-                  changeDirection();
-                },
-                mouseleave: function () {
-                  $(this).parent().siblings('ul').hide();
-                  $(this).children('ul').stop(true, false).fadeOut();
-                },
-              });
-            } else {
-              // MOBILE
-              liHasChild.click(function () {
-                $(this).children('ul').stop(true, false).slideToggle();
-                $(this).siblings().children('ul').stop(true, false).slideUp();
-              });
-            }
-          }
-
-          mediaSize();
-          window.addEventListener('resize', mediaSize, false);
-        })(jQuery);
-        //search
-        if ($('.searchBtn').length > 0) {
-          var searchStatus = false;
-          $('.searchBtn')
-            .off()
-            .click(function (e) {
-              if (!searchStatus) {
-                $('.mt-search').stop(true, true).addClass('open');
-                searchStatus = true;
-              }
-              e.preventDefault();
-            });
-          $('.mt-search')
-            .find('.close')
-            .off()
-            .click(function (e) {
-              $('.mt-search').stop(true, true).removeClass('open');
-              searchStatus = false;
-              e.preventDefault();
-            });
-        }
-        //language
-        if ($('.langBtn').length > 0) {
-          var lanStatus = false;
-          $('.langBtn')
-            .off()
-            .click(function (e) {
-              if (!lanStatus) {
-                $('.languageBlock').stop(true, true).addClass('open').slideDown('600', 'easeOutQuint');
-                lanStatus = true;
-              } else {
-                $('.languageBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
-                lanStatus = false;
-              }
-              e.preventDefault();
-            });
-          // click document close lang
-          function closeLang() {
-            $('.languageBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
-          }
-          $(document.body).click(function (e) {
-            if (lanStatus) {
-              closeLang();
-              lanStatus = false;
-            }
-          });
-          $('.languageBlock ,.langBtn').click(function (e) {
-            e.stopPropagation();
-          });
-        }
-        //menu logo classname 切換
-        function logoToggleClassName() {
-          if ($('.mt-logo').length != 0) {
-            const w = $(window).width();
-            if (w < 992) {
-              $('.mt-logo').addClass('mt-logo-mobile');
-            } else {
-              $('.mt-logo').removeClass('mt-logo-mobile');
-            }
-          }
-        }
-        $(window).resize(function () {
-          logoToggleClassName();
-          changeDirection();
-        });
-        logoToggleClassName();
-
-        //menu 最後一個子選單展開換方向
-      });
-    </script>
-
     <div class="certpage-tw">
       <!-- mt_kv-html -->
       <div class="full">
@@ -356,33 +191,6 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
           </div>
         </div>
       </div>
-      <!-- JS -->
-      <script>
-        $(function () {
-          $('.mt-kv-html').append('<div class="control"></div>');
-          //slick
-          $('.mt-kv-html .kvSlider').slick({
-            arrows: true, //左右箭頭
-            autoplay: true, //自動播放
-            autoplaySpeed: 15000, //自動播放秒數
-            dots: true, //顯示圓點
-            dotsClass: 'slick-dots', //原點css
-            draggable: true, //滑鼠可以拖曳
-            infinite: true, //無限輪播
-            pauseOnHover: true, //滑鼠移過後暫停自動撥放
-            pauseOnDotsHover: false, //滑鼠移過圓點後暫停自動撥放
-            rtl: false, //改變輪播方向
-            slidesToShow: 1, //一次顯示幾張
-            slidesToScroll: 1, //一次輪播幾張
-            vertical: false, //改成垂直方向
-            lazyLoad: 'ondemand', //lazyLoad
-            fade: true, //淡入
-            appendArrows: '.control',
-            appendDots: '.control',
-          });
-          $('.mt-kv-html .kvSlider').slick('refresh');
-        });
-      </script>
 
       <!-- mt_about -->
       <div class="full">
@@ -412,30 +220,6 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
           </div>
         </div>
       </div>
-      <!-- JS -->
-      <script>
-        $(function () {
-          //slick
-          $('.mt-about .listBox').slick({
-            arrows: false, //左右箭頭
-            autoplay: true, //自動播放
-            autoplaySpeed: 15000, //自動播放秒數
-            dots: true, //顯示圓點
-            dotsClass: 'slick-dots', //原點css
-            draggable: true, //滑鼠可以拖曳
-            infinite: true, //無限輪播
-            pauseOnHover: true, //滑鼠移過後暫停自動撥放
-            pauseOnDotsHover: false, //滑鼠移過圓點後暫停自動撥放
-            rtl: false, //改變輪播方向
-            slidesToShow: 1, //一次顯示幾張
-            slidesToScroll: 1, //一次輪播幾張
-            vertical: false, //改成垂直方向
-            lazyLoad: 'ondemand', //lazyLoad
-            fade: true, //淡入
-          });
-          $('.mt-about .listBox').slick('refresh');
-        });
-      </script>
 
       <!-- mt_topVideo -->
       <div class="full">
@@ -459,30 +243,6 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
           </div>
         </div>
       </div>
-      <!-- JS -->
-      <script>
-        window.addEventListener('load', function () {
-          const check = document.querySelector('.mt-topVideo');
-          const font = document.querySelector('.mt-topVideo .title');
-          const options = {
-            root: null,
-            rootMargin: '0px 0px 0px 0px',
-            threshold: 0.8,
-          };
-          const callback = (entries, observer) => {
-            if (entries[0].isIntersecting && !check.classList.contains('active')) {
-              check.classList.add('active');
-              font.style.cssText = ' opacity: 1;bottom: 10px';
-              // } else {
-              //   check.classList.remove('active');
-              //   font.style.cssText = ' opacity: 0;bottom: -300px';
-            }
-          };
-
-          const observer = new IntersectionObserver(callback, options);
-          observer.observe(check);
-        });
-      </script>
 
       <!-- mt_sp -->
       <div class="full">
@@ -570,35 +330,6 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
           </div>
         </div>
       </div>
-      <!-- JS -->
-      <script>
-        window.addEventListener('load', function () {
-          const count1 = document.querySelector('.mt-sp .count1 span');
-          const count2 = document.querySelector('.mt-sp .count2 span');
-          const check = document.querySelector('.mt-sp .depth .bottomBox');
-          const options = {
-            root: null,
-            rootMargin: '0px 0px 0px 0px',
-            threshold: 0.2,
-          };
-          const callback = (entries, observer) => {
-            if (entries[0].isIntersecting && !check.classList.contains('active')) {
-              check.classList.add('active');
-              setTimeout(() => {
-                animateNumber(count1, 0, 75, 2000);
-                animateNumber(count2, 0, 134, 4000);
-              }, 500);
-              // } else {
-              //   check.classList.remove('active');
-              //   count1.innerHTML = 0;
-              //   count2.innerHTML = 0;
-            }
-          };
-
-          const observer = new IntersectionObserver(callback, options);
-          observer.observe(check);
-        });
-      </script>
 
       <!-- mt_earth -->
       <div class="full">
@@ -702,27 +433,6 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
           </div>
         </div>
       </div>
-      <!-- JS -->
-      <script>
-        window.addEventListener('load', function () {
-          const check = document.querySelector('.mt-wp');
-          const options = {
-            root: null,
-            rootMargin: '0px 0px 0px 0px',
-            threshold: 0,
-          };
-          const callback = (entries, observer) => {
-            if (entries[0].isIntersecting && !check.classList.contains('active')) {
-              check.classList.add('active');
-            } else {
-              check.classList.remove('active');
-            }
-          };
-
-          const observer = new IntersectionObserver(callback, options);
-          observer.observe(check);
-        });
-      </script>
 
       <!-- mt_sirco -->
       <div class="full">
@@ -774,35 +484,50 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
                         <div class="title">活動永續管理系統</div>
                         <div class="certifications">ISO 20121</div>
                       </div>
-                      <div class="count"><span>0</span></div>
+                      <div class="count">
+                        <span>0</span>
+                        <div>Certificates</div>
+                      </div>
                     </li>
                     <li class="count2">
                       <div class="info">
                         <div class="title">碳中和</div>
                         <div class="certifications">PAS 2050 / ISO 14067:2018</div>
                       </div>
-                      <div class="count"><span>0</span></div>
+                      <div class="count">
+                        <span>0</span>
+                        <div>Certificates</div>
+                      </div>
                     </li>
                     <li class="count3">
                       <div class="info">
                         <div class="title">碳足跡</div>
                         <div class="certifications">ISO 14064-1:2018</div>
                       </div>
-                      <div class="count"><span>0</span></div>
+                      <div class="count">
+                        <span>0</span>
+                        <div>Certificates</div>
+                      </div>
                     </li>
                     <li class="count4">
                       <div class="info">
                         <div class="title">碳盤查</div>
                         <div class="certifications">ISO 50001</div>
                       </div>
-                      <div class="count"><span>0</span></div>
+                      <div class="count">
+                        <span>0</span>
+                        <div>Certificates</div>
+                      </div>
                     </li>
                     <li class="count5">
                       <div class="info">
                         <div class="title">能源管理系統</div>
                         <div class="certifications">GRI Standards</div>
                       </div>
-                      <div class="count"><span>0</span></div>
+                      <div class="count">
+                        <span>0</span>
+                        <div>Certificate</div>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -816,44 +541,6 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
           </div>
         </div>
       </div>
-      <!-- JS -->
-      <script>
-        window.addEventListener('load', function () {
-          const count1 = document.querySelector('.mt-st .count1 span');
-          const count2 = document.querySelector('.mt-st .count2 span');
-          const count3 = document.querySelector('.mt-st .count3 span');
-          const count4 = document.querySelector('.mt-st .count4 span');
-          const count5 = document.querySelector('.mt-st .count5 span');
-          const check = document.querySelector('.mt-st ul');
-          const options = {
-            root: null,
-            rootMargin: '0px 0px 0px 0px',
-            threshold: 0.2,
-          };
-          const callback = (entries, observer) => {
-            if (entries[0].isIntersecting && !check.classList.contains('active')) {
-              check.classList.add('active');
-              setTimeout(() => {
-                animateNumber(count1, 0, 19, 2000);
-                animateNumber(count2, 0, 5, 500);
-                animateNumber(count3, 0, 9, 1000);
-                animateNumber(count4, 0, 4, 400);
-                animateNumber(count5, 0, 1, 100);
-              }, 500);
-              // } else {
-              //   check.classList.remove('active');
-              //   count1.innerHTML = 0;
-              //   count2.innerHTML = 0;
-              //   count3.innerHTML = 0;
-              //   count4.innerHTML = 0;
-              //   count5.innerHTML = 0;
-            }
-          };
-
-          const observer = new IntersectionObserver(callback, options);
-          observer.observe(check);
-        });
-      </script>
 
       <!-- mt_awards2 -->
       <div class="full">
@@ -930,7 +617,6 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
       <link rel="stylesheet" href="vendor/lity-2.4.1/dist/lity.min.css" />
       <script src="vendor/lity-2.4.1/dist/lity.min.js"></script>
     </div>
-
     <!-- mt-fatfooter -->
     <div class="mt-fatfooter">
       <div class="container">
@@ -1002,17 +688,6 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
         </ul>
       </div>
     </div>
-    <!-- js -->
-    <script>
-      $(function () {
-        // fatfooter btn
-        $('.toggleBtn').click(function (e) {
-          $(this).parent('.container').find('.fatList>li>ul').stop(true, true).slideToggle();
-          $(this).stop(true, true).toggleClass('close');
-          e.preventDefault();
-        });
-      });
-    </script>
     <!-- mt-footer -->
     <div class="mt-footer">
       <div class="footer">
@@ -1096,32 +771,7 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
     <a href="#" class="mt-scrollToTop">
       <span>Top</span>
     </a>
-    <script>
-      $(function () {
-        //置頂go to top
-        $(window).bind('scroll', function () {
-          if ($(this).scrollTop() > 200) {
-            $('.mt-scrollToTop').fadeIn();
-          } else {
-            $('.mt-scrollToTop').fadeOut();
-          }
-        });
-        //click event to scroll to top
-        $('.mt-scrollToTop').click(function (e) {
-          $('html, body').animate(
-            {
-              scrollTop: 0,
-            },
-            400,
-            'easeOutExpo'
-          );
-          e.preventDefault();
-        });
-        $('.mt-scrollToTop').keydown(function (e) {
-          e.preventDefault();
-        });
-      });
-    </script>
+
     <!-- mt-cookie -->
     <div class="mt-cookie">
       <div class="container">
@@ -1134,6 +784,7 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
     <!-- JS -->
     <!-- 呼叫元件內的function -->
     <script src="js/mt-init.js"></script>
+    <script src="js/mt-portal.js"></script>
     <script>
       $(function () {
         $('.mt-cookie')

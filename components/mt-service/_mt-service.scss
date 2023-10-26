@@ -39,11 +39,8 @@
         .serviceMore {
           background: #0b2443;
           color: #fff;
-          .i {
-            fill: #fff;
-          }
-          .a {
-            fill: #0b2443;
+          &::after {
+            background: url('../images/m1/service_icon_.svg') no-repeat center;
           }
         }
       }
@@ -132,6 +129,7 @@
         display: block;
         background: url('../images/m1/service_icon.svg') no-repeat center;
         background-size: contain;
+        transition: all 0.3s linear;
       }
     }
   }

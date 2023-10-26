@@ -4,6 +4,7 @@
 .mt-st {
   padding: 6em 20px;
   background: url('../images/m1/st_bg.jpg') center top no-repeat;
+  background-size: cover;
   position: relative;
   overflow: hidden;
   @include screen('notebook') {
@@ -174,14 +175,19 @@
           display: block;
           font-weight: 400;
           line-height: 1;
-          margin: 0 0 10px;
+          margin: 0 0 15px;
           font-family: 'Josefin Sans', sans-serif;
           @include screen('notebook') {
             font-size: 50px;
-            margin: 0;
+            margin: 0 0 5px;
           }
         }
       }
+    }
+  }
+  .btnBox a {
+    @include screen('mobile') {
+      flex: none;
     }
   }
 }

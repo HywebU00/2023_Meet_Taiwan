@@ -784,58 +784,5 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
     <!-- 呼叫元件內的function -->
     <script src="js/mt-init.js"></script>
     <script src="js/mt-portal.js"></script>
-    <script>
-      $(function () {
-        $('.mt-cookie')
-          .find('a.more')
-          .off()
-          .click(function (e) {
-            $('.mt-cookie').stop().hide();
-            e.preventDefault();
-          });
-      });
-
-      function animateNumber(element, start, stop, duration, ease) {
-        let startTime = null;
-        const isCountdown = start > stop;
-        function numberWithCommas(number) {
-          return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-        }
-        function animationStep(timestamp) {
-          if (!startTime) {
-            startTime = timestamp;
-          }
-          const elapsedTime = timestamp - startTime;
-          const progress = elapsedTime / duration;
-          let currentValue;
-          if (isCountdown) {
-            currentValue = Math.floor(start - (start - stop) * progress);
-          } else {
-            currentValue = Math.floor(start + (stop - start) * progress);
-          }
-          element.textContent = numberWithCommas(currentValue);
-          if (progress < 1) {
-            requestAnimationFrame(animationStep);
-          } else {
-            element.textContent = numberWithCommas(stop);
-          }
-        }
-        requestAnimationFrame(animationStep);
-      }
-
-      (function () {
-        const preLoad = document.createElement('div');
-        const body = document.querySelector('body');
-        preLoad.className = 'preLoad';
-        body.append(preLoad);
-        body.classList.add('noscroll');
-
-        window.addEventListener('load', () => {
-          body.classList.remove('noscroll');
-          preLoad?.classList.add('loaded');
-          AOS.refresh();
-        });
-      })();
-    </script>
   </body>
 </html>

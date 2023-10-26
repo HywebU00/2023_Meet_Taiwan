@@ -172,4 +172,7 @@
   padding: 60px 20px;
   margin: 0 0 -32px;
   background: linear-gradient(180deg, #1c3c6c 0%, #90e1ea 100%);
+  @include screen('mobile') {
+    padding: 40px 20px;
+  }
 }

@@ -27525,6 +27525,11 @@ p.error a {
   margin: 0 0 -32px;
   background: linear-gradient(180deg, #1c3c6c 0%, #90e1ea 100%);
 }
+@media screen and (max-width: 767px) {
+  .visaBottomBox {
+    padding: 40px 20px;
+  }
+}
 
 .tabSet, .mt-category, .divider,
 .divider-vertical, .pagination, .mt-main-content .cp_content .file_download,
@@ -27833,7 +27838,7 @@ p.error a {
 .certpage-tw .mt-kv-html .kvSlider .infoBox .title {
   text-align: center;
   text-shadow: 5px 5px 55px rgba(0, 0, 0, 0.17);
-  font-family: "Josefin Sans";
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   font-size: 65px;
   font-weight: 400;
   line-height: 1.2;
@@ -27859,7 +27864,7 @@ p.error a {
 }
 .certpage-tw .mt-kv-html .kvSlider .infoBox .description {
   text-align: center;
-  font-family: "Lato";
+  font-family: "Lato", "Noto Sans TC", sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 26px;
@@ -28080,6 +28085,7 @@ p.error a {
   font-size: 18px;
   font-weight: 300;
   line-height: 2;
+  font-family: "Lato", "Noto Sans TC", sans-serif;
 }
 @media screen and (max-width: 820px) {
   .certpage-tw .mt-about .description {
@@ -28236,7 +28242,7 @@ p.error a {
   }
 }
 .certpage-tw .mt-sp .secTitle {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   color: rgba(255, 255, 255, 0.2);
   font-size: 130px;
   font-weight: 500;
@@ -28928,7 +28934,7 @@ p.error a {
   }
 }
 .certpage-tw .mt-sp .depth .countBox .item .count {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   font-size: 80px;
   white-space: nowrap;
   font-weight: 700;
@@ -29796,6 +29802,7 @@ p.error a {
 .certpage-tw .mt-st {
   padding: 6em 20px;
   background: url("../images/m1/st_bg.jpg") center top no-repeat;
+  background-size: cover;
   position: relative;
   overflow: hidden;
 }
@@ -30013,13 +30020,18 @@ p.error a {
   display: block;
   font-weight: 400;
   line-height: 1;
-  margin: 0 0 10px;
-  font-family: "Josefin Sans", sans-serif;
+  margin: 0 0 15px;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
 }
 @media screen and (max-width: 1399px) {
   .certpage-tw .mt-st ul li .count span {
     font-size: 50px;
-    margin: 0;
+    margin: 0 0 5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .certpage-tw .mt-st .btnBox a {
+    flex: none;
   }
 }
 

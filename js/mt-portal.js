@@ -140,6 +140,36 @@ $(function () {
         const observer1 = new IntersectionObserver(callback1, options1);
         observer1.observe(check1);
       }
+
+      if ($('.mt-sp').length > 0) {
+        const count11 = document.querySelector('.mt-sp .count1 span');
+        const count12 = document.querySelector('.mt-sp .count2 span');
+        const check1 = document.querySelector('.mt-sp .depth');
+        const options1 = {
+          root: null,
+          rootMargin: '0px 0px 0px 0px',
+          threshold: 0.2,
+        };
+        const callback1 = (entries, observer) => {
+          if (entries[0].isIntersecting && !check1.classList.contains('active')) {
+            check1.classList.add('active');
+            setTimeout(() => {
+              animateNumber(count11, 0, count11.innerHTML, 2000);
+              animateNumber(count12, 0, count12.innerHTML, 2000);
+            }, 500);
+            // } else {
+            //   check.classList.remove('active');
+            //   count1.innerHTML = 0;
+            //   count2.innerHTML = 0;
+            //   count3.innerHTML = 0;
+            //   count4.innerHTML = 0;
+            //   count5.innerHTML = 0;
+          }
+        };
+
+        const observer1 = new IntersectionObserver(callback1, options1);
+        observer1.observe(check1);
+      }
       if ($('.mt-wp').length > 0) {
         const check3 = document.querySelector('.mt-wp');
         const options3 = {

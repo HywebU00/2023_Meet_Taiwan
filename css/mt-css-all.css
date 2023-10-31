@@ -33681,9 +33681,6 @@ p.error a {
   cursor: pointer;
   transition: all 0.3s linear;
 }
-.mt-search .searchForm .inputBox .list > ul ul li:hover {
-  background: rgba(35, 67, 127, 0.1);
-}
 .mt-search .searchForm button {
   color: #fff;
   font-family: "Lato";
@@ -33727,7 +33724,7 @@ p.error a {
 .mt-search .searchForm .info {
   color: #0b2443;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
   font-size: 14px;
   margin: 0 0 0 20px;
@@ -33744,9 +33741,6 @@ p.error a {
   display: block;
   margin: 0 5px 0 0;
   font-weight: bold;
-}
-.mt-search .searchForm .info:hover {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .tabSet, .mt-category, .divider,

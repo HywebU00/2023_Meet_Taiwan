@@ -462,25 +462,10 @@
                       </ul>
                     </div>
                   </div>
-                  <button type="button">搜尋</button>
-                  <a href="#" class="info">清除</a>
+                  <a href="#" class="info cleanerBtn">清除</a>
                 </div>
               </div>
             </div>
-            <!-- JS -->
-            <script>
-              $('.mt-search input')
-                .off()
-                .on('click', function (e) {
-                  $('.mt-search .list').stop().slideToggle('fast');
-                });
-              $('.mt-search .list li li')
-                .off()
-                .on('click', function (e) {
-                  $('.mt-search input').val($(this).text());
-                  $('.mt-search .list').stop().slideUp('fast');
-                });
-            </script>
 
             <!-- mt_service -->
             <div class="mt-service" data-aos="fade-up" data-aos-delay="0">

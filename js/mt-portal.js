@@ -70,18 +70,31 @@ $(function () {
 
     $('.mt-kv4 .kvSlider').slick('refresh');
 
-    $('.mt-search input')
+    $('.mt-search2 input')
       .off()
       .on('click', function (e) {
-        $('.mt-search .list').stop().slideToggle('fast');
+        e.stopPropagation();
+        $('.mt-search2 .list').stop().slideToggle('fast');
       });
 
-    $('.mt-search .list li li')
+    $('.mt-search2 .list li li')
       .off()
       .on('click', function (e) {
-        $('.mt-search input').val($(this).text());
-        $('.mt-search .list').stop().slideUp('fast');
+        e.stopPropagation();
+        $('.mt-search2 input').val($(this).text());
+        $('.mt-search2 .list').stop().slideUp('fast');
       });
+
+    $('.mt-search2 .cleanerBtn')
+      .off()
+      .on('click', function (e) {
+        e.preventDefault();
+        $('.mt-search2 input').val('');
+      });
+
+    $('body').on('click', function () {
+      $('.mt-search2 .list').stop().slideUp('fast');
+    });
 
     window.addEventListener('load', function () {
       if ($('.mt-topVideo').length > 0) {

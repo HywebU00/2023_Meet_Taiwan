@@ -1,7 +1,7 @@
 @import '../../sass/variable'; //Variable
 @import '../../sass/mixin'; //Mixin
 
-.mt-search {
+.mt-search2 {
   margin: 0 0 3%;
   position: relative;
   z-index: 10;
@@ -78,6 +78,10 @@
           border: 2px solid #000;
           transform: translateY(-50%) rotate(45deg);
           border-width: 0 3px 3px 0;
+
+          @include screen('mobile') {
+            border-color: #fff;
+          }
         }
       }
 
@@ -85,10 +89,13 @@
         margin: 0;
         height: 100%;
         width: 100%;
+        border-width: 0 0 1px;
+        background: none;
 
         &:focus {
-          border: 1px solid #c9c9c9;
-          box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+          border-color: #c9c9c9;
+          box-shadow: none;
+          // box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
         }
       }
 
@@ -220,6 +227,27 @@
       // &:hover {
       //   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
       // }
+    }
+  }
+
+  &.type2 {
+    .outBox {
+      background: none;
+      padding: 0;
+    }
+
+    .searchForm {
+      .title {
+        color: #fff;
+      }
+
+      .inputBox .input::before {
+        border-color: #fff;
+      }
+
+      .info {
+        color: #fff;
+      }
     }
   }
 }

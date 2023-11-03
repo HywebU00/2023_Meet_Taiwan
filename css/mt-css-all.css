@@ -33196,8 +33196,8 @@ p.error a {
   width: 100%;
 }
 .mt-kv4 .kvSlider .item .pic {
-  height: 100vh;
-  height: 100dvh;
+  height: 80vh;
+  height: 80dvh;
 }
 @media screen and (max-width: 991px) {
   .mt-kv4 .kvSlider .item .pic {
@@ -33538,45 +33538,45 @@ p.error a {
   justify-content: space-between;
 }
 
-.mt-search {
+.mt-search2 {
   margin: 0 0 3%;
   position: relative;
   z-index: 10;
 }
-.mt-search .outBox {
+.mt-search2 .outBox {
   max-width: 1200px;
   border-radius: 10px;
   background: #efefef;
   padding: 28px 60px;
 }
 @media screen and (max-width: 991px) {
-  .mt-search .outBox {
+  .mt-search2 .outBox {
     padding: 20px 40px;
   }
 }
 @media screen and (max-width: 767px) {
-  .mt-search .outBox {
+  .mt-search2 .outBox {
     padding: 0;
     margin: 0 0 30px;
     background: none;
   }
 }
-.mt-search .searchForm {
+.mt-search2 .searchForm {
   display: flex;
   gap: 20px;
 }
 @media screen and (max-width: 991px) {
-  .mt-search .searchForm {
+  .mt-search2 .searchForm {
     gap: 10px;
   }
 }
 @media screen and (max-width: 767px) {
-  .mt-search .searchForm {
+  .mt-search2 .searchForm {
     flex-wrap: wrap;
     justify-content: center;
   }
 }
-.mt-search .searchForm .title {
+.mt-search2 .searchForm .title {
   color: rgba(0, 0, 0, 0.76);
   font-family: "Inter";
   font-size: 24px;
@@ -33586,31 +33586,31 @@ p.error a {
   white-space: nowrap;
 }
 @media screen and (max-width: 991px) {
-  .mt-search .searchForm .title {
+  .mt-search2 .searchForm .title {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 767px) {
-  .mt-search .searchForm .title {
+  .mt-search2 .searchForm .title {
     width: 100%;
     color: #fff;
     justify-content: center;
   }
 }
-.mt-search .searchForm .inputBox {
+.mt-search2 .searchForm .inputBox {
   flex-grow: 1;
   position: relative;
 }
 @media screen and (max-width: 767px) {
-  .mt-search .searchForm .inputBox {
+  .mt-search2 .searchForm .inputBox {
     width: 100%;
   }
 }
-.mt-search .searchForm .inputBox .input {
+.mt-search2 .searchForm .inputBox .input {
   height: 100%;
   position: relative;
 }
-.mt-search .searchForm .inputBox .input::before {
+.mt-search2 .searchForm .inputBox .input::before {
   content: "";
   position: absolute;
   right: 20px;
@@ -33621,16 +33621,23 @@ p.error a {
   transform: translateY(-50%) rotate(45deg);
   border-width: 0 3px 3px 0;
 }
-.mt-search .searchForm .inputBox input {
+@media screen and (max-width: 767px) {
+  .mt-search2 .searchForm .inputBox .input::before {
+    border-color: #fff;
+  }
+}
+.mt-search2 .searchForm .inputBox input {
   margin: 0;
   height: 100%;
   width: 100%;
+  border-width: 0 0 1px;
+  background: none;
 }
-.mt-search .searchForm .inputBox input:focus {
-  border: 1px solid #c9c9c9;
-  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+.mt-search2 .searchForm .inputBox input:focus {
+  border-color: #c9c9c9;
+  box-shadow: none;
 }
-.mt-search .searchForm .inputBox .list {
+.mt-search2 .searchForm .inputBox .list {
   display: none;
   position: absolute;
   left: 0;
@@ -33644,44 +33651,44 @@ p.error a {
   scrollbar-color: #041c5a rgba(0, 0, 0, 0.2);
   scrollbar-width: thin;
 }
-.mt-search .searchForm .inputBox .list::-webkit-scrollbar {
+.mt-search2 .searchForm .inputBox .list::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
-.mt-search .searchForm .inputBox .list::-webkit-scrollbar-thumb {
+.mt-search2 .searchForm .inputBox .list::-webkit-scrollbar-thumb {
   border-radius: 100px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   background: #041c5a;
 }
-.mt-search .searchForm .inputBox .list::-webkit-scrollbar-track {
+.mt-search2 .searchForm .inputBox .list::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 0;
   background: rgba(0, 0, 0, 0.1);
 }
-.mt-search .searchForm .inputBox .list > ul > li {
+.mt-search2 .searchForm .inputBox .list > ul > li {
   color: #23437f;
   font-family: "Lato";
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1.4px;
 }
-.mt-search .searchForm .inputBox .list > ul > li span {
+.mt-search2 .searchForm .inputBox .list > ul > li span {
   display: block;
   padding: 5px 20px;
 }
-.mt-search .searchForm .inputBox .list > ul ul {
+.mt-search2 .searchForm .inputBox .list > ul ul {
   color: rgba(0, 0, 0, 0.8);
   font-family: "Lato";
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 1.4px;
 }
-.mt-search .searchForm .inputBox .list > ul ul li {
+.mt-search2 .searchForm .inputBox .list > ul ul li {
   padding: 5px 0 5px 30px;
   cursor: pointer;
   transition: all 0.3s linear;
 }
-.mt-search .searchForm button {
+.mt-search2 .searchForm button {
   color: #fff;
   font-family: "Lato";
   font-size: 24px;
@@ -33699,29 +33706,29 @@ p.error a {
   transition: all 0.3s linear;
 }
 @media screen and (max-width: 991px) {
-  .mt-search .searchForm button {
+  .mt-search2 .searchForm button {
     padding: 6px 20px;
     height: 40px;
     font-size: 18px;
   }
 }
 @media screen and (max-width: 767px) {
-  .mt-search .searchForm button {
+  .mt-search2 .searchForm button {
     background: #2d8bff;
     width: auto;
     flex-grow: 1;
   }
 }
-.mt-search .searchForm button:hover {
+.mt-search2 .searchForm button:hover {
   background: #166eb1;
 }
 @media screen and (max-width: 767px) {
-  .mt-search .searchForm button:hover {
+  .mt-search2 .searchForm button:hover {
     color: #2d8bff;
     background: #fff;
   }
 }
-.mt-search .searchForm .info {
+.mt-search2 .searchForm .info {
   color: #0b2443;
   display: flex;
   align-items: center;
@@ -33730,17 +33737,30 @@ p.error a {
   margin: 0 0 0 20px;
 }
 @media screen and (max-width: 767px) {
-  .mt-search .searchForm .info {
+  .mt-search2 .searchForm .info {
     align-items: center;
     color: #fff;
   }
 }
-.mt-search .searchForm .info::before {
+.mt-search2 .searchForm .info::before {
   content: "X";
   aspect-ratio: 1;
   display: block;
   margin: 0 5px 0 0;
   font-weight: bold;
+}
+.mt-search2.type2 .outBox {
+  background: none;
+  padding: 0;
+}
+.mt-search2.type2 .searchForm .title {
+  color: #fff;
+}
+.mt-search2.type2 .searchForm .inputBox .input::before {
+  border-color: #fff;
+}
+.mt-search2.type2 .searchForm .info {
+  color: #fff;
 }
 
 .tabSet, .mt-category, .divider,
@@ -33812,26 +33832,26 @@ p.error a {
 .mt-service .listBox .item {
   width: calc((100% - 60px) / 4);
   position: relative;
+  opacity: 1;
   transition: all 0.3s linear;
-  display: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .mt-service .listBox .item {
     width: calc((100% - 20px) / 2);
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 576px) {
   .mt-service .listBox .item {
     width: 100%;
   }
 }
-.mt-service .listBox .item.active {
+.mt-service .listBox .item.inactive {
   display: block;
+  opacity: 0.5;
+  pointer-events: none;
 }
 .mt-service .listBox .item a {
   display: block;
-  border-radius: 30px;
-  overflow: hidden;
 }
 .mt-service .listBox .item:hover .serviceMore {
   background: #0b2443;
@@ -33843,6 +33863,14 @@ p.error a {
 .mt-service .listBox .pic {
   position: relative;
   line-height: 0;
+  border-radius: 30px;
+  overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  .mt-service .listBox .pic {
+    position: absolute;
+    inset: 0;
+  }
 }
 .mt-service .listBox .pic::before {
   content: "";
@@ -33858,7 +33886,12 @@ p.error a {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .mt-service .listBox .pic img {
+    min-height: 320px;
+  }
+}
+@media screen and (min-width: 576px) {
   .mt-service .listBox .pic img {
     min-height: 250px;
   }
@@ -33872,7 +33905,14 @@ p.error a {
 }
 @media screen and (max-width: 1440px) {
   .mt-service .listBox .info {
-    inset: 30px 30px 30px;
+    inset: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .mt-service .listBox .info {
+    position: relative;
+    padding: 30px;
+    inset: auto;
   }
 }
 .mt-service .listBox .title {
@@ -33891,19 +33931,14 @@ p.error a {
   font-family: "Playfair Display", serif;
   word-wrap: break-word;
 }
-@media screen and (max-width: 1399px) {
-  .mt-service .listBox .title {
-    font-size: 44px;
-  }
-}
 @media screen and (max-width: 1400px) {
   .mt-service .listBox .title {
     font-size: 30px;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 576px) {
   .mt-service .listBox .title {
-    font-size: 24px;
+    margin: 0 0 20px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -34000,13 +34035,23 @@ p.error a {
   color: #fff;
   text-align: center;
   font-family: "Inter";
-  font-size: 22px;
+  font-size: 40px;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.88px;
   position: relative;
   padding: 0 0 30px;
   margin: 0 0 2%;
+}
+@media screen and (max-width: 1400px) {
+  .mt-event .unitTitle {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mt-event .unitTitle {
+    font-size: 26px;
+  }
 }
 .mt-event .unitTitle::before {
   content: "";
@@ -34035,20 +34080,18 @@ p.error a {
   transition: all 0.3s linear;
   isolation: isolate;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .mt-event .listBox .item {
     width: calc((100% - 20px) / 2);
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 576px) {
   .mt-event .listBox .item {
     width: 100%;
   }
 }
 .mt-event .listBox .item a {
   display: block;
-  border-radius: 30px;
-  overflow: hidden;
 }
 .mt-event .listBox .item:hover .title {
   filter: none;
@@ -34061,6 +34104,14 @@ p.error a {
 .mt-event .listBox .pic {
   position: relative;
   line-height: 0;
+  border-radius: 30px;
+  overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  .mt-event .listBox .pic {
+    position: absolute;
+    inset: 0;
+  }
 }
 .mt-event .listBox .pic::before {
   content: "";
@@ -34093,24 +34144,27 @@ p.error a {
   align-items: center;
   z-index: 9;
 }
-@media screen and (max-width: 1399px) {
-  .mt-event .listBox .title {
-    font-size: 36px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .mt-event .listBox .title {
-    font-size: 32px;
-  }
-}
 @media screen and (max-width: 1400px) {
   .mt-event .listBox .title {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 1200px) {
+  .mt-event .listBox .title {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 991px) {
   .mt-event .listBox .title {
     font-size: 24px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .mt-event .listBox .title {
+    position: relative;
+    padding: 30px;
+    min-height: 100px;
+    inset: auto;
   }
 }
 @media screen and (max-width: 400px) {
@@ -34252,8 +34306,8 @@ p.error a {
   width: 100%;
 }
 .certpage-tw .mt-kv4 .kvSlider .item .pic {
-  height: 100vh;
-  height: 100dvh;
+  height: 80vh;
+  height: 80dvh;
 }
 @media screen and (max-width: 991px) {
   .certpage-tw .mt-kv4 .kvSlider .item .pic {
@@ -34615,17 +34669,23 @@ p.error a {
 .certpage-tw .mt-service .listBox .item {
   width: calc((100% - 60px) / 4);
   position: relative;
+  opacity: 1;
   transition: all 0.3s linear;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .certpage-tw .mt-service .listBox .item {
     width: calc((100% - 20px) / 2);
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 576px) {
   .certpage-tw .mt-service .listBox .item {
     width: 100%;
   }
+}
+.certpage-tw .mt-service .listBox .item.inactive {
+  display: block;
+  opacity: 0.5;
+  pointer-events: none;
 }
 .certpage-tw .mt-service .listBox .item a {
   display: block;
@@ -34643,6 +34703,12 @@ p.error a {
   position: relative;
   line-height: 0;
 }
+@media screen and (max-width: 576px) {
+  .certpage-tw .mt-service .listBox .pic {
+    position: absolute;
+    inset: 0;
+  }
+}
 .certpage-tw .mt-service .listBox .pic::before {
   content: "";
   position: absolute;
@@ -34657,6 +34723,16 @@ p.error a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .certpage-tw .mt-service .listBox .pic img {
+    min-height: 320px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .certpage-tw .mt-service .listBox .pic img {
+    min-height: 250px;
+  }
+}
 .certpage-tw .mt-service .listBox .info {
   position: absolute;
   inset: 50px 30px 30px;
@@ -34666,12 +34742,14 @@ p.error a {
 }
 @media screen and (max-width: 1440px) {
   .certpage-tw .mt-service .listBox .info {
-    inset: 30px 30px 30px;
+    inset: 30px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 576px) {
   .certpage-tw .mt-service .listBox .info {
-    inset: 20px 20px 20px;
+    position: relative;
+    padding: 30px;
+    inset: auto;
   }
 }
 .certpage-tw .mt-service .listBox .title {
@@ -34697,15 +34775,9 @@ p.error a {
   display: block;
   font-size: 16px;
 }
-@media screen and (max-width: 991px) {
-  .certpage-tw .mt-service .listBox .title span {
-    display: none;
-  }
-}
 @media screen and (max-width: 800px) {
   .certpage-tw .mt-service .listBox .title span {
     font-size: 14px;
-    display: block;
   }
 }
 .certpage-tw .mt-service .listBox .serviceMore {
@@ -34801,13 +34873,23 @@ p.error a {
   color: #fff;
   text-align: center;
   font-family: "Inter";
-  font-size: 22px;
+  font-size: 36px;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.88px;
   position: relative;
   padding: 0 0 30px;
   margin: 0 0 2%;
+}
+@media screen and (max-width: 1400px) {
+  .certpage-tw .mt-event .unitTitle {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .certpage-tw .mt-event .unitTitle {
+    font-size: 26px;
+  }
 }
 .certpage-tw .mt-event .unitTitle::before {
   content: "";
@@ -34839,20 +34921,18 @@ p.error a {
   transition: all 0.3s linear;
   isolation: isolate;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .certpage-tw .mt-event .listBox .item {
     width: calc((100% - 20px) / 2);
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 576px) {
   .certpage-tw .mt-event .listBox .item {
     width: 100%;
   }
 }
 .certpage-tw .mt-event .listBox .item a {
   display: block;
-  border-radius: 30px;
-  overflow: hidden;
 }
 .certpage-tw .mt-event .listBox .item:hover .title {
   filter: none;
@@ -34865,6 +34945,14 @@ p.error a {
 .certpage-tw .mt-event .listBox .pic {
   position: relative;
   line-height: 0;
+  border-radius: 30px;
+  overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  .certpage-tw .mt-event .listBox .pic {
+    position: absolute;
+    inset: 0;
+  }
 }
 .certpage-tw .mt-event .listBox .pic::before {
   content: "";
@@ -34900,6 +34988,14 @@ p.error a {
 @media screen and (max-width: 1300px) {
   .certpage-tw .mt-event .listBox .title {
     font-size: 28px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .certpage-tw .mt-event .listBox .title {
+    position: relative;
+    padding: 30px;
+    min-height: 100px;
+    inset: auto;
   }
 }
 @media screen and (max-width: 991px) {

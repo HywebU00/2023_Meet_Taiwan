@@ -237,16 +237,15 @@
     .infoBox {
       color: #fff;
       position: absolute;
-      inset: 0;
+      inset: 50px;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       flex-direction: column;
       z-index: 9;
-      margin-bottom: 5%;
 
       @include screen('mobile') {
-        margin-bottom: 15%;
+        inset: 20px;
       }
 
       .title {
@@ -255,6 +254,7 @@
         font-weight: 300;
         letter-spacing: 5.12px;
         line-height: 1;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 
         @include screen('notebook') {
           font-size: 100px;

@@ -33301,17 +33301,16 @@ p.error a {
 .mt-kv4 .kvSlider .infoBox {
   color: #fff;
   position: absolute;
-  inset: 0;
+  inset: 50px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 9;
-  margin-bottom: 10%;
 }
 @media screen and (max-width: 767px) {
   .mt-kv4 .kvSlider .infoBox {
-    margin-bottom: 15%;
+    inset: 20px;
   }
 }
 .mt-kv4 .kvSlider .infoBox .title {
@@ -33320,6 +33319,7 @@ p.error a {
   font-weight: 400;
   letter-spacing: 5.12px;
   line-height: 1;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 1399px) {
   .mt-kv4 .kvSlider .infoBox .title {
@@ -33687,6 +33687,9 @@ p.error a {
   padding: 5px 0 5px 30px;
   cursor: pointer;
   transition: all 0.3s linear;
+}
+.mt-search2 .searchForm .inputBox .list > ul ul li:hover {
+  background: rgba(35, 67, 127, 0.1);
 }
 .mt-search2 .searchForm button {
   color: #fff;
@@ -34411,17 +34414,16 @@ p.error a {
 .certpage-tw .mt-kv4 .kvSlider .infoBox {
   color: #fff;
   position: absolute;
-  inset: 0;
+  inset: 50px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 9;
-  margin-bottom: 5%;
 }
 @media screen and (max-width: 767px) {
   .certpage-tw .mt-kv4 .kvSlider .infoBox {
-    margin-bottom: 15%;
+    inset: 20px;
   }
 }
 .certpage-tw .mt-kv4 .kvSlider .infoBox .title {
@@ -34430,6 +34432,7 @@ p.error a {
   font-weight: 300;
   letter-spacing: 5.12px;
   line-height: 1;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 1399px) {
   .certpage-tw .mt-kv4 .kvSlider .infoBox .title {

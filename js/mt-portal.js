@@ -1,6 +1,7 @@
 var contextPath = '';
 
 $(function () {
+  console.log($('.certpage-tw').length);
   //2023-永續 page 特別頁
   if ($('.certpage-tw').length > 0 || $('.certpage').length > 0) {
     //slick

@@ -33830,6 +33830,7 @@ p.error a {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 .mt-service .listBox .item {
@@ -34667,6 +34668,7 @@ p.error a {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 .certpage-tw .mt-service .listBox .item {

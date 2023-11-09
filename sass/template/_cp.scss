@@ -1508,6 +1508,7 @@
             align-items: center;
             justify-content: center;
             margin-top: 0em;
+            margin-left: 0.5em;
             color: #888;
           }
 
@@ -1519,6 +1520,7 @@
           }
           em {
             margin-top: 0.5em;
+            margin-right: 0.5em;
           }
           @include screen('tablet') {
             span {
@@ -1592,7 +1594,7 @@
         justify-content: center;
         text-align: center;
         white-space: normal;
-
+        word-break: break-all;
         img {
           border: 1px solid #555;
           padding: 0.5em;
@@ -1779,13 +1781,12 @@
     .pic {
       width: 100%;
       float: none;
-      background: #f1f1f1;
+      background: center center no-repeat url(../images/body_empty_bg.jpg);
       overflow: hidden;
       margin: 0;
       padding: 0;
       max-width: unset;
       position: relative;
-
       img {
         min-width: 100%;
         height: 100%;

@@ -1,0 +1,108 @@
+@import '../../sass/variable'; //Variable
+@import '../../sass/mixin'; //Mixin
+
+.mt-city-banner {
+  position: relative;
+  overflow: hidden;
+  max-height: 80vh;
+  max-height: 80dvh;
+  overflow: hidden;
+  color: #fff;
+
+  .pic {
+    line-height: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .title {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.25);
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    line-height: 1;
+    padding: 3%;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 75px;
+      display: block;
+      margin: 0 0 0 30px;
+      padding: 0 0 0 30px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 15px;
+        width: 1px;
+        background: #fff;
+        opacity: .8;
+      }
+    }
+  }
+
+  .listBox {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+
+    .item {
+      background: #000;
+      position: relative;
+
+      .cityName {
+        position: absolute;
+        inset: 10px 10px 0px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1;
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0);
+        transition: all 0.3s linear;
+      }
+
+      .pic {
+        max-width: 210px;
+        aspect-ratio: 210/170;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: .65;
+          transition: all 0.3s linear;
+        }
+      }
+
+      a {
+        color: #fff;
+      }
+
+      &:hover {
+        img {
+          opacity: .8;
+        }
+
+        .cityName {
+          text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+  }
+}

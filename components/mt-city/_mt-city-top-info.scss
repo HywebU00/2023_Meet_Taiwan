@@ -1,0 +1,118 @@
+@import '../../sass/variable'; //Variable
+@import '../../sass/mixin'; //Mixin
+
+.mt-city-top-info {
+  background: #fff;
+  padding: 60px 0;
+
+  .listBox {
+    display: flex;
+
+    .item {
+      display: flex;
+      font-weight: bold;
+      flex-grow: 1;
+    }
+
+    .info {
+      position: relative;
+    }
+
+    .title {
+      font-size: 23px;
+      color: #646464;
+      margin-bottom: 10px;
+    }
+
+    .con {
+      font-size: 68px;
+      display: flex;
+      align-items: flex-end;
+      line-height: 1;
+      color: #000;
+
+      .d {
+        display: flex;
+        align-items: center;
+
+        span {
+          display: block;
+          transform: translateY(20%);
+        }
+      }
+
+      & > span {
+        font-weight: 100;
+        display: block;
+        position: relative;
+      }
+
+      .unit {
+        font-size: 20px;
+        color: #242424;
+        display: block;
+        margin: 0 10px 13px 5px;
+      }
+
+      i {
+        font-style: normal;
+        font-size: 0.9em;
+      }
+
+      button {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        margin: 0;
+        background: url('../images/mcity/more.svg') no-repeat;
+        background-size: contain;
+        margin: 0 0 13px 10px;
+        color: transparent;
+        filter: grayscale(1) brightness(3.5);
+        transition: all .3s linear;
+
+        &:hover {
+          filter: none;
+
+          & ~ .moreInfo {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .moreInfo {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    color: #fff;
+    position: absolute;
+    top: calc(100% - 10px);
+    right: 0;
+    padding: 10px;
+    z-index: 9;
+    font-weight: normal;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 1px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s linear;
+    font-size: 20px;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      & + li {
+        margin-top: 5px;
+      }
+    }
+
+    .month {
+      font-size: 12px;
+      line-height: 1;
+      color: #bbb;
+      margin: 0 10px 0 0;
+    }
+  }
+}

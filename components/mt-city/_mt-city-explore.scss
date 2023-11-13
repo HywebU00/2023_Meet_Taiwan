@@ -1,0 +1,52 @@
+@import '../../sass/variable'; //Variable
+@import '../../sass/mixin'; //Mixin
+
+.mt-city-explore {
+  color: #fff;
+
+  .topBox {
+    position: relative;
+  }
+
+  .pic {
+    line-height: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .exploreNav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+
+    .title {
+      position: absolute;
+      font-size: 74px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      left: 60px;
+      transform: translateY(-700%);
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        color: #fff;
+        padding: 26px 40px 20px 0;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .description {
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+}

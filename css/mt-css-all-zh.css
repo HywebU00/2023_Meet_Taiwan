@@ -27442,6 +27442,16 @@ p.error a {
   overflow: hidden !important;
 }
 
+.cityOutBox {
+  max-width: 1440px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 55px;
+  padding-right: 55px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 .outBox {
   max-width: 1272px;
   position: relative;

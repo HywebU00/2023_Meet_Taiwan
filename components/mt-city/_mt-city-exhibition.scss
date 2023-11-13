@@ -4,6 +4,7 @@
 .mt-city-exhibition {
   position: relative;
   padding: 60px 0;
+  overflow: hidden;
 
   &::before {
     content: '';
@@ -16,6 +17,16 @@
     background: url('../images/mcity/exhibition_bg.jpg') center bottom no-repeat;
     background-size: cover;
     display: none;
+    opacity: .4;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    display: block;
+    background: #000;
+    z-index: -2;
   }
 
   &.active {
@@ -29,6 +40,8 @@
     display: flex;
     padding: 0;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .4);
+    position: relative;
+    z-index: 1;
 
     .titleBox {
       font-size: 45px;

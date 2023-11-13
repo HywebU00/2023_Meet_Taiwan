@@ -5,10 +5,12 @@
 :root {
   scroll-behavior: smooth;
   scroll-padding-top: 76px;
+
   @include screen('mobile') {
     scroll-padding-top: 60px;
   }
 }
+
 .preLoad {
   position: fixed;
   inset: 0;
@@ -18,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   &::before {
     content: '';
     width: 200px;
@@ -27,10 +30,12 @@
     background-size: contain;
     animation: flipInX 4s ease-in-out infinite;
     transform-origin: center top;
+
     @include screen('notebook') {
       width: 100px;
     }
   }
+
   &::after {
     content: 'Loading...';
     font-size: 12px;
@@ -39,6 +44,7 @@
     margin: 5px 0 0;
     animation: flipInX 4s ease-in-out infinite;
   }
+
   &.loaded {
     opacity: 0;
     pointer-events: none;
@@ -71,13 +77,16 @@
   40% {
     transform: perspective(400px);
   }
+
   50% {
     transform: perspective(400px);
   }
+
   80% {
     transform: perspective(400px);
     opacity: 1;
   }
+
   to {
     opacity: 0;
     transform: perspective(400px);
@@ -86,6 +95,16 @@
 
 .noscroll {
   overflow: hidden !important;
+}
+
+.cityOutBox {
+  max-width: 1440px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 55px;
+  padding-right: 55px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .outBox {
@@ -97,18 +116,22 @@
   box-sizing: border-box;
   margin: 0 auto;
 }
+
 .btnBox {
   width: 100%;
   display: flex;
   gap: 50px;
   justify-content: center;
+
   @media screen and (max-width: 800px) {
     gap: 20px;
   }
+
   @include screen('xs_mobile') {
     flex-direction: column;
     align-items: center;
   }
+
   // @include screen('mobile') {
   //   gap: 30px;
   // }
@@ -134,15 +157,18 @@
     position: relative;
     isolation: isolate;
     overflow: hidden;
+
     @include screen('mobile') {
       padding: 10px;
       flex: 0 1 180px;
       font-size: 18px;
       min-height: 48px;
     }
+
     @include screen('xs_mobile') {
       flex: 0 1 auto;
     }
+
     &::after {
       content: '';
       position: absolute;
@@ -156,9 +182,11 @@
       z-index: -1;
       transition: all 0.3s linear;
     }
+
     &:hover {
       color: #fff;
       background: none;
+
       &::after {
         width: 100%;
         left: 0;
@@ -172,6 +200,7 @@
   padding: 60px 20px;
   margin: 0 0 -32px;
   background: linear-gradient(180deg, #1c3c6c 0%, #90e1ea 100%);
+
   @include screen('mobile') {
     padding: 40px 20px;
   }

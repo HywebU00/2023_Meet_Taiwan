@@ -50,6 +50,10 @@
       bottom: 10px;
     }
 
+    @media screen and (max-width: 400px) {
+      bottom: 0;
+    }
+
     .slick-dots {
       width: auto;
       bottom: auto;
@@ -277,6 +281,10 @@
 
         @include screen('xs_mobile') {
           font-size: 60px;
+        }
+
+        @media screen and (max-width: 400px) {
+          font-size: 40px;
         }
 
         span {

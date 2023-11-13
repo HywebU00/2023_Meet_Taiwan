@@ -46,6 +46,14 @@
     align-items: center;
     justify-content: center;
 
+    @include screen('mobile') {
+      bottom: 10px;
+    }
+
+    @media screen and (max-width: 400px) {
+      bottom: 0;
+    }
+
     .slick-dots {
       width: auto;
       bottom: auto;
@@ -269,6 +277,10 @@
           font-size: 60px;
         }
 
+        @media screen and (max-width: 400px) {
+          font-size: 40px;
+        }
+
         span {
           display: block;
           font-family: 'Noto Sans TC', sans-serif;
@@ -281,6 +293,10 @@
 
           @include screen('mobile') {
             font-size: 30px;
+          }
+
+          @include screen('xs_mobile') {
+            font-size: 20px;
           }
         }
       }

@@ -1,7 +1,6 @@
 var contextPath = '';
 
 $(function () {
-  console.log($('.certpage-tw').length);
   //2023-永續 page 特別頁
   if ($('.certpage-tw').length > 0 || $('.certpage').length > 0) {
     //slick
@@ -72,53 +71,6 @@ $(function () {
       });
 
       $('.mt-kv4 .kvSlider').slick('refresh');
-
-      if ($('.mt-search2').length > 0) {
-        $('.mt-search2 input')
-          .off()
-          .on('click', function (e) {
-            e.stopPropagation();
-            $('.mt-search2 .list').stop().slideToggle('fast');
-          });
-
-        $('.mt-search2 .list li li')
-          .off()
-          .on('click', function (e) {
-            e.stopPropagation();
-            $('.mt-search2 input').val($(this).text());
-            $('.mt-search2 .list').stop().slideUp('fast');
-          });
-
-        $('.mt-search2 .cleanerBtn')
-          .off()
-          .on('click', function (e) {
-            e.preventDefault();
-            $('.mt-search2 input').val('');
-          });
-
-        $('body').on('click', function () {
-          $('.mt-search2 .list').stop().slideUp('fast');
-        });
-      }
-
-      if ($('.mt-city-exhibition').length > 0) {
-        const exhibitionCheck = document.querySelector('.mt-city-exhibition');
-        const exhibitionOptions = {
-          root: null,
-          rootMargin: '0px 0px 0px 0px',
-          threshold: 0,
-        };
-        const exhibitionCallback = (entries, observer) => {
-          if (entries[0].isIntersecting && !exhibitionCheck.classList.contains('active')) {
-            exhibitionCheck.classList.add('active');
-          } else {
-            exhibitionCheck.classList.remove('active');
-          }
-        };
-
-        const observer1 = new IntersectionObserver(exhibitionCallback, exhibitionOptions);
-        observer1.observe(exhibitionCheck);
-      }
 
       if ($('.mt-topVideo').length > 0) {
         const check = document.querySelector('.mt-topVideo');
@@ -224,7 +176,125 @@ $(function () {
         const observer = new IntersectionObserver(callback3, options3);
         observer.observe(check3);
       }
+
+      (function () {
+        if ($('.mt-city-top-info').length > 0) {
+          let today = new Date();
+          // 取得月份（從0開始，所以需要加1）
+          let month = today.getMonth() + 1;
+          let dTarget = document.querySelector('.mt-city-top-info .listBox .item .info .con .d');
+          let mList = document.querySelectorAll('.mt-city-top-info .moreInfo');
+          let mListLi = document.querySelectorAll('.mt-city-top-info .moreInfo li');
+          let btn = document.querySelector('.mt-city-top-info .listBox .item .info .con button');
+          btn.addEventListener('click', function () {
+            mList.classList.toggle('active');
+          });
+          if (month >= 3 && month <= 5) {
+            dTarget.innerHTML = mListLi[0].querySelector('.temperature').innerHTML;
+          } else if (month >= 6 && month <= 8) {
+            dTarget.innerHTML = mListLi[1].querySelector('.temperature').innerHTML;
+          } else if (month >= 9 && month <= 11) {
+            dTarget.innerHTML = mListLi[2].querySelector('.temperature').innerHTML;
+          } else if (month >= 12 && month <= 2) {
+            dTarget.innerHTML = mListLi[3].querySelector('.temperature').innerHTML;
+          }
+        }
+      })();
+
+      //city
+      if ($('.mt-search2').length > 0) {
+        let checkSearch = document.querySelector('.mt-search2 input');
+        let searchListLi = document.querySelectorAll('.mt-search2 li li');
+        let searchList = document.querySelector('.mt-search2 .list ul');
+        let oList = searchList.innerHTML;
+        let searchArr = [];
+        let newList;
+
+        searchListLi.forEach((e) => {
+          searchArr.push(e.innerText);
+          newList = [].concat(...searchArr);
+        });
+
+        checkSearch.addEventListener('input', function (e) {
+          let searchAns = '';
+          $('.mt-search2 .list').stop().slideDown('fast');
+
+          if (this.value !== '') {
+            let newSearchList = [];
+            newList.forEach((value) => (value.includes(this.value) ? newSearchList.push(value) : ''));
+
+            newSearchList.forEach((e) => {
+              searchAns += `<li>${e}</li>`;
+            });
+            searchList.innerHTML = `<li><ul>${searchAns}</ul></li>`;
+          } else {
+            searchList.innerHTML = oList;
+          }
+        });
+
+        $('.mt-search2 input')
+          .off()
+          .on('click', function (e) {
+            e.stopPropagation();
+            $('.mt-search2 .list').stop().slideDown('fast');
+          });
+
+        $('.mt-search2 .list')
+          .off()
+          .on('click', 'li li', function (e) {
+            e.stopPropagation();
+            $('.mt-search2 input').val($(this).text());
+            $('.mt-search2 .list').stop().slideUp('fast');
+            searchList.innerHTML = oList;
+          });
+
+        $('.mt-search2 .cleanerBtn')
+          .off()
+          .on('click', function (e) {
+            e.preventDefault();
+            $('.mt-search2 input').val('');
+          });
+
+        $('body').on('click', function () {
+          $('.mt-search2 .list').stop().slideUp('fast');
+        });
+      }
+
+      if ($('.mt-city-exhibition').length > 0) {
+        const exhibitionCheck = document.querySelector('.mt-city-exhibition');
+        const exhibitionOptions = {
+          root: null,
+          rootMargin: '0px 0px 0px 0px',
+          threshold: 0,
+        };
+        const exhibitionCallback = (entries, observer) => {
+          if (entries[0].isIntersecting && !exhibitionCheck.classList.contains('active')) {
+            exhibitionCheck.classList.add('active');
+          } else {
+            exhibitionCheck.classList.remove('active');
+          }
+        };
+
+        const observer1 = new IntersectionObserver(exhibitionCallback, exhibitionOptions);
+        observer1.observe(exhibitionCheck);
+      }
+      //city
     });
+
+    //city
+    //mt-city-explore 選單
+
+    if ($('.mt-city-explore .exploreNav').length > 0) {
+      $(window).on('load resize', function () {
+        $('.mt-city-explore .exploreNav li')
+          .off()
+          .on('click', function () {
+            let targetTop = $('.mt-city-explore .listBox .item').eq($(this).index()).offset().top - $('.mt-city-nav').height();
+            $(window).scrollTop(targetTop);
+          });
+      });
+    }
+    //city
   } else {
     //kv-slick
     $('.kvSlider').slick({

@@ -165,7 +165,7 @@
     </header>
 
     <div class="certpage">
-      <!-- mt_kv4 -->
+      <!-- mt-city-kv -->
       <div class="full">
         <div class="container">
           <div class="mt-city-banner">
@@ -201,7 +201,7 @@
         </div>
       </div>
 
-      <!-- mt_about_visa -->
+      <!-- mt-city-about -->
       <div class="full">
         <div class="container">
           <div class="mt-about-city">
@@ -227,7 +227,7 @@
             <div class="cityOutBox">
               <div class="listBox">
                 <div class="item" data-aos="fade-left" data-aos-delay="0">
-                  <div class="pic"></div>
+                  <div class="pic"><img src="images/mcity/icon1.png" alt="" /></div>
                   <div class="info">
                     <div class="title">Population</div>
                     <div class="con">
@@ -237,7 +237,7 @@
                   </div>
                 </div>
                 <div class="item" data-aos="fade-left" data-aos-delay="200">
-                  <div class="pic"></div>
+                  <div class="pic"><img src="images/mcity/icon2.png" alt="" /></div>
                   <div class="info">
                     <div class="title">Weather</div>
                     <div class="con">
@@ -271,7 +271,7 @@
                   </div>
                 </div>
                 <div class="item" data-aos="fade-left" data-aos-delay="400">
-                  <div class="pic"></div>
+                  <div class="pic"><img src="images/mcity/icon3.png" alt="" /></div>
                   <div class="info">
                     <div class="title">Excellent Accommodations</div>
                     <div class="con">
@@ -288,28 +288,6 @@
           </div>
         </div>
       </div>
-
-      <script>
-        let today = new Date();
-        // 取得月份（從0開始，所以需要加1）
-        let month = today.getMonth() + 1;
-        let dTarget = document.querySelector('.mt-city-top-info .listBox .item .info .con .d');
-        let mList = document.querySelectorAll('.mt-city-top-info .moreInfo');
-        let mListLi = document.querySelectorAll('.mt-city-top-info .moreInfo li');
-        let btn = document.querySelector('.mt-city-top-info .listBox .item .info .con button');
-        btn.addEventListener('click', function () {
-          mList.classList.toggle('active');
-        });
-        if (month >= 3 && month <= 5) {
-          dTarget.innerHTML = mListLi[0].querySelector('.temperature').innerHTML;
-        } else if (month >= 6 && month <= 8) {
-          dTarget.innerHTML = mListLi[1].querySelector('.temperature').innerHTML;
-        } else if (month >= 9 && month <= 11) {
-          dTarget.innerHTML = mListLi[2].querySelector('.temperature').innerHTML;
-        } else if (month >= 12 && month <= 2) {
-          dTarget.innerHTML = mListLi[3].querySelector('.temperature').innerHTML;
-        }
-      </script>
 
       <!--mt-city-exhibition-->
       <div class="full">
@@ -369,11 +347,11 @@
         <div class="container">
           <div class="mt-city-nav">
             <div class="cityOutBox">
-              <div class="title">Plan Your Events</div>
+              <div class="title" data-aos="fade-right" data-aos-delay="0">Plan Your Events</div>
               <ul>
-                <li><a href="#">Find MICE Service</a></li>
-                <li><a href="#">Find MICE Venue</a></li>
-                <li><a href="#">Find Accommodation</a></li>
+                <li><a href="#" data-aos="fade-left" data-aos-delay="200">Find MICE Service</a></li>
+                <li><a href="#" data-aos="fade-left" data-aos-delay="250">Find MICE Venue</a></li>
+                <li><a href="#" data-aos="fade-left" data-aos-delay="300">Find Accommodation</a></li>
               </ul>
             </div>
           </div>
@@ -383,13 +361,13 @@
               <div class="pic"><img src="images/mcity/explore.jpg" alt="" /></div>
               <div class="exploreNav">
                 <div class="cityOutBox">
-                  <div class="title">Explore Kaohsiung</div>
+                  <div class="title"><span data-aos="fade-up" data-aos-delay="0">Explore Kaohsiung</span></div>
                   <ul>
-                    <li>Arts & Humanities</li>
-                    <li>Touring Hotspot</li>
-                    <li>Technology Trends</li>
-                    <li>Cultural Tour</li>
-                    <li>Fashion & Shopping</li>
+                    <li data-aos="fade-left" data-aos-delay="200">Arts & Humanities</li>
+                    <li data-aos="fade-left" data-aos-delay="250">Touring Hotspot</li>
+                    <li data-aos="fade-left" data-aos-delay="300">Technology Trends</li>
+                    <li data-aos="fade-left" data-aos-delay="350">Cultural Tour</li>
+                    <li data-aos="fade-left" data-aos-delay="400">Fashion & Shopping</li>
                   </ul>
                 </div>
               </div>
@@ -397,10 +375,177 @@
 
             <div class="listBox">
               <div class="item">
-                <div class="title">Arts & Humanities</div>
-                <div class="description">
-                  The Pier-2 Art Zone and warehouse complex, which has been transformed from the old port warehouse, complements the Dagang Bridge on the Kaohsiung Harbor and has become a popular attraction for locals and tourists in Kaohsiung. Weiwuying National Art and Culture Center, Dadong
-                  Culture and Art Center, Kaohsiung City Cultural Center, Kaohsiung City Museum of Art, Neiwei Art Center, Kaohsiung General Library, Kaohsiung Film Museum, combining art, music, drama, performing arts and many library collections, making Kaohsiung is a city of humanities and arts.
+                <div class="cityOutBox">
+                  <div class="title" data-aos="fade-up" data-aos-delay="0">Arts & Humanities</div>
+                  <div class="content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pic picB">
+                      <a href="#">
+                        <img src="images/mcity/01.png" alt="" />
+                        <div class="info">The Pier-2 Art Zone</div>
+                      </a>
+                    </div>
+                    <div class="infoBox">
+                      <div class="description">
+                        The Pier-2 Art Zone and warehouse complex, which has been transformed from the old port warehouse, complements the Dagang Bridge on the Kaohsiung Harbor and has become a popular attraction for locals and tourists in Kaohsiung. Weiwuying National Art and Culture Center, Dadong
+                        Culture and Art Center, Kaohsiung City Cultural Center, Kaohsiung City Museum of Art, Neiwei Art Center, Kaohsiung General Library, Kaohsiung Film Museum, combining art, music, drama, performing arts and many library collections, making Kaohsiung is a city of humanities and
+                        arts.
+                      </div>
+                      <div class="picBox">
+                        <div class="pic">
+                          <a href="#">
+                            <img src="images/mcity/02.png" alt="" />
+                            <div class="info">Weiwuying National Art and Culture Center</div>
+                          </a>
+                        </div>
+                        <div class="pic">
+                          <a href="#">
+                            <img src="images/mcity/03.png" alt="" />
+                            <div class="info">test</div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="cityOutBox">
+                  <div class="title" data-aos="fade-up" data-aos-delay="0">Arts & Humanities</div>
+                  <div class="content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pic picB">
+                      <a href="#">
+                        <img src="images/mcity/04.png" alt="" />
+                        <div class="info">test</div>
+                      </a>
+                    </div>
+                    <div class="infoBox">
+                      <div class="description">
+                        Kaohsiung is surrounded by the mountains and the sea. In the early days, it relied on the port for its livelihood. Since 2020, it has returned the river to the people, providing more water-friendly space. Gushan-Cijin Ferry Station, Xizi Bay, and Qijin Beach, you can see the
+                        beautiful scenery of Kaohsiung waters. Admire various scenic spots in Kaohsiung Harbor on the cultural yacht, and travel through historical memories. In the Hongmaogang Cultural Park, you can see the life style of early fishermen, and you can also watch the magnificent
+                        scenery of big ships leaving the port. Sailing the solar-powered love boat on the Love River, experience the smart driving technology, and enjoy the beauty of Kaohsiung's water capital.
+                      </div>
+                      <div class="picBox">
+                        <div class="pic">
+                          <a href="#">
+                            <img src="images/mcity/05.png" alt="" />
+                            <div class="info">test</div>
+                          </a>
+                        </div>
+                        <div class="pic">
+                          <a href="#">
+                            <img src="images/mcity/06.png" alt="" />
+                            <div class="info">test</div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="cityOutBox">
+                  <div class="title" data-aos="fade-up" data-aos-delay="0">Technology Trends</div>
+                  <div class="content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pic picB">
+                      <a href="#">
+                        <img src="images/mcity/07.png" alt="" />
+                        <div class="info">test</div>
+                      </a>
+                    </div>
+                    <div class="infoBox">
+                      <div class="description">
+                        Kaohsiung Exhibition Center, Kaohsiung Port Tourism Center, Kaohsiung Pop Music Center, Kaohsiung E-Sports Arena, and Kaohsiung Software Park have jointly formed the Asia New Bay Area 5G AloT Innovation Park to experience the latest 5G AloT exhibition trends and empirical
+                        application technologies. Dream Reality Moondream Reality, VR Somatosensory Theater VR FILM LAB, HOLO PARK Guangyu Floating Theater Life Square, even use AR/VR/MR technology, put on a helmet and step into the dream world of virtual and real integration, so that the exhibition
+                        experience and The new allure of incentive travel is even more memorable.
+                      </div>
+                      <div class="picBox">
+                        <div class="pic">
+                          <a href="#">
+                            <img src="images/mcity/08.jpg" alt="" />
+                            <div class="info">test</div>
+                          </a>
+                        </div>
+                        <div class="pic">
+                          <a href="#">
+                            <img src="images/mcity/09.png" alt="" />
+                            <div class="info">test</div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="cityOutBox">
+                  <div class="title" data-aos="fade-up" data-aos-delay="0">Cultural tour</div>
+                  <div class="content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pic picB">
+                      <a href="#">
+                        <img src="images/mcity/10.png" alt="" />
+                        <div class="info">test</div>
+                      </a>
+                    </div>
+                    <div class="infoBox">
+                      <div class="description">
+                        The Golden Horse Hotel Contemporary Art Museum was formerly a relay station for military service in Kinmen and Matsu. It carries the historical memory of military officers from the Cold War period. After its regular relaunch, it is an elegant green building that blends with
+                        nature. It has permanent exhibitions and well-known exhibitions. Then visit the Kaohsiung Lighthouse (formerly known as the Qihou Lighthouse) along the hillside. It is open until9:00 pm, overlooking the city and seascape of Kaohsiung City from day to night, and feeling the
+                        most important guiding light that Kaohsiung City has defended the fishermen in the port for a century.
+                      </div>
+                      <div class="picBox">
+                        <div class="pic">
+                          <a href="#">
+                            <img src="images/mcity/11.png" alt="" />
+                            <div class="info">test</div>
+                          </a>
+                        </div>
+                        <div class="pic">
+                          <a href="#">
+                            <img src="images/mcity/12.png" alt="" />
+                            <div class="info">test</div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="cityOutBox">
+                  <div class="title" data-aos="fade-up" data-aos-delay="0">Fashion and Shopping</div>
+                  <div class="content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pic picB">
+                      <a href="#">
+                        <img src="images/mcity/13.png" alt="" />
+                        <div class="info">test</div>
+                      </a>
+                    </div>
+                    <div class="infoBox">
+                      <div class="description">
+                        SKM Park Outlets, Kaohsiung Cao-Ya, Uni-UStyle Dream Mall, E-Da World Shopping Plaza, E-Enjoy Fashion Plaza, Lecport Plaza, Hanshin Arena Shopping Plaza, Hanshin Department Store, Kaohsiung FE21 Mega, Shin Kong Mitsukoshi Sinda Store/Zuoying Store, Far Eastern Sogo Kaohsiung
+                        Store, and Dayi Department Store, along with numerous commercial districts, markets, and night markets, come together to form a shopping paradise. These options offer a chance to relax after MICE events or indulge in rewarding shopping journeys, adding flexibility and
+                        enjoyment to the event experience.
+                      </div>
+                      <div class="picBox">
+                        <div class="pic">
+                          <a href="#">
+                            <img src="images/mcity/14.jpg" alt="" />
+                            <div class="info">test</div>
+                          </a>
+                        </div>
+                        <div class="pic">
+                          <a href="#">
+                            <img src="images/mcity/15.jpg" alt="" />
+                            <div class="info">test</div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -578,5 +723,23 @@
     <!-- 呼叫元件內的function -->
     <script src="js/mt-init.js"></script>
     <script src="js/mt-portal.js"></script>
+
+    <script>
+      $(function () {
+        $(window).on('load resize', function () {
+          let windowWidth = $(window).width();
+          if (windowWidth <= 767) {
+            // $('.mt-city-explore .content > .pic').appendTo('.mt-city-explore .item .picBox');
+            $('.mt-city-explore .item .content').each(function () {
+              $(this).find('.picB').appendTo($(this).find('.picBox'));
+            });
+          } else {
+            $('.mt-city-explore .item .content .picBox').each(function () {
+              $(this).find('.picB').prependTo($(this).parents('.content'));
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>

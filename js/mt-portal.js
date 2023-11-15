@@ -221,7 +221,7 @@ $(function () {
 
           if (this.value !== '') {
             let newSearchList = [];
-            newList.forEach((value) => (value.includes(this.value) ? newSearchList.push(value) : ''));
+            newList.forEach((value) => (value.toUpperCase().includes(this.value.toUpperCase()) ? newSearchList.push(value) : ''));
 
             newSearchList.forEach((e) => {
               searchAns += `<li>${e}</li>`;

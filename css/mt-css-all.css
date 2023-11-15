@@ -35390,6 +35390,16 @@ p.error a {
   align-items: center;
   margin-bottom: 34px;
 }
+@media screen and (max-width: 767px) {
+  .mt-about-city .title {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mt-about-city .title {
+    font-size: 26px;
+  }
+}
 .mt-about-city .title::before, .mt-about-city .title::after {
   content: "";
   height: 1px;
@@ -35510,6 +35520,7 @@ p.error a {
   position: relative;
   isolation: isolate;
   background: #9c9c9c;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 1280px) {
   .mt-city-exhibition .contentBox .titleBox {
@@ -35525,6 +35536,12 @@ p.error a {
   .mt-city-exhibition .contentBox .titleBox {
     width: 100%;
     background: #000;
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mt-city-exhibition .contentBox .titleBox {
+    font-size: 26px;
   }
 }
 .mt-city-exhibition .contentBox .titleBox::before {
@@ -36219,12 +36236,12 @@ p.error a {
 }
 @media screen and (max-width: 767px) {
   .mt-city-explore .listBox .item .title {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 500px) {
   .mt-city-explore .listBox .item .title {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 .mt-city-explore .listBox .item .content {

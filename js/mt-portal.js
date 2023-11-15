@@ -278,6 +278,21 @@ $(function () {
         const observer1 = new IntersectionObserver(exhibitionCallback, exhibitionOptions);
         observer1.observe(exhibitionCheck);
       }
+
+      if ($('.mt-city-explore').length > 0) {
+        $(window).on('load resize', function () {
+          let windowWidth = $(window).width();
+          if (windowWidth <= 767) {
+            $('.mt-city-explore .item .content').each(function () {
+              $(this).find('.picB').appendTo($(this).find('.picBox'));
+            });
+          } else {
+            $('.mt-city-explore .item .content .picBox').each(function () {
+              $(this).find('.picB').prependTo($(this).parents('.content'));
+            });
+          }
+        });
+      }
       //city
     });
 

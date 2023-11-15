@@ -181,19 +181,19 @@
               <div class="item">
                 <a href="#">
                   <div class="pic"><img src="images/mcity/city.jpg" alt="" /></div>
-                  <div class="cityName">TAIPEI</div>
+                  <div class="cityName">TAOYUAN</div>
                 </a>
               </div>
               <div class="item">
                 <a href="#">
                   <div class="pic"><img src="images/mcity/city.jpg" alt="" /></div>
-                  <div class="cityName">TAIPEI</div>
+                  <div class="cityName">TAICHUNG</div>
                 </a>
               </div>
               <div class="item">
                 <a href="#">
                   <div class="pic"><img src="images/mcity/city.jpg" alt="" /></div>
-                  <div class="cityName">TAIPEI</div>
+                  <div class="cityName">TAINAN</div>
                 </a>
               </div>
             </div>
@@ -208,12 +208,10 @@
             <div class="cityOutBox" data-aos="fade-up" data-aos-delay="0">
               <div class="title">INTRODUCTION</div>
               <div class="description">
-                Located in southwestern Taiwan, Kaohsiung is not only a major political and economic city, it is also a hub of air and marine transport for the Asia-Pacific region. It is a city that has two ports—an international airport and a seaport. All types of cargo from major cities around the
-                world are transferred through this city in a fairly short amount of time, so Kaohsiung is also referred to as the "Port City".<br />
-                Kaohsiung was once focused on industrial development, however in recent years it is gradually becoming a green city that emphasizes ecology, technology, culture, and nature. Kaohsiung has already transformed into a city that combines culture, history, and art. Travel around by
-                bicycle along the Love River. Relive history in the British Consulate at Takow. Immerse yourself in art at the Pier-2 Art Center. Experience Hakka culture in Meinong Village. Take a stroll through the night markets and feast on delicious local foods.<br />
-                The weather in Kaohsiung is mild and sunny all year round. The locals are down-to-earth and friendly. Its rich history and culture and its beautiful scenery have truly made Kaohsiung an ideal city for tourists. Many areas are worth exploring. Visit these places and leave with
-                unforgettable memories.
+                Long renowned as a hub of logistics and manufacturing industries, the Port of Kaohsiung has evolved and is now characterized by streams of visitors and intelligent services. The “Asia’s New Bay Area” project marks Kaohsiung’s initiative in developing towards industrial
+                transformation, and the MICE industry, a newly-emerging industry in recent years, is one of the focal points. The well-established hardware and software related to MICE, along with Kaohsiung’s iconic image as a maritime city, have come to serve as a phenomenal force to attract more
+                business opportunities for the City’s tourism and MICE industries. It is anticipated that the joint efforts by the government and all sectors of society will put Kaohsiung’s industrial, harbor and cost advantages into full play, thereby enabling it to join the lineup of the world’s
+                major host cities for MICE events.
               </div>
             </div>
           </div>
@@ -310,7 +308,7 @@
                       <div class="info">
                         <div class="title">Venue Capacity</div>
                         <div class="con">
-                          <div class="txt">2</div>
+                          <div class="txt">1</div>
                           <div class="unit">venues</div>
                         </div>
                         <div class="con">
@@ -364,7 +362,7 @@
                   <div class="title"><span data-aos="fade-up" data-aos-delay="0">Explore Kaohsiung</span></div>
                   <ul>
                     <li data-aos="fade-left" data-aos-delay="200">Arts & Humanities</li>
-                    <li data-aos="fade-left" data-aos-delay="250">Touring Hotspot</li>
+                    <li data-aos="fade-left" data-aos-delay="250">Seaside Hotspots</li>
                     <li data-aos="fade-left" data-aos-delay="300">Technology Trends</li>
                     <li data-aos="fade-left" data-aos-delay="350">Cultural Tour</li>
                     <li data-aos="fade-left" data-aos-delay="400">Fashion & Shopping</li>
@@ -498,13 +496,13 @@
                       <div class="picBox">
                         <div class="pic">
                           <a href="#">
-                            <img src="images/mcity/11.png" alt="" />
+                            <img src="images/mcity/11.jpg" alt="" />
                             <div class="info">test</div>
                           </a>
                         </div>
                         <div class="pic">
                           <a href="#">
-                            <img src="images/mcity/12.png" alt="" />
+                            <img src="images/mcity/12.jpg" alt="" />
                             <div class="info">test</div>
                           </a>
                         </div>
@@ -533,13 +531,13 @@
                       <div class="picBox">
                         <div class="pic">
                           <a href="#">
-                            <img src="images/mcity/14.jpg" alt="" />
+                            <img src="images/mcity/14.png" alt="" />
                             <div class="info">test</div>
                           </a>
                         </div>
                         <div class="pic">
                           <a href="#">
-                            <img src="images/mcity/15.jpg" alt="" />
+                            <img src="images/mcity/15.png" alt="" />
                             <div class="info">test</div>
                           </a>
                         </div>
@@ -723,23 +721,5 @@
     <!-- 呼叫元件內的function -->
     <script src="js/mt-init.js"></script>
     <script src="js/mt-portal.js"></script>
-
-    <script>
-      $(function () {
-        $(window).on('load resize', function () {
-          let windowWidth = $(window).width();
-          if (windowWidth <= 767) {
-            // $('.mt-city-explore .content > .pic').appendTo('.mt-city-explore .item .picBox');
-            $('.mt-city-explore .item .content').each(function () {
-              $(this).find('.picB').appendTo($(this).find('.picBox'));
-            });
-          } else {
-            $('.mt-city-explore .item .content .picBox').each(function () {
-              $(this).find('.picB').prependTo($(this).parents('.content'));
-            });
-          }
-        });
-      });
-    </script>
   </body>
 </html>

@@ -35542,6 +35542,7 @@ p.error a {
 @media screen and (max-width: 500px) {
   .mt-city-exhibition .contentBox .titleBox {
     font-size: 26px;
+    padding: 40px 20px;
   }
 }
 .mt-city-exhibition .contentBox .titleBox::before {
@@ -35562,7 +35563,7 @@ p.error a {
 }
 @media screen and (max-width: 1000px) {
   .mt-city-exhibition .contentBox .infoBox {
-    padding: 30px;
+    padding: 30px 30px 40px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -35585,21 +35586,45 @@ p.error a {
   display: flex;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 600px) {
+  .mt-city-exhibition .contentBox .infoBox .listBox {
+    flex-direction: column;
+  }
+}
 .mt-city-exhibition .contentBox .infoBox .listBox .item {
   display: flex;
   font-weight: bold;
   flex-grow: 1;
 }
+@media screen and (max-width: 600px) {
+  .mt-city-exhibition .contentBox .infoBox .listBox .item + .item {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: #ddd 1px solid;
+  }
+}
+.mt-city-exhibition .contentBox .infoBox .listBox .pic {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
 .mt-city-exhibition .contentBox .infoBox .listBox .info {
+  width: 80%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0 0 0 40px;
+}
+@media screen and (max-width: 1280px) {
+  .mt-city-exhibition .contentBox .infoBox .listBox .info {
+    padding: 0 0 0 20px;
+  }
 }
 .mt-city-exhibition .contentBox .infoBox .listBox .title {
   font-size: 23px;
   color: #646464;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 @media screen and (max-width: 1280px) {
   .mt-city-exhibition .contentBox .infoBox .listBox .title {
@@ -35607,7 +35632,7 @@ p.error a {
   }
 }
 .mt-city-exhibition .contentBox .infoBox .listBox .con {
-  font-size: 68px;
+  font-size: 45px;
   display: flex;
   align-items: flex-end;
   line-height: 1;
@@ -35615,13 +35640,16 @@ p.error a {
 }
 @media screen and (max-width: 1280px) {
   .mt-city-exhibition .contentBox .infoBox .listBox .con {
-    font-size: 44px;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 1100px) {
   .mt-city-exhibition .contentBox .infoBox .listBox .con {
-    font-size: 40px;
+    font-size: 35px;
   }
+}
+.mt-city-exhibition .contentBox .infoBox .listBox .con + .title {
+  margin-top: 10px;
 }
 .mt-city-exhibition .contentBox .infoBox .listBox .con > span {
   font-weight: 100;
@@ -35636,7 +35664,13 @@ p.error a {
 }
 @media screen and (max-width: 1280px) {
   .mt-city-exhibition .contentBox .infoBox .listBox .con .unit {
+    font-size: 18px;
     margin: 0 10px 8px 5px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mt-city-exhibition .contentBox .infoBox .listBox .con .unit {
+    margin: 0 0px 6px 5px;
   }
 }
 .mt-city-exhibition .contentBox .infoBox .link {
@@ -35824,6 +35858,7 @@ p.error a {
 @media screen and (max-width: 500px) {
   .mt-city-nav ul a {
     font-size: 18px;
+    padding-top: 3px;
   }
 }
 .mt-city-nav ul a::after {

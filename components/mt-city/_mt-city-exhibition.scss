@@ -6,7 +6,7 @@
   padding: 60px 0;
   overflow: hidden;
 
-  &::before {
+  .bg {
     content: '';
     position: fixed;
     top: 0;
@@ -14,10 +14,14 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: url('../images/mcity/exhibition_bg.jpg') center bottom no-repeat;
-    background-size: cover;
     display: none;
     opacity: .4;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &::after {
@@ -30,7 +34,7 @@
   }
 
   &.active {
-    &::before {
+    .bg {
       display: block;
     }
   }
@@ -56,6 +60,7 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
+      min-height: 100px;
       line-height: 1;
       width: 35%;
       position: relative;
@@ -79,18 +84,21 @@
 
       @media screen and (max-width: 500px) {
         font-size: 26px;
-        padding: 40px 20px;
+        padding: 40px 20px 35px;
       }
 
-      &::before {
-        content: '';
+      .titleBg {
         position: absolute;
         inset: 0;
         display: block;
-        background: url('../images/mcity/exhibition_titlebg.jpg') center top no-repeat;
-        background-size: cover;
         opacity: .9;
         z-index: -1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
 
@@ -141,12 +149,27 @@
               border-top: #ddd 1px solid;
             }
           }
+
+          &:first-child {
+
+            .info .con {
+              @media screen and (min-width: 1281px) {
+                font-size: 48px;
+              }
+
+            }
+          }
         }
 
         .pic {
-          width: 20%;
           display: flex;
           align-items: center;
+          width: 94px;
+          flex-shrink: 0;
+
+          @media screen and (max-width: 1280px) {
+            width: 70px;
+          }
         }
 
         .info {
@@ -201,7 +224,7 @@
             font-size: 20px;
             color: #242424;
             display: block;
-            margin: 0 10px 13px 5px;
+            margin: 0 10px 5px 5px;
 
             @media screen and (max-width: 1280px) {
               font-size: 18px;

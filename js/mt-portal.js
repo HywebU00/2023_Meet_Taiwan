@@ -288,7 +288,7 @@ $(function () {
         $('.mt-city-explore .exploreNav li')
           .off()
           .on('click', function () {
-            let targetTop = $('.mt-city-explore .listBox .item').eq($(this).index()).offset().top - $('.mt-city-nav').height();
+            let targetTop = $('.mt-city-explore .listBox .item').eq($(this).index()).offset().top - $('.mt-header').height();
             $(window).scrollTop(targetTop);
           });
       });

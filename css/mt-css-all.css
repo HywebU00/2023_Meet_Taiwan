@@ -35912,6 +35912,11 @@ p.error a {
   display: flex;
   font-weight: bold;
 }
+@media screen and (max-width: 1000px) {
+  .mt-city-top-info .listBox .item.weatherCon .pic {
+    transform: translateX(5px);
+  }
+}
 .mt-city-top-info .listBox .item.weatherCon .con {
   padding: 0 40px 0 0;
 }

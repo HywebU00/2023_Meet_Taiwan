@@ -6,7 +6,7 @@
   padding: 60px 0;
 
   @media screen and (max-width: 550px) {
-      padding: 40px 0;
+    padding: 40px 0;
   }
 
   @media screen and (max-width: 1000px) {
@@ -31,8 +31,16 @@
       display: flex;
       font-weight: bold;
 
-      &.weatherCon .con {
-        padding: 0 40px 0 0;
+      &.weatherCon {
+        @media screen and (max-width: 1000px) {
+          .pic {
+            transform: translateX(5px);
+          }
+        }
+
+        .con {
+          padding: 0 40px 0 0;
+        }
       }
 
       @media screen and (max-width: 1000px) {

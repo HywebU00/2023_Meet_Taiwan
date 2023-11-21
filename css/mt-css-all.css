@@ -33622,8 +33622,9 @@ p.error a {
 }
 @media screen and (max-width: 767px) {
   .mt-search2 .searchForm {
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }
 .mt-search2 .searchForm .title {
@@ -33659,6 +33660,7 @@ p.error a {
 @media screen and (max-width: 767px) {
   .mt-search2 .searchForm .inputBox {
     width: 100%;
+    max-width: 290px;
   }
 }
 .mt-search2 .searchForm .inputBox .input {
@@ -33688,6 +33690,8 @@ p.error a {
   border-width: 0 0 1px;
   background: none;
   color: #fff;
+  font-size: 20px;
+  border-radius: 0;
 }
 .mt-search2 .searchForm .inputBox input:focus {
   border-color: #c9c9c9;
@@ -33799,14 +33803,8 @@ p.error a {
   .mt-search2 .searchForm .info {
     align-items: center;
     color: #fff;
+    margin: 0 auto;
   }
-}
-.mt-search2 .searchForm .info::before {
-  content: "X";
-  aspect-ratio: 1;
-  display: block;
-  margin: 0 5px 0 0;
-  font-weight: bold;
 }
 .mt-search2.type2 .outBox {
   background: none;

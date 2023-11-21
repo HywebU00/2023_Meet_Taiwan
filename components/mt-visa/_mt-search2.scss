@@ -32,8 +32,9 @@
     }
 
     @include screen('mobile') {
-      flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
 
     .title {
@@ -66,6 +67,7 @@
 
       @include screen('mobile') {
         width: 100%;
+        max-width: 290px;
       }
 
       .input {
@@ -96,6 +98,8 @@
         border-width: 0 0 1px;
         background: none;
         color: #fff;
+        font-size: 20px;
+        border-radius: 0;
 
         &:focus {
           border-color: #c9c9c9;
@@ -220,15 +224,16 @@
       @include screen('mobile') {
         align-items: center;
         color: #fff;
+        margin: 0 auto;
       }
 
-      &::before {
-        content: 'X';
-        aspect-ratio: 1;
-        display: block;
-        margin: 0 5px 0 0;
-        font-weight: bold;
-      }
+      // &::before {
+      //   content: 'X';
+      //   aspect-ratio: 1;
+      //   display: block;
+      //   margin: 0 5px 0 0;
+      //   font-weight: bold;
+      // }
 
       // &:hover {
       //   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);

@@ -1,0 +1,30 @@
+@import '../../sass/variable'; //Variable
+@import '../../sass/mixin'; //Mixin
+
+.mt-city-link {
+  background: #242424;
+  padding: 60px 0;
+
+  @media screen and (max-width: 500px) {
+    padding: 40px 0;
+  }
+
+  .listBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .item {
+    width: calc((100% - 30px * 3)/4);
+
+    @media screen and (max-width: 767px) {
+      width: calc((100% - 30px * 2)/3);
+    }
+
+    @media screen and (max-width: 500px) {
+      width: calc((100% - 30px)/2);
+    }
+  }
+}

@@ -27454,6 +27454,7 @@ p.error a {
 }
 @media screen and (max-width: 1680px) {
   .cityOutBox {
+    max-width: 1380px;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -35185,7 +35186,7 @@ p.error a {
 .mt-city-banner .pic img {
   width: 100%;
   height: 100%;
-  min-height: 300px;
+  min-height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -35210,12 +35211,7 @@ p.error a {
 }
 @media screen and (max-width: 1000px) {
   .mt-city-banner .title {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .mt-city-banner .title {
-    font-size: 16px;
+    font-size: 28px;
   }
 }
 .mt-city-banner .title span {
@@ -35233,14 +35229,13 @@ p.error a {
 }
 @media screen and (max-width: 767px) {
   .mt-city-banner .title span {
-    font-size: 30px;
-    margin: 0 0 10px;
+    margin: 0 0 15px;
     padding: 0 0 10px;
   }
 }
 @media screen and (max-width: 600px) {
   .mt-city-banner .title span {
-    font-size: 40px;
+    font-size: 45px;
   }
 }
 .mt-city-banner .listBox a {
@@ -35496,7 +35491,6 @@ p.error a {
 }
 @media screen and (max-width: 500px) {
   .mt-city-exhibition .contentBox .titleBox {
-    font-size: 26px;
     padding: 40px 20px 35px;
   }
 }
@@ -35763,14 +35757,16 @@ p.error a {
   font-size: 30px;
   color: #18397a;
   font-weight: bold;
-  margin-right: 40px;
   border: #707070 1px solid;
   border-width: 0 1px 0 0;
   padding: 0 40px 0px 0;
+  margin-right: 40px;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1360px) {
   .mt-city-nav .title {
     font-size: 24px;
+    padding: 0 20px 0px 0;
+    margin-right: 20px;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -36138,7 +36134,7 @@ p.error a {
 }
 @media screen and (max-width: 550px) {
   .mt-city-explore .topBox .pic img {
-    min-height: 300px;
+    min-height: 100px;
   }
 }
 .mt-city-explore .exploreNav {
@@ -36157,6 +36153,7 @@ p.error a {
   font-family: "Josefin Sans", sans-serif;
   left: 60px;
   transform: translateY(-700%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 @media screen and (max-width: 1680px) {
   .mt-city-explore .exploreNav .title {
@@ -36182,10 +36179,17 @@ p.error a {
 }
 @media screen and (max-width: 550px) {
   .mt-city-explore .exploreNav .title {
-    font-size: 30px;
+    font-size: 40px;
     left: 0;
     width: 100%;
+    padding: 0 30px;
     text-align: center;
+    transform: translateY(-300%);
+  }
+}
+@media screen and (max-width: 440px) {
+  .mt-city-explore .exploreNav .title {
+    font-size: 30px;
   }
 }
 .mt-city-explore .exploreNav .title span {
@@ -36200,6 +36204,7 @@ p.error a {
 @media screen and (max-width: 550px) {
   .mt-city-explore .exploreNav ul {
     flex-direction: column;
+    display: none;
   }
 }
 .mt-city-explore .exploreNav ul li {
@@ -36285,11 +36290,6 @@ p.error a {
 @media screen and (max-width: 767px) {
   .mt-city-explore .listBox .item .title {
     font-size: 36px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .mt-city-explore .listBox .item .title {
-    font-size: 30px;
   }
 }
 .mt-city-explore .listBox .item .content {
@@ -36427,14 +36427,92 @@ p.error a {
 .mt-city-explore .listBox .item:nth-child(even) .picBox .pic:nth-child(2) {
   margin: 0 -6% 0 0;
   max-width: 540px;
+  transform: translateY(20%);
 }
 @media screen and (max-width: 767px) {
   .mt-city-explore .listBox .item:nth-child(even) .picBox .pic:nth-child(2) {
     margin: 0;
+    transform: translateY(0%);
   }
 }
 .mt-city-explore .listBox .item:nth-child(even) .infoBox .description {
   padding: 0 8.5% 7.5% 0;
+}
+
+.tabSet, .mt-category, .divider,
+.divider-vertical, .pagination, .mt-main-content .cp_content .file_download,
+.mt-main-content .signup_content .file_download, .mt-main-content .cp_content .web_link,
+.mt-main-content .signup_content .web_link, .mt-main-content .cp_content .mt-tag,
+.mt-main-content .signup_content .mt-tag, .sp_member .file_download,
+.sp_member .score_list, .sitemap {
+  clear: both;
+  zoom: 1;
+}
+.tabSet:before, .mt-category:before, .divider:before,
+.divider-vertical:before, .pagination:before, .mt-main-content .cp_content .file_download:before,
+.mt-main-content .signup_content .file_download:before, .mt-main-content .cp_content .web_link:before,
+.mt-main-content .signup_content .web_link:before, .mt-main-content .cp_content .mt-tag:before,
+.mt-main-content .signup_content .mt-tag:before, .sp_member .file_download:before,
+.sp_member .score_list:before, .sitemap:before, .tabSet:after, .mt-category:after, .divider:after,
+.divider-vertical:after, .pagination:after, .mt-main-content .cp_content .file_download:after,
+.mt-main-content .signup_content .file_download:after, .mt-main-content .cp_content .web_link:after,
+.mt-main-content .signup_content .web_link:after, .mt-main-content .cp_content .mt-tag:after,
+.mt-main-content .signup_content .mt-tag:after, .sp_member .file_download:after,
+.sp_member .score_list:after, .sitemap:after {
+  content: "";
+  display: table;
+}
+.tabSet:after, .mt-category:after, .divider:after,
+.divider-vertical:after, .pagination:after, .mt-main-content .cp_content .file_download:after,
+.mt-main-content .signup_content .file_download:after, .mt-main-content .cp_content .web_link:after,
+.mt-main-content .signup_content .web_link:after, .mt-main-content .cp_content .mt-tag:after,
+.mt-main-content .signup_content .mt-tag:after, .sp_member .file_download:after,
+.sp_member .score_list:after, .sitemap:after {
+  clear: both;
+}
+
+.breadcrumb ul li:before {
+  content: " / ";
+  display: inline-block;
+  padding: 0px 4px;
+  margin: 0px 5px 0px 5px;
+  color: #ccc;
+}
+
+[class^=flex-] {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.mt-city-link {
+  background: #242424;
+  padding: 60px 0;
+}
+@media screen and (max-width: 500px) {
+  .mt-city-link {
+    padding: 40px 0;
+  }
+}
+.mt-city-link .listBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.mt-city-link .item {
+  width: calc((100% - 90px) / 4);
+}
+@media screen and (max-width: 767px) {
+  .mt-city-link .item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (max-width: 500px) {
+  .mt-city-link .item {
+    width: calc((100% - 30px) / 2);
+  }
 }
 
 /* city */
@@ -36553,11 +36631,6 @@ p.error a {
 @media screen and (max-width: 767px) {
   .certpage-tw .mt-city-explore .listBox .item .title {
     font-size: 36px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .certpage-tw .mt-city-explore .listBox .item .title {
-    font-size: 30px;
   }
 }
 

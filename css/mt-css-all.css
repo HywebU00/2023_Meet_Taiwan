@@ -36267,6 +36267,9 @@ p.error a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.mt-city-explore .listBox .item {
+  padding: 120px 0 120px;
+}
 @media screen and (max-width: 767px) {
   .mt-city-explore .listBox .item {
     padding: 50px 0 !important;
@@ -36381,23 +36384,27 @@ p.error a {
 }
 .mt-city-explore .listBox .item:nth-child(odd) .picBox .pic:nth-child(1) {
   margin: 0 0 0 -6%;
+  width: 60%;
   max-width: 540px;
   transform: translateY(20%);
 }
 @media screen and (max-width: 767px) {
   .mt-city-explore .listBox .item:nth-child(odd) .picBox .pic:nth-child(1) {
+    width: auto;
     aspect-ratio: 1;
     margin: 0;
     transform: translateY(0);
   }
 }
 .mt-city-explore .listBox .item:nth-child(odd) .picBox .pic:nth-child(2) {
+  width: 40%;
   max-width: 360px;
   aspect-ratio: 18/17;
   overflow: hidden;
 }
 @media screen and (max-width: 767px) {
   .mt-city-explore .listBox .item:nth-child(odd) .picBox .pic:nth-child(2) {
+    width: auto;
     aspect-ratio: 1;
   }
 }
@@ -36405,7 +36412,6 @@ p.error a {
   padding: 0 0 7.5% 8.5%;
 }
 .mt-city-explore .listBox .item:nth-child(even) {
-  padding: 6% 0 6%;
   color: #242424;
 }
 .mt-city-explore .listBox .item:nth-child(even) .content > .pic {
@@ -36415,6 +36421,7 @@ p.error a {
   max-height: 340px;
 }
 .mt-city-explore .listBox .item:nth-child(even) .picBox .pic:nth-child(1) {
+  width: 40%;
   max-width: 360px;
   aspect-ratio: 18/17;
   overflow: hidden;
@@ -36422,15 +36429,18 @@ p.error a {
 @media screen and (max-width: 767px) {
   .mt-city-explore .listBox .item:nth-child(even) .picBox .pic:nth-child(1) {
     aspect-ratio: 1;
+    width: auto;
   }
 }
 .mt-city-explore .listBox .item:nth-child(even) .picBox .pic:nth-child(2) {
+  width: 60%;
   margin: 0 -6% 0 0;
   max-width: 540px;
   transform: translateY(20%);
 }
 @media screen and (max-width: 767px) {
   .mt-city-explore .listBox .item:nth-child(even) .picBox .pic:nth-child(2) {
+    width: auto;
     margin: 0;
     transform: translateY(0%);
   }

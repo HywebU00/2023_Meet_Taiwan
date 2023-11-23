@@ -293,7 +293,6 @@ $(function () {
           });
       });
     }
-    //city
 
     if ($('.mt-city-explore').length > 0) {
       $(window).on('load resize', function () {
@@ -309,6 +308,27 @@ $(function () {
         }
       });
     }
+    if ($('.mt-city-exhibition .item .box').length > 1) {
+      $('.mt-city-exhibition .outListBox').slick({
+        arrows: true, //左右箭頭
+        autoplay: false, //自動播放
+        autoplaySpeed: 15000, //自動播放秒數
+        dots: false, //顯示圓點
+        dotsClass: 'slick-dots', //原點css
+        draggable: true, //滑鼠可以拖曳
+        infinite: true, //無限輪播
+        pauseOnHover: true, //滑鼠移過後暫停自動撥放
+        pauseOnDotsHover: false, //滑鼠移過圓點後暫停自動撥放
+        rtl: false, //改變輪播方向
+        slidesToShow: 1, //一次顯示幾張
+        slidesToScroll: 1, //一次輪播幾張
+        vertical: false, //改成垂直方向
+        lazyLoad: 'ondemand', //lazyLoad
+        fade: true, //淡入
+      });
+      $('.kvSlider').slick('refresh');
+    }
+    //city
   } else {
     //kv-slick
     $('.kvSlider').slick({

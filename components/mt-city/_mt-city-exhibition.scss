@@ -40,15 +40,34 @@
   }
 
   .contentBox {
-    background: #fff;
-    display: flex;
     padding: 0;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .4);
-    position: relative;
     z-index: 1;
 
-    @media screen and (max-width: 767px) {
-      flex-direction: column;
+    .outListBox {
+
+      .slick-next:hover,
+      .slick-next:focus {
+        filter: brightness(0.5);
+      }
+
+      .slick-next {
+        right: 10px;
+      }
+
+      .slick-prev {
+        left: 10px;
+      }
+
+      .box {
+        background: #fff;
+        display: flex;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .4);
+        position: relative;
+
+        @media screen and (max-width: 767px) {
+          flex-direction: column;
+        }
+      }
     }
 
     .titleBox {
@@ -66,7 +85,7 @@
       position: relative;
       isolation: isolate;
       background: #9c9c9c;
-      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
 
       @media screen and (max-width: 1280px) {
         font-size: 40px;

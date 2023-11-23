@@ -34161,6 +34161,7 @@ p.error a {
 }
 .mt-event .listBox .item a {
   display: block;
+  height: 100%;
 }
 .mt-event .listBox .item:hover .title {
   filter: none;
@@ -34175,6 +34176,7 @@ p.error a {
   line-height: 0;
   border-radius: 30px;
   overflow: hidden;
+  height: 100%;
 }
 @media screen and (max-width: 576px) {
   .mt-event .listBox .pic {
@@ -34823,7 +34825,7 @@ p.error a {
 }
 .certpage-tw .mt-service .listBox .info {
   position: absolute;
-  inset: 50px 20px 20px;
+  inset: 30px;
   z-index: 9;
   display: flex;
   flex-direction: column;
@@ -35053,6 +35055,7 @@ p.error a {
 }
 .certpage-tw .mt-event .listBox .item a {
   display: block;
+  height: 100%;
 }
 .certpage-tw .mt-event .listBox .item:hover .pic::before {
   -webkit-backdrop-filter: none;
@@ -35064,6 +35067,7 @@ p.error a {
   line-height: 0;
   border-radius: 30px;
   overflow: hidden;
+  height: 100%;
 }
 @media screen and (max-width: 576px) {
   .certpage-tw .mt-event .listBox .pic {
@@ -35443,15 +35447,27 @@ p.error a {
   display: block;
 }
 .mt-city-exhibition .contentBox {
-  background: #fff;
-  display: flex;
   padding: 0;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
-  position: relative;
   z-index: 1;
 }
+.mt-city-exhibition .contentBox .outListBox .slick-next:hover,
+.mt-city-exhibition .contentBox .outListBox .slick-next:focus {
+  filter: brightness(0.5);
+}
+.mt-city-exhibition .contentBox .outListBox .slick-next {
+  right: 10px;
+}
+.mt-city-exhibition .contentBox .outListBox .slick-prev {
+  left: 10px;
+}
+.mt-city-exhibition .contentBox .outListBox .box {
+  background: #fff;
+  display: flex;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  position: relative;
+}
 @media screen and (max-width: 767px) {
-  .mt-city-exhibition .contentBox {
+  .mt-city-exhibition .contentBox .outListBox .box {
     flex-direction: column;
   }
 }
@@ -35470,7 +35486,7 @@ p.error a {
   position: relative;
   isolation: isolate;
   background: #9c9c9c;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
 }
 @media screen and (max-width: 1280px) {
   .mt-city-exhibition .contentBox .titleBox {
@@ -36114,6 +36130,7 @@ p.error a {
 
 .mt-city-explore {
   color: #fff;
+  overflow: hidden;
 }
 .mt-city-explore .topBox {
   position: relative;
@@ -36579,6 +36596,20 @@ p.error a {
 }
 .certpage-tw .mt-city-nav ul {
   flex-grow: unset;
+}
+.certpage-tw .mt-city-nav ul a {
+  font-size: 22px;
+  padding: 5px 10px;
+}
+@media screen and (max-width: 1280px) {
+  .certpage-tw .mt-city-nav ul a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .certpage-tw .mt-city-nav ul a {
+    font-size: 18px;
+  }
 }
 
 .tabSet, .mt-category, .divider,

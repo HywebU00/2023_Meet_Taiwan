@@ -47,8 +47,7 @@
 
       a {
         display: block;
-        border-radius: 30px;
-        overflow: hidden;
+        height: 100%;
       }
 
       &:hover {
@@ -66,6 +65,9 @@
     .pic {
       position: relative;
       line-height: 0;
+      height: 100%;
+      border-radius: 30px;
+      overflow: hidden;
 
       @media screen and (max-width: 576px) {
         position: absolute;

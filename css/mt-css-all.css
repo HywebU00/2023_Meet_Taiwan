@@ -35518,6 +35518,7 @@ p.error a {
   width: 35%;
   position: relative;
   isolation: isolate;
+  flex-shrink: 0;
   background: #9c9c9c;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
 }
@@ -35595,6 +35596,11 @@ p.error a {
   display: flex;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 900px) and (min-width: 767px) {
+  .mt-city-exhibition .contentBox .infoBox .listBox {
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 600px) {
   .mt-city-exhibition .contentBox .infoBox .listBox {
     flex-direction: column;
@@ -35604,6 +35610,13 @@ p.error a {
   display: flex;
   font-weight: bold;
   flex-grow: 1;
+}
+@media screen and (max-width: 900px) and (min-width: 767px) {
+  .mt-city-exhibition .contentBox .infoBox .listBox .item + .item {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: #ddd 1px solid;
+  }
 }
 @media screen and (max-width: 600px) {
   .mt-city-exhibition .contentBox .infoBox .listBox .item + .item {

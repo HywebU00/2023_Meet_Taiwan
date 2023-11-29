@@ -89,6 +89,7 @@
       width: 35%;
       position: relative;
       isolation: isolate;
+      flex-shrink: 0;
       background: #9c9c9c;
       text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
 
@@ -165,6 +166,11 @@
         display: flex;
         margin-bottom: 20px;
 
+
+        @media screen and (max-width: 900px) and (min-width:767px) {
+          flex-direction: column;
+        }
+
         @media screen and (max-width: 600px) {
           flex-direction: column;
         }
@@ -173,6 +179,14 @@
           display: flex;
           font-weight: bold;
           flex-grow: 1;
+
+          @media screen and (max-width: 900px) and (min-width:767px) {
+            & + .item {
+              margin-top: 30px;
+              padding-top: 30px;
+              border-top: #ddd 1px solid;
+            }
+          }
 
           @media screen and (max-width: 600px) {
             & + .item {

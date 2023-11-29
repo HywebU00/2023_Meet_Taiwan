@@ -31,7 +31,11 @@
     background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
 
     @media screen and (max-width: 600px) {
-      padding: 20px;
+      padding: 40px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
   }
 
@@ -44,9 +48,9 @@
       font-size: 28px;
     }
 
-    // @media screen and (max-width: 767px) {
-    //   font-size: 16px;
-    // }
+    @media screen and (max-width: 600px) {
+      font-size: 32px;
+    }
 
 
     span {
@@ -56,6 +60,7 @@
       margin: 0 0 20px;
       padding: 0 0 20px;
       border-bottom: 1px solid #fff;
+
 
       @media screen and (max-width: 1000px) {
         font-size: 50px;
@@ -67,7 +72,9 @@
       }
 
       @media screen and (max-width: 600px) {
-        font-size: 45px;
+        font-size: 80px;
+        letter-spacing: 5px;
+        text-shadow: 2px 3px 5px rgba(0, 0, 0, .8);
       }
 
     }

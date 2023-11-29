@@ -328,97 +328,97 @@ th {
 }
 
 .flex-12 .col {
-  flex-basis: calc(100% / 12 * 12 - 0px);
-  max-width: calc(100% / 12 * 12 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 12 - 0px);
+  max-width: calc(8.3333333333% * 12 - 0px);
+  padding: 0 calc(32px / 2);
 }
 
 .flex-6-6 .col {
-  flex-basis: calc(100% / 12 * 6 - 0px);
-  max-width: calc(100% / 12 * 6 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 6 - 0px);
+  max-width: calc(8.3333333333% * 6 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-6-6 .col {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 
 .flex-8-4 .col {
-  flex-basis: calc(100% / 12 * 8 - 0px);
-  max-width: calc(100% / 12 * 8 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 8 - 0px);
+  max-width: calc(8.3333333333% * 8 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-8-4 .col {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 .flex-8-4 .col:nth-child(2) {
-  flex-basis: calc(100% / 12 * 4 - 0px);
-  max-width: calc(100% / 12 * 4 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 4 - 0px);
+  max-width: calc(8.3333333333% * 4 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-8-4 .col:nth-child(2) {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 
 .flex-4-8 .col {
-  flex-basis: calc(100% / 12 * 4 - 0px);
-  max-width: calc(100% / 12 * 4 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 4 - 0px);
+  max-width: calc(8.3333333333% * 4 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-4-8 .col {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 .flex-4-8 .col:nth-child(2) {
-  flex-basis: calc(100% / 12 * 8 - 0px);
-  max-width: calc(100% / 12 * 8 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 8 - 0px);
+  max-width: calc(8.3333333333% * 8 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-4-8 .col:nth-child(2) {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 
 .flex-4-4-4 .col {
-  flex-basis: calc(100% / 12 * 4 - 0px);
-  max-width: calc(100% / 12 * 4 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 4 - 0px);
+  max-width: calc(8.3333333333% * 4 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-4-4-4 .col {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 
 .flex-3-3-3-3 .col {
-  flex-basis: calc(100% / 12 * 3 - 0px);
-  max-width: calc(100% / 12 * 3 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 3 - 0px);
+  max-width: calc(8.3333333333% * 3 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-3-3-3-3 .col {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 
@@ -35143,14 +35143,6 @@ p.error a {
     font-size: 22px;
   }
 }
-@media screen and (max-width: 576px) {
-  .certpage-tw .mt-event .listBox .title {
-    position: relative;
-    padding: 30px;
-    min-height: 100px;
-    inset: auto;
-  }
-}
 
 /*visa*/
 /* city */
@@ -35231,7 +35223,11 @@ p.error a {
 }
 @media screen and (max-width: 600px) {
   .mt-city-banner .info {
-    padding: 20px;
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 .mt-city-banner .title {
@@ -35242,6 +35238,11 @@ p.error a {
 @media screen and (max-width: 1000px) {
   .mt-city-banner .title {
     font-size: 28px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mt-city-banner .title {
+    font-size: 32px;
   }
 }
 .mt-city-banner .title span {
@@ -35265,7 +35266,9 @@ p.error a {
 }
 @media screen and (max-width: 600px) {
   .mt-city-banner .title span {
-    font-size: 45px;
+    font-size: 80px;
+    letter-spacing: 5px;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.8);
   }
 }
 .mt-city-banner .listBox a {
@@ -35486,7 +35489,11 @@ p.error a {
 .mt-city-exhibition .contentBox .outListBox .slick-prev {
   left: 10px;
 }
+.mt-city-exhibition .contentBox .outListBox .item + .item {
+  margin-top: 30px;
+}
 .mt-city-exhibition .contentBox .outListBox .box {
+  min-height: 220px;
   background: #fff;
   display: flex;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
@@ -35695,6 +35702,9 @@ p.error a {
   line-height: 1;
   margin: 0 0 -20px auto;
   transition: all 0.3s linear;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
 }
 .mt-city-exhibition .contentBox .infoBox .link::after {
   content: "";
@@ -36241,6 +36251,7 @@ p.error a {
 @media screen and (max-width: 440px) {
   .mt-city-explore .exploreNav .title {
     font-size: 30px;
+    transform: translateY(-250%);
   }
 }
 .mt-city-explore .exploreNav .title span {

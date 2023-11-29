@@ -328,97 +328,97 @@ th {
 }
 
 .flex-12 .col {
-  flex-basis: calc(100% / 12 * 12 - 0px);
-  max-width: calc(100% / 12 * 12 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 12 - 0px);
+  max-width: calc(8.3333333333% * 12 - 0px);
+  padding: 0 calc(32px / 2);
 }
 
 .flex-6-6 .col {
-  flex-basis: calc(100% / 12 * 6 - 0px);
-  max-width: calc(100% / 12 * 6 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 6 - 0px);
+  max-width: calc(8.3333333333% * 6 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-6-6 .col {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 
 .flex-8-4 .col {
-  flex-basis: calc(100% / 12 * 8 - 0px);
-  max-width: calc(100% / 12 * 8 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 8 - 0px);
+  max-width: calc(8.3333333333% * 8 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-8-4 .col {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 .flex-8-4 .col:nth-child(2) {
-  flex-basis: calc(100% / 12 * 4 - 0px);
-  max-width: calc(100% / 12 * 4 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 4 - 0px);
+  max-width: calc(8.3333333333% * 4 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-8-4 .col:nth-child(2) {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 
 .flex-4-8 .col {
-  flex-basis: calc(100% / 12 * 4 - 0px);
-  max-width: calc(100% / 12 * 4 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 4 - 0px);
+  max-width: calc(8.3333333333% * 4 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-4-8 .col {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 .flex-4-8 .col:nth-child(2) {
-  flex-basis: calc(100% / 12 * 8 - 0px);
-  max-width: calc(100% / 12 * 8 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 8 - 0px);
+  max-width: calc(8.3333333333% * 8 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-4-8 .col:nth-child(2) {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 
 .flex-4-4-4 .col {
-  flex-basis: calc(100% / 12 * 4 - 0px);
-  max-width: calc(100% / 12 * 4 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 4 - 0px);
+  max-width: calc(8.3333333333% * 4 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-4-4-4 .col {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 
 .flex-3-3-3-3 .col {
-  flex-basis: calc(100% / 12 * 3 - 0px);
-  max-width: calc(100% / 12 * 3 - 0px);
-  padding: 0 calc(32px/2);
+  flex-basis: calc(8.3333333333% * 3 - 0px);
+  max-width: calc(8.3333333333% * 3 - 0px);
+  padding: 0 calc(32px / 2);
 }
 @media screen and (max-width: 767px) {
   .flex-3-3-3-3 .col {
-    flex-basis: calc(100% / 12 * 12 - 0px);
-    max-width: calc(100% / 12 * 12 - 0px);
-    padding: 0 calc(32px/2);
+    flex-basis: calc(8.3333333333% * 12 - 0px);
+    max-width: calc(8.3333333333% * 12 - 0px);
+    padding: 0 calc(32px / 2);
   }
 }
 

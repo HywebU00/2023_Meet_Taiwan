@@ -26,5 +26,13 @@
     @media screen and (max-width: 500px) {
       width: calc((100% - 30px)/2);
     }
+
+    .title {
+      color: #a2a2a2;
+      font-size: 13px;
+      font-family: 'Noto Sans TC', sans-serif;
+      text-align: center;
+      margin-bottom: 10px;
+    }
   }
 }

@@ -36599,6 +36599,13 @@ p.error a {
     width: calc((100% - 30px) / 2);
   }
 }
+.mt-city-link .item .title {
+  color: #a2a2a2;
+  font-size: 13px;
+  font-family: "Noto Sans TC", sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
 
 /* city */
 /* city */

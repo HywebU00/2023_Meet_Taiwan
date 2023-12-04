@@ -36580,6 +36580,36 @@ p.error a {
     padding: 40px 0;
   }
 }
+.mt-city-link .title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+}
+@media screen and (max-width: 767px) {
+  .mt-city-link .title {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mt-city-link .title {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+}
+.mt-city-link .title::before, .mt-city-link .title::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background: #fff;
+  flex-grow: 1;
+  margin: 0 20px 8px 0;
+}
+.mt-city-link .title::after {
+  margin: 0 0 8px 20px;
+}
 .mt-city-link .listBox {
   display: flex;
   flex-wrap: wrap;
@@ -36598,13 +36628,6 @@ p.error a {
   .mt-city-link .item {
     width: calc((100% - 30px) / 2);
   }
-}
-.mt-city-link .item .title {
-  color: #a2a2a2;
-  font-size: 13px;
-  font-family: "Noto Sans TC", sans-serif;
-  text-align: center;
-  margin-bottom: 10px;
 }
 
 /* city */
@@ -36737,6 +36760,122 @@ p.error a {
 @media screen and (max-width: 767px) {
   .certpage-tw .mt-city-explore .listBox .item .title {
     font-size: 36px;
+  }
+}
+
+.tabSet, .mt-category, .divider,
+.divider-vertical, .pagination, .mt-main-content .cp_content .file_download,
+.mt-main-content .signup_content .file_download, .mt-main-content .cp_content .web_link,
+.mt-main-content .signup_content .web_link, .mt-main-content .cp_content .mt-tag,
+.mt-main-content .signup_content .mt-tag, .sp_member .file_download,
+.sp_member .score_list, .sitemap {
+  clear: both;
+  zoom: 1;
+}
+.tabSet:before, .mt-category:before, .divider:before,
+.divider-vertical:before, .pagination:before, .mt-main-content .cp_content .file_download:before,
+.mt-main-content .signup_content .file_download:before, .mt-main-content .cp_content .web_link:before,
+.mt-main-content .signup_content .web_link:before, .mt-main-content .cp_content .mt-tag:before,
+.mt-main-content .signup_content .mt-tag:before, .sp_member .file_download:before,
+.sp_member .score_list:before, .sitemap:before, .tabSet:after, .mt-category:after, .divider:after,
+.divider-vertical:after, .pagination:after, .mt-main-content .cp_content .file_download:after,
+.mt-main-content .signup_content .file_download:after, .mt-main-content .cp_content .web_link:after,
+.mt-main-content .signup_content .web_link:after, .mt-main-content .cp_content .mt-tag:after,
+.mt-main-content .signup_content .mt-tag:after, .sp_member .file_download:after,
+.sp_member .score_list:after, .sitemap:after {
+  content: "";
+  display: table;
+}
+.tabSet:after, .mt-category:after, .divider:after,
+.divider-vertical:after, .pagination:after, .mt-main-content .cp_content .file_download:after,
+.mt-main-content .signup_content .file_download:after, .mt-main-content .cp_content .web_link:after,
+.mt-main-content .signup_content .web_link:after, .mt-main-content .cp_content .mt-tag:after,
+.mt-main-content .signup_content .mt-tag:after, .sp_member .file_download:after,
+.sp_member .score_list:after, .sitemap:after {
+  clear: both;
+}
+
+.breadcrumb ul li:before {
+  content: " / ";
+  display: inline-block;
+  padding: 0px 4px;
+  margin: 0px 5px 0px 5px;
+  color: #ccc;
+}
+
+[class^=flex-] {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.mt-city-link {
+  background: #242424;
+  padding: 60px 0;
+}
+@media screen and (max-width: 500px) {
+  .mt-city-link {
+    padding: 40px 0;
+  }
+}
+.mt-city-link .title {
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+  font-size: 40px;
+}
+@media screen and (max-width: 1280px) {
+  .mt-city-link .title {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .mt-city-link .title {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mt-city-link .title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mt-city-link .title {
+    font-size: 26px;
+  }
+}
+.mt-city-link .title::before, .mt-city-link .title::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background: #fff;
+  flex-grow: 1;
+  margin: 0 20px 8px 0;
+}
+.mt-city-link .title::after {
+  margin: 0 0 8px 20px;
+}
+.mt-city-link .listBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.mt-city-link .item {
+  width: calc((100% - 90px) / 4);
+}
+@media screen and (max-width: 767px) {
+  .mt-city-link .item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (max-width: 500px) {
+  .mt-city-link .item {
+    width: calc((100% - 30px) / 2);
   }
 }
 

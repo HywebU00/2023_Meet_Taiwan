@@ -1485,7 +1485,17 @@
       .slick-next {
         top: 32%;
       }
-
+      &.noSlider {
+        min-width: 600px;
+        display: flex;
+        justify-content: center;
+        .item {
+          min-width: 33.3%;
+        }
+        @include screen('tablet') {
+          min-width: 100%;
+        }
+      }
       .item {
         a {
           height: 20vh;

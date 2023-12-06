@@ -117,7 +117,8 @@
       </div>
       <div class="cp_content">
         <div class="cp_pics">
-          <div class="slider-cp-pics">
+          <!-- slider-cp-pics -->
+          <div class=" partner-slider-pics">
             <div class="item">
               <a href="https://source.unsplash.com/random/1" data-fancybox="gallery" data-caption="圖說">
                 <div class="img-container">
@@ -157,14 +158,14 @@
           <script>
             $(function () {
               //slick
-              let itemlen = $('.slider-cp-pics .item').length;
+              let partnerItemlen = $('.partner-slider-pics .item').length;
               function sliderCpPics() {
-                $('.slider-cp-pics').slick({
+                $('.partner-slider-pics').slick({
                   mobileFirst: true,
                   dots: false,
                   infinite: true,
                   speed: 300,
-                  slidesToShow: itemlen >= 4 ? 4 : itemlen - 1,
+                  slidesToShow: partnerItemlen > 4 ? 4 : partnerItemlen - 1,
                   slidesToScroll: 1,
                   autoplay: false,
                   arrow: true,
@@ -175,7 +176,7 @@
                     {
                       breakpoint: 1200,
                       settings: {
-                        slidesToShow: itemlen >= 4 ? 4 : itemlen - 1,
+                        slidesToShow: partnerItemlen > 4 ? 4 : partnerItemlen - 1,
                         slidesToScroll: 1,
                         arrows: true,
                       },
@@ -183,7 +184,7 @@
                     {
                       breakpoint: 768,
                       settings: {
-                        slidesToShow: itemlen >= 3 ? 3 : itemlen - 1,
+                        slidesToShow: partnerItemlen >= 3 ? 3 : partnerItemlen - 1,
                         slidesToScroll: 1,
                         arrows: true,
                       },
@@ -191,7 +192,7 @@
                     {
                       breakpoint: 575,
                       settings: {
-                        slidesToShow: itemlen >= 3 ? 3 : itemlen - 1,
+                        slidesToShow: partnerItemlen >= 3 ? 3 : partnerItemlen - 1,
                         slidesToScroll: 1,
                         arrows: true,
                       },
@@ -207,14 +208,13 @@
                     },
                   ],
                 });
-                $('.slider-cp-pics').slick('refresh');
+                $('.partner-slider-pics').slick('refresh');
               }
-              if (itemlen > 4 || itemlen == 4) {
+              if (partnerItemlen > 4 || partnerItemlen == 4) {
                 sliderCpPics()
               } else {
-                $('.slider-cp-pics').addClass('noSlider')
+                $('.partner-slider-pics').addClass('noSlider')
               }
-
             });
           </script>
         </div>

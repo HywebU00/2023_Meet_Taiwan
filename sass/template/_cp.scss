@@ -1215,6 +1215,7 @@
     }
 
     .slider-cp-pics,
+    .partner-slider-pics,
     .slider-pics {
       padding: 1em 2.5em;
 
@@ -1284,6 +1285,19 @@
       }
       @include screen('mobile') {
         padding: 1em 0em;
+      }
+    }
+    .partner-slider-pics {
+      &.noSlider {
+        min-width: 600px;
+        display: flex;
+        justify-content: center;
+        .item {
+          min-width: 33.3%;
+        }
+        @include screen('tablet') {
+          min-width: 100%;
+        }
       }
     }
 
@@ -1485,17 +1499,7 @@
       .slick-next {
         top: 32%;
       }
-      &.noSlider {
-        min-width: 600px;
-        display: flex;
-        justify-content: center;
-        .item {
-          min-width: 33.3%;
-        }
-        @include screen('tablet') {
-          min-width: 100%;
-        }
-      }
+
       .item {
         a {
           height: 20vh;
@@ -1639,6 +1643,7 @@
       }
     }
   }
+
   table th {
     text-align: left;
   }

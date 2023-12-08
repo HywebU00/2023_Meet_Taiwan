@@ -45,22 +45,22 @@
 
     .outListBox {
 
-      .slick-next:hover,
-      .slick-next:focus {
-        filter: brightness(0.5);
-      }
-
-      .slick-next {
-        right: 10px;
-      }
-
-      .slick-prev {
-        left: 10px;
-      }
-
-      // .item + .item {
-      //   margin-top: 30px;
+      // .slick-next:hover,
+      // .slick-next:focus {
+      //   filter: brightness(0.5);
       // }
+
+      // .slick-next {
+      //   right: 10px;
+      // }
+
+      // .slick-prev {
+      //   left: 10px;
+      // }
+
+      & > .item + .item {
+        margin-top: 30px;
+      }
 
       .box {
         min-height: 220px;

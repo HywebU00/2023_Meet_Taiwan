@@ -35549,15 +35549,8 @@ p.error a {
   padding: 0;
   z-index: 1;
 }
-.mt-city-exhibition .contentBox .outListBox .slick-next:hover,
-.mt-city-exhibition .contentBox .outListBox .slick-next:focus {
-  filter: brightness(0.5);
-}
-.mt-city-exhibition .contentBox .outListBox .slick-next {
-  right: 10px;
-}
-.mt-city-exhibition .contentBox .outListBox .slick-prev {
-  left: 10px;
+.mt-city-exhibition .contentBox .outListBox > .item + .item {
+  margin-top: 30px;
 }
 .mt-city-exhibition .contentBox .outListBox .box {
   min-height: 220px;

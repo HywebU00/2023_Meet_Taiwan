@@ -36811,6 +36811,7 @@ p.error a {
   font-size: 65px;
   line-height: 1;
   margin: 0 0 3.5%;
+  padding-top: 10px;
 }
 @media screen and (max-width: 1000px) {
   .certpage-tw .mt-city-explore .listBox .item .title {

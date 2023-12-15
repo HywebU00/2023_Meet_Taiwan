@@ -23784,13 +23784,13 @@ p.error a {
 .mt-awards .award-content {
   display: flex;
   height: 42em;
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .mt-awards .award-content .award-img {
   width: 50%;
   height: 100%;
-  padding: 0 2em;
+  padding: 0 1em;
 }
 .mt-awards .award-content .award-img .item {
   display: flex;

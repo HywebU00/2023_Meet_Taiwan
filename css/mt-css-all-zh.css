@@ -27753,35 +27753,9 @@ p.error a {
   pointer-events: auto;
 }
 .certpage-tw .mt-kv-html .kvSlider .item {
-  overflow: hidden;
-  position: relative;
   position: relative;
   width: 100%;
   height: 500px;
-}
-.certpage-tw .mt-kv-html .kvSlider .item:before {
-  display: block;
-  content: "";
-  line-height: 0;
-  padding-top: 33.3333333333%;
-}
-.certpage-tw .mt-kv-html .kvSlider .item img,
-.certpage-tw .mt-kv-html .kvSlider .item iframe,
-.certpage-tw .mt-kv-html .kvSlider .item video {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-.certpage-tw .mt-kv-html .kvSlider .item img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
 }
 @media screen and (max-width: 991px) {
   .certpage-tw .mt-kv-html .kvSlider .item {
@@ -27813,7 +27787,13 @@ p.error a {
     display: block;
   }
 }
-.certpage-tw .mt-kv-html .kvSlider .item a::after {
+.certpage-tw .mt-kv-html .kvSlider .item .pic {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+.certpage-tw .mt-kv-html .kvSlider .item .pic.blur::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -27821,10 +27801,6 @@ p.error a {
   background: rgba(0, 0, 0, 0.4);
   -webkit-backdrop-filter: blur(1.5px);
           backdrop-filter: blur(1.5px);
-}
-.certpage-tw .mt-kv-html .kvSlider .item .pic {
-  height: 500px;
-  overflow: hidden;
 }
 .certpage-tw .mt-kv-html .kvSlider .item img {
   width: 100%;
@@ -27930,6 +27906,7 @@ p.error a {
   align-items: center;
   flex-direction: column;
   z-index: 9;
+  opacity: 0;
 }
 .certpage-tw .mt-kv-html .kvSlider .infoBox .title {
   text-align: center;
@@ -28001,6 +27978,19 @@ p.error a {
 @media screen and (max-width: 575px) {
   .certpage-tw .mt-kv-html .video_background .video_foreground iframe {
     height: 50% !important;
+  }
+}
+.certpage-tw .mt-kv-html .slick-current .infoBox {
+  animation: kvFadeUp 0.5s 0.2s ease-in-out forwards;
+}
+@keyframes kvFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 

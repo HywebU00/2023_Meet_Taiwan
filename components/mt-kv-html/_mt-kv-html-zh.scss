@@ -1,8 +1,10 @@
 @import '../../sass/variable'; //Variable
 @import '../../sass/mixin'; //Mixin
+
 .certpage-tw .mt-kv-html {
   position: relative;
   overflow: hidden;
+
   // @media screen and (max-width: 1340px) {
   //   padding: 0em 0 1em;
   // }
@@ -42,17 +44,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     .slick-dots {
       width: auto;
       bottom: auto;
       right: auto;
       position: relative;
       z-index: 1;
+
       // margin: 0 20px;
       li {
         width: 12px;
         height: 12px;
         margin: 0 5px;
+
         button::before {
           width: 12px;
           height: 12px;
@@ -60,11 +65,13 @@
           background: #fff;
           opacity: 50%;
         }
+
         &.slick-active button::before {
           opacity: 70%;
         }
       }
     }
+
     .slick-arrow {
       position: relative;
       width: 16px;
@@ -75,6 +82,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
       &::before {
         width: 6px;
         height: 6px;
@@ -86,13 +94,16 @@
         transform: rotate(45deg);
       }
     }
+
     .slick-prev {
       &:before {
         border-width: 0 0 3px 3px;
       }
     }
+
     .slick-next {
       order: 3;
+
       &:before {
         border-width: 3px 3px 0 0;
       }
@@ -101,23 +112,33 @@
 
   .kvSlider {
     width: 100%;
+
     &:hover {
+
       .slick-prev,
       .slick-next {
         opacity: 1;
         pointer-events: auto;
       }
     }
+
     .item {
-      @include aspect-ratio(3, 1);
+      // @include aspect-ratio(3, 1);
       position: relative;
       width: 100%;
       height: 500px;
+
       @include screen('tablet') {
         @include aspect-ratio(3, 2);
       }
-      a {
-        &::after {
+
+      .pic {
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+        z-index: -1;
+
+        &.blur::after {
           content: '';
           position: absolute;
           inset: 0;
@@ -126,15 +147,13 @@
           backdrop-filter: blur(1.5px);
         }
       }
-      .pic {
-        height: 500px;
-        overflow: hidden;
-      }
+
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
+
       .caption {
         position: absolute;
         z-index: 3;
@@ -142,30 +161,37 @@
         top: 50%;
         width: 80%;
         transform: translate(-50%, -50%);
+
         &.left {
           width: 80%;
+
           h3,
           p {
             max-width: 400px;
             text-align: left;
             margin: 0 auto 0 0;
           }
+
           p {
             width: 60%;
           }
         }
+
         &.right {
           width: 80%;
+
           h3,
           p {
             max-width: 400px;
             text-align: right;
             margin: 0 0 0 auto;
           }
+
           p {
             width: 60%;
           }
         }
+
         h3 {
           font-size: 2.5em;
           text-align: center;
@@ -174,10 +200,12 @@
           max-width: 600px;
           text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.75);
           @include text-line(3, 1.25em);
+
           @include screen('xs_mobile') {
             font-size: 1.75em;
           }
         }
+
         p {
           font-size: 1em;
           text-align: center;
@@ -188,25 +216,30 @@
           margin: 0 auto;
           text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.75);
           @include text-line(3, 1.6em);
+
           @include screen('xs_mobile') {
             width: 80% !important;
           }
         }
       }
+
       &.slick-active {
         a {
           animation: fadeUse 0.2s ease-in-out forwards;
         }
       }
     }
+
     @keyframes fadeUse {
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
     }
+
     .infoBox {
       color: #fff;
       position: absolute;
@@ -216,6 +249,8 @@
       align-items: center;
       flex-direction: column;
       z-index: 9;
+      opacity: 0;
+
       .title {
         text-align: center;
         text-shadow: 5px 5px 55px rgba(0, 0, 0, 0.17);
@@ -226,17 +261,21 @@
         letter-spacing: 6.5px;
         text-indent: 6.5px;
         margin: 0 0 10px;
+
         @include screen('notebook') {
           font-size: 80px;
           letter-spacing: -1px;
         }
+
         @include screen('mobile') {
           font-size: 50px;
         }
+
         @include screen('xs_mobile') {
           font-size: 30px;
         }
       }
+
       .description {
         text-align: center;
         font-family: 'Lato', 'Noto Sans TC', sans-serif;
@@ -246,12 +285,14 @@
         max-width: 740px;
         padding: 0 20px;
         margin: 0 auto;
+
         @include screen('mobile') {
           font-size: 18px;
         }
       }
     }
   }
+
   .video-background iframe {
     pointer-events: none;
   }
@@ -283,6 +324,24 @@
       iframe {
         height: 50% !important;
       }
+    }
+  }
+
+  .slick-current {
+    .infoBox {
+      animation: kvFadeUp 0.5s 0.2s ease-in-out forwards;
+    }
+  }
+
+  @keyframes kvFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0px);
     }
   }
 }

@@ -35809,6 +35809,70 @@ p.error a {
     transform: translateX(0px);
   }
 }
+/* 20231229 新增*/
+.mt-city-exhibition .sub-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  background: #f8f8f8;
+}
+
+.mt-city-exhibition .subtitle {
+  font-size: 1.2em;
+  width: 50%;
+  padding: 0.5rem 0 0.5rem 1rem;
+  color: #646464;
+}
+
+.mt-city-exhibition .contentBox .infoBox .listBox {
+  flex-direction: column;
+}
+
+.mt-city-exhibition .contentBox .infoBox .listBox .title {
+  padding: 1rem 0 0 0;
+}
+
+.mt-city-exhibition .contentBox .infoBox .listBox .item:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.mt-city-exhibition .contentBox .infoBox .listBox .info.traffic {
+  flex-direction: unset;
+}
+
+.mt-city-exhibition .contentBox .infoBox .listBox .info.traffic .sub-info {
+  width: 50%;
+}
+
+@media screen and (max-width: 1280px) {
+  .mt-city-exhibition .subtitle {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .mt-city-exhibition .sub-item {
+    flex-direction: column;
+  }
+  .mt-city-exhibition .subtitle {
+    width: 100%;
+  }
+}
+.mt-city-link .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mt-city-link .pic {
+  text-align: center;
+}
+
+.mt-city-link .listBox {
+  justify-content: space-evenly;
+}
+
+/* 20231229 新增*/
 .tabSet, .mt-category, .divider,
 .divider-vertical, .pagination, .mt-main-content .cp_content .file_download,
 .mt-main-content .signup_content .file_download, .mt-main-content .cp_content .web_link,
